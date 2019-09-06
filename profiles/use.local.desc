@@ -28,3 +28,8 @@ www-client/ungoogled-chromium:system-openjpeg - Use the system-wide media-libs/o
 www-client/ungoogled-chromium:tcmalloc - Use bundled tcmalloc instead of system malloc.
 www-client/ungoogled-chromium:thinlto - Build with ThinLTO support. LTO (Link Time Optimization) achieves better runtime performance through whole-program analysis and cross-module optimization (highly recommended).
 www-client/ungoogled-chromium:widevine - Unsupported closed-source DRM capability (required by Netflix VOD).
+www-client/ungoogled-chromium-bin:core2 - Pull in a binary, built for core2.
+www-client/ungoogled-chromium-bin:generic - Pull in a binary, built for a generic x86-64.
+www-client/ungoogled-chromium-bin:haswell - Pull in a binary, built for haswell.
+www-client/ungoogled-chromium-bin:suid - Build the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels.
+www-client/ungoogled-chromium-bin:widevine - Unsupported closed-source DRM capability (required by Netflix VOD).
