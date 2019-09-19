@@ -7,6 +7,7 @@ app-misc/font-manager:nemo - Build Nemo extension
 www-client/opera:gtk - Install support libraries and runtime dependencies to support GTK+/GNOME desktop integration
 www-client/ungoogled-chromium:cfi - Build with CFI (Control Flow Integrity) enabled (recommended).
 www-client/ungoogled-chromium:closure-compile - Enable closure type-checking for Chrome's web technology-based UI. Requires Java and bundled binary compiler.jar
+www-client/ungoogled-chromium:convert-dict - Patch and build the convert_dict utility More info here: https://github.com/Eloston/ungoogled-chromium/issues/188#issuecomment-444752907
 www-client/ungoogled-chromium:gnome - Improve integration with GIO (libgio).
 www-client/ungoogled-chromium:gold - Use GNU's gold linker.
 www-client/ungoogled-chromium:jumbo-build - Coalesce translation units together, making builds faster on single machines, at the expense of more memory during build time. This flag is not automatically tested by Chromium developers, so it may not work all the time.
