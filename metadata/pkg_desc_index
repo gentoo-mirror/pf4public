@@ -1,4 +1,4 @@
 app-misc/font-manager 0.7.5 9999: A simple font management application for Gtk+ Desktop Environments
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
 www-client/ungoogled-chromium 76.0.3809.132_p1 77.0.3865.75_p1 77.0.3865.90_p1 77.0.3865.120_p1: Modifications to Chromium for removing Google integration and enhancing privacy
-www-client/ungoogled-chromium-bin 76.0.3809.132_p1 77.0.3865.90_p1: Modifications to Chromium for removing Google integration and enhancing privacy
+www-client/ungoogled-chromium-bin 76.0.3809.132_p1 77.0.3865.90_p1 77.0.3865.120_p1: Modifications to Chromium for removing Google integration and enhancing privacy
