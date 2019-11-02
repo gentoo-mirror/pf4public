@@ -4,6 +4,10 @@
 
 app-misc/font-manager:nautilus - Build Nautilus extension
 app-misc/font-manager:nemo - Build Nemo extension
+net-misc/sb-hosts:fakenews - Add fake news sites
+net-misc/sb-hosts:gambling - Add common online betting sites
+net-misc/sb-hosts:porn - Add porn sites
+net-misc/sb-hosts:social - Add social media sites
 www-client/opera:gtk - Install support libraries and runtime dependencies to support GTK+/GNOME desktop integration
 www-client/ungoogled-chromium:cfi - Build with CFI (Control Flow Integrity) enabled (recommended).
 www-client/ungoogled-chromium:closure-compile - Enable closure type-checking for Chrome's web technology-based UI. Requires Java and bundled binary compiler.jar
