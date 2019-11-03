@@ -1,5 +1,5 @@
 app-misc/font-manager 0.7.5 9999: A simple font management application for Gtk+ Desktop Environments
 net-misc/sb-hosts 2.5.21 9999: A hosts file from several well-curated sources
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
-www-client/ungoogled-chromium 76.0.3809.132_p1 77.0.3865.75_p1 77.0.3865.90_p1 77.0.3865.120_p1 78.0.3904.70_p1 78.0.3904.87_p1: Modifications to Chromium for removing Google integration and enhancing privacy
-www-client/ungoogled-chromium-bin 76.0.3809.132_p1 77.0.3865.90_p1 77.0.3865.120_p1: Modifications to Chromium for removing Google integration and enhancing privacy
+www-client/ungoogled-chromium 77.0.3865.120_p1 78.0.3904.87_p1: Modifications to Chromium for removing Google integration and enhancing privacy
+www-client/ungoogled-chromium-bin 77.0.3865.120_p1 78.0.3904.87_p1: Modifications to Chromium for removing Google integration and enhancing privacy
