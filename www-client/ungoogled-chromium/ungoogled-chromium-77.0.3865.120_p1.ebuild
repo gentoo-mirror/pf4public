@@ -245,7 +245,6 @@ src_prepare() {
 	use system-openjpeg && eapply "${FILESDIR}/${PN}-system-openjpeg-r1.patch"
 	use vaapi && eapply "${FILESDIR}/${PN}-enable-vaapi.patch"
 	use vaapi && eapply "${FILESDIR}/${PN}-fix-vaapi.patch"
-	use widevine && eapply "${FILESDIR}/${PN}-widevine.patch"
 
 	if use optimize-webui; then
 		mkdir -p third_party/node/linux/node-linux-x64/bin || die
@@ -273,7 +272,7 @@ src_prepare() {
 	done
 
 	if use closure-compile; then
-		ewarn "Keeping binary compiler.jar for closure-compile"
+		ewarn "Keeping binary compiler.jar in sources tree for closure-compile"
 		sed -i '\!third_party/closure_compiler/compiler/compiler.jar!d' "${ugc_pruning_list}" || die
 	fi
 
