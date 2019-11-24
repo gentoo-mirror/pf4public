@@ -2,6 +2,7 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
+app-admin/gb-chroot:host - Enable this on a chroot host
 app-misc/font-manager:nautilus - Build Nautilus extension
 app-misc/font-manager:nemo - Build Nemo extension
 net-misc/sb-hosts:fakenews - Add fake news sites
