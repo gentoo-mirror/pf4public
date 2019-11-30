@@ -230,8 +230,6 @@ pkg_pretend() {
 }
 
 pkg_setup() {
-	pre_build_checks
-
 	chromium_suid_sandbox_check_kernel_config
 }
 
@@ -282,17 +280,16 @@ src_prepare() {
 		sed -i '\!third_party/closure_compiler/compiler/compiler.jar!d' "${ugc_pruning_list}" || die
 	fi
 
-	# make it less noisy
 	ebegin "Pruning binaries"
-	"${UGC_WD}/utils/prune_binaries.py" . "${UGC_WD}/pruning.list"
+	"${UGC_WD}/utils/prune_binaries.py" "-q" . "${UGC_WD}/pruning.list"
 	eend $? || die
 
 	ebegin "Applying ungoogled-chromium patches"
-	"${UGC_WD}/utils/patches.py" apply . "${UGC_WD}/patches"
+	"${UGC_WD}/utils/patches.py" "-q" apply . "${UGC_WD}/patches"
 	eend $? || die
 
 	ebegin "Applying domain substitution"
-	"${UGC_WD}/utils/domain_substitution.py" apply -r "${UGC_WD}/domain_regex.list" -f "${UGC_WD}/domain_substitution.list" -c build/domsubcache.tar.gz .
+	"${UGC_WD}/utils/domain_substitution.py" "-q" apply -r "${UGC_WD}/domain_regex.list" -f "${UGC_WD}/domain_substitution.list" -c build/domsubcache.tar.gz .
 	eend $? || die
 
 	local keeplibs=(
@@ -507,6 +504,8 @@ src_prepare() {
 
 	use tcmalloc && keeplibs+=( third_party/tcmalloc )
 
+	python_setup 'python2*'
+
 	# Remove most bundled libraries. Some are still needed.
 	build/linux/unbundle/remove_bundled_libraries.py "${keeplibs[@]}" --do-remove || die
 }
@@ -614,7 +613,7 @@ src_configure() {
 	myconf_gn+=" thin_lto_enable_optimizations=$(usex optimize-thinlto true false)"
 	myconf_gn+=" optimize_webui=$(usex optimize-webui true false)"
 	myconf_gn+=" use_gio=$(usex gnome true false)"
-	myconf_gn+=" use_openh264=$(usex system-openh26 false true)"
+	myconf_gn+=" use_openh264=$(usex system-openh264 false true)"
 	myconf_gn+=" use_system_freetype=$(usex system-harfbuzz true false)"
 	myconf_gn+=" use_system_libopenjpeg2=$(usex system-openjpeg true false)"
 	myconf_gn+=" use_vaapi=$(usex vaapi true false)"
