@@ -11,10 +11,13 @@ net-misc/sb-hosts:porn - Add porn sites
 net-misc/sb-hosts:social - Add social media sites
 www-client/opera:gtk - Install support libraries and runtime dependencies to support GTK+/GNOME desktop integration
 www-client/ungoogled-chromium:cfi - Build with CFI (Control Flow Integrity) enabled (recommended).
+www-client/ungoogled-chromium:clang - Use Clang compiler instead of GCC
 www-client/ungoogled-chromium:closure-compile - Enable closure type-checking for Chrome's web technology-based UI. Requires Java and bundled binary compiler.jar in sources tree
 www-client/ungoogled-chromium:convert-dict - Patch and build the convert_dict utility. The script will be installed into /usr/lib64/chromium-browser/ungoogled-chromium-update-dicts.sh More info here: https://github.com/Eloston/ungoogled-chromium/issues/188#issuecomment-444752907
+www-client/ungoogled-chromium:enable-driver - Build chromedriver
 www-client/ungoogled-chromium:gnome - Improve integration with GIO (libgio).
 www-client/ungoogled-chromium:gold - Use GNU's gold linker.
+www-client/ungoogled-chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
 www-client/ungoogled-chromium:jumbo-build - Coalesce translation units together, making builds faster on single machines, at the expense of more memory during build time. This flag is not automatically tested by Chromium developers, so it may not work all the time.
 www-client/ungoogled-chromium:libcxx - Build against sys-devel/libcxx, which requires that all C++ dependencies must be built with '-stdlib=libc++' (EXPERIMENTAL).
 www-client/ungoogled-chromium:lld - LLD is a linker from the LLVM project. That is a drop-in replacement for system linkers and runs much faster than them (recommended).
