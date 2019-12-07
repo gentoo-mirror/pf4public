@@ -7,5 +7,5 @@ IUSE=doc host
 LICENSE=MIT
 PROPERTIES=live
 SLOT=0
-_eclasses_=git-r3	562b380fc59ae6a8622171d0acb777d1
+_eclasses_=git-r3	6d22636df236df4cc8475f7b7668bdcd
 _md5_=7b2968ec2cb8c984b3a95a55c108207f
