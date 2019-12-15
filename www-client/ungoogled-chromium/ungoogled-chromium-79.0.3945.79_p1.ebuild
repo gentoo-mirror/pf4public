@@ -53,7 +53,7 @@ COMMON_DEPEND="
 	>=dev-libs/atk-2.26
 	dev-libs/expat:=
 	dev-libs/glib:2
-	system-icu? ( >=dev-libs/icu-65:= )
+	system-icu? ( >=dev-libs/icu-64:= )
 	>=dev-libs/libxml2-2.9.4-r3:=[icu]
 	dev-libs/libxslt:=
 	dev-libs/nspr:=
@@ -905,10 +905,6 @@ src_install() {
 	doins -r out/Release/locales
 	doins -r out/Release/resources
 
-	if [[ -d out/Release/swiftshader ]]; then
-		insinto "${CHROMIUM_HOME}/swiftshader"
-		doins out/Release/swiftshader/*.so
-	fi
 
 	# Install icons and desktop entry.
 	local branding size
