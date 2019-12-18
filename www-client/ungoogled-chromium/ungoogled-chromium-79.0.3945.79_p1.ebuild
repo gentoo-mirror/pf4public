@@ -41,8 +41,8 @@ REQUIRED_USE="
 	|| ( $(python_gen_useflags 'python3*') )
 	|| ( $(python_gen_useflags 'python2*') )
 	thinlto? ( clang )
-	cfi? ( clang thinlto )
 	optimize-thinlto? ( thinlto )
+	cfi? ( thinlto )
 	system-openjpeg? ( pdf )
 	x86? ( !thinlto !cfi )
 "
@@ -147,10 +147,7 @@ BDEPEND="
 	closure-compile? ( virtual/jre )
 	virtual/pkgconfig
 	clang? ( >=sys-devel/clang-8.0.0 )
-	thinlto? (
-		>=sys-devel/lld-9.0.0
-		>=sys-devel/clang-9.0.0
-	)
+	thinlto? ( >=sys-devel/lld-8.0.0 )
 	virtual/libusb:1
 	cfi? ( >=sys-devel/clang-runtime-8.0.0[sanitize] )
 "
@@ -224,15 +221,16 @@ pre_build_checks() {
 pkg_pretend() {
 	if use custom-cflags && [[ "${MERGE_TYPE}" != binary ]]; then
 		ewarn
-		ewarn "USE=custom-cflags bypass strip-flags; you are on your own."
-		ewarn "Expect build failures. Don't file bugs using that unsupported USE flag!"
+		ewarn "USE=custom-cflags bypasses strip-flags"
+		ewarn "Consider disabling this USE flag if something breaks"
 		ewarn
 	fi
 
 	if use jumbo-build && [[ "${MERGE_TYPE}" != binary ]]; then
 		ewarn
-		ewarn "Jumbo is no longer supported by Google; you are on your own."
-		ewarn "Expect build failures. Don't file bugs using that unsupported USE flag!"
+		ewarn "Jumbo is no longer supported by Google, but it might still work"
+		ewarn "jumbo_file_merge_limit was lowered to 8 just in case"
+		ewarn "Consider disabling this USE flag if something breaks"
 		ewarn
 	fi
 
@@ -580,12 +578,14 @@ src_configure() {
 		einfo "Enforcing the use of clang due to USE=clang ..."
 		CC=${CHOST}-clang
 		CXX=${CHOST}-clang++
+		AR=llvm-ar #thinlto fails otherwise
 		strip-unsupported-flags
 	elif ! use clang && ! tc-is-gcc ; then
 		# Force gcc
 		einfo "Enforcing the use of gcc due to USE=-clang ..."
 		CC=${CHOST}-gcc
 		CXX=${CHOST}-g++
+		AR=gcc-ar #just in case
 		strip-unsupported-flags
 	fi
 
@@ -834,8 +834,8 @@ src_configure() {
 
 	local flags
 	einfo "Building with following compiler settings:"
-	for flags in {C,CXX,CPP,LD}FLAGS; do
-		einfo "  ${flags} = ${!flags}"
+	for flags in C{C,XX} AR NM RANLIB {C,CXX,CPP,LD}FLAGS; do
+		einfo "  ${flags} = \"${!flags}\""
 	done
 
 	einfo "Configuring Chromium..."
