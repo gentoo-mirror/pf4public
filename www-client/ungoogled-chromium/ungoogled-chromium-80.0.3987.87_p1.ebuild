@@ -49,6 +49,7 @@ REQUIRED_USE="
 
 COMMON_DEPEND="
 	>=app-accessibility/at-spi2-atk-2.26:2
+	app-arch/bzip2:=
 	cups? ( >=net-print/cups-1.3.11:= )
 	>=dev-libs/atk-2.26
 	dev-libs/expat:=
@@ -132,7 +133,6 @@ DEPEND="${COMMON_DEPEND}
 # dev-vcs/git - https://bugs.gentoo.org/593476
 BDEPEND="
 	${PYTHON_DEPS}
-	app-arch/bzip2:=
 	>=app-arch/gzip-1.7
 	dev-lang/yasm
 	dev-lang/perl
@@ -140,7 +140,7 @@ BDEPEND="
 	dev-vcs/git
 	>=dev-util/gperf-3.0.3
 	>=dev-util/ninja-1.7.2
-	optimize-webui? ( >=net-libs/nodejs-7.6.0[inspector] )
+	>=net-libs/nodejs-7.6.0[inspector]
 	sys-apps/hwids[usb(+)]
 	>=sys-devel/bison-2.4.3
 	sys-devel/flex
@@ -234,10 +234,8 @@ src_prepare() {
 
 	use custom-cflags && eapply "${FILESDIR}/chromium-compiler-r10.patch"
 
-	if use optimize-webui; then
 	mkdir -p third_party/node/linux/node-linux-x64/bin || die
 	ln -s "${EPREFIX}"/usr/bin/node third_party/node/linux/node-linux-x64/bin/node || die
-	fi
 
 	use convert-dict && eapply "${FILESDIR}/chromium-ucf-dict-utility.patch"
 
@@ -411,12 +409,8 @@ src_prepare() {
 		third_party/metrics_proto
 		third_party/modp_b64
 		third_party/nasm
-	)
-	use optimize-webui && keeplibs+=(
 		third_party/node
 		third_party/node/node_modules/polymer-bundler/lib/third_party/UglifyJS2
-	)
-	keeplibs+=(
 		third_party/one_euro_filter
 		third_party/openscreen
 		third_party/openscreen/src/third_party/tinycbor/src/src
