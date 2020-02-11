@@ -17,7 +17,6 @@ www-client/ungoogled-chromium:convert-dict - Patch and build the convert_dict ut
 www-client/ungoogled-chromium:enable-driver - Build chromedriver
 www-client/ungoogled-chromium:gnome - Improve integration with GIO (libgio).
 www-client/ungoogled-chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
-www-client/ungoogled-chromium:jumbo-build - Coalesce translation units together, making builds faster on single machines, at the expense of more memory during build time. This flag is not automatically tested by Chromium developers, so it may not work all the time.
 www-client/ungoogled-chromium:optimize-thinlto - Whether to enable ThinLTO optimizations. Turning ThinLTO optimizations on can substantially increase link time and binary size, but they generally also make binaries a fair bit faster.
 www-client/ungoogled-chromium:optimize-webui - Optimize parts of Chromium's UI written with web technologies (HTML/CSS/JS) for runtime performance purposes. This does more work at compile time for speed benefits at runtime.
 www-client/ungoogled-chromium:pdf - Enable the built-in PDF viewer
