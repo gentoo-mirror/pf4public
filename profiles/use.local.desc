@@ -19,6 +19,7 @@ www-client/ungoogled-chromium:gnome - Improve integration with GIO (libgio).
 www-client/ungoogled-chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
 www-client/ungoogled-chromium:optimize-thinlto - Whether to enable ThinLTO optimizations. Turning ThinLTO optimizations on can substantially increase link time and binary size, but they generally also make binaries a fair bit faster.
 www-client/ungoogled-chromium:optimize-webui - Optimize parts of Chromium's UI written with web technologies (HTML/CSS/JS) for runtime performance purposes. This does more work at compile time for speed benefits at runtime.
+www-client/ungoogled-chromium:ozone - Enable Chrome's Ozone platform abstraction layer (experimental feature).
 www-client/ungoogled-chromium:proprietary-codecs - Enable proprietary codecs like H.264, MP3.
 www-client/ungoogled-chromium:suid - Build the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels.
 www-client/ungoogled-chromium:system-ffmpeg - Use the system media-video/ffmpeg instead of bundled.
