@@ -1,7 +1,7 @@
 app-admin/gb-chroot 0.6 0.7 9999: gb-chroot is a collection of scripts for building Gentoo's binpkgs
 app-misc/font-manager 0.7.5 0.7.7 9999: A simple font management application for Gtk+ Desktop Environments
-net-misc/sb-hosts 2.6.6 2.6.7 9999: A hosts file from several well-curated sources
-sys-kernel/linux-image 4.4.217 4.4.218 4.4.219 4.4.220 4.9.217 4.9.218 4.9.219 4.9.220 4.14.174 4.14.175 4.14.176 4.14.177 4.19.113 4.19.114 4.19.115 4.19.116 4.19.117 4.19.118 5.4.28 5.4.29 5.4.30 5.4.31 5.4.32 5.4.33 5.4.34 5.4.35 5.5.15 5.5.16 5.5.17 5.5.18 5.5.19 5.6.2 5.6.3 5.6.4 5.6.5 5.6.6 5.6.7: linux-image ebuild is used to build linux kernel image using savedconfig
+net-misc/sb-hosts 2.6.6 2.6.11 9999: A hosts file from several well-curated sources
+sys-kernel/linux-image 4.4.217 4.4.218 4.4.219 4.4.220 4.4.221 4.9.217 4.9.218 4.9.219 4.9.220 4.9.221 4.14.174 4.14.175 4.14.176 4.14.177 4.14.178 4.19.113 4.19.114 4.19.115 4.19.116 4.19.117 4.19.118 4.19.119 4.19.120 5.4.28 5.4.29 5.4.30 5.4.31 5.4.32 5.4.33 5.4.34 5.4.35 5.4.36 5.4.37 5.4.38 5.5.19 5.6.2 5.6.3 5.6.4 5.6.5 5.6.6 5.6.7 5.6.8 5.6.9 5.6.10: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
 www-client/ungoogled-chromium 81.0.4044.129_p1: Modifications to Chromium for removing Google integration and enhancing privacy
 www-client/ungoogled-chromium-bin 81.0.4044.129_p1: Modifications to Chromium for removing Google integration and enhancing privacy
