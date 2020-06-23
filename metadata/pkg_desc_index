@@ -3,5 +3,5 @@ app-misc/font-manager 0.7.5 0.7.7 9999: A simple font management application for
 net-misc/sb-hosts 2.6.22 2.6.23 9999: A hosts file from several well-curated sources
 sys-kernel/linux-image 4.4.221 4.4.225 4.4.226 4.4.227 4.9.221 4.9.225 4.9.226 4.9.227 4.14.178 4.14.182 4.14.183 4.14.184 4.19.120 4.19.126 4.19.127 4.19.128 5.4.38 5.4.44 5.4.45 5.4.46 5.4.47 5.6.16 5.6.17 5.6.18 5.6.19 5.7.0 5.7.1 5.7.2 5.7.3: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
-www-client/ungoogled-chromium 81.0.4044.138_p1 83.0.4103.106_p1: Modifications to Chromium for removing Google integration and enhancing privacy
+www-client/ungoogled-chromium 81.0.4044.138_p1 83.0.4103.116_p1: Modifications to Chromium for removing Google integration and enhancing privacy
 www-client/ungoogled-chromium-bin 83.0.4103.106_p1: Modifications to Chromium for removing Google integration and enhancing privacy
