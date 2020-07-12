@@ -245,12 +245,6 @@ pkg_pretend() {
 		ewarn "Consider disabling this USE flag if something breaks"
 		ewarn
 	fi
-	if use ozone && use vaapi; then
-		ewarn
-		ewarn "You've enabled ozone and vaapi USE flags"
-		ewarn "This combinations is known to break the compilation"
-		ewarn
-	fi
 	if use wayland; then
 		ewarn
 		ewarn "You've enabled USE=wayland"
@@ -688,6 +682,7 @@ src_configure() {
 		myconf_gn+=" ozone_auto_platforms=false"
 		myconf_gn+=" use_system_minigbm=true"
 		myconf_gn+=" use_system_libdrm=true"
+		use vaapi && eapply "${FILESDIR}/fix-vaapi-ozone-build.patch"
 	fi
 
 	if use ozone; then
