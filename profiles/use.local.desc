@@ -3,8 +3,11 @@
 # * generated automatically using pmaint *
 
 app-admin/gb-chroot:host - Enable this on a chroot host
+app-misc/font-manager:manager - Build font-manager
 app-misc/font-manager:nautilus - Build Nautilus extension
 app-misc/font-manager:nemo - Build Nemo extension
+app-misc/font-manager:reproducible - Make the build reproducible
+app-misc/font-manager:viewer - Build font-viewer
 net-misc/sb-hosts:fakenews - Add fake news sites
 net-misc/sb-hosts:gambling - Add common online betting sites
 net-misc/sb-hosts:porn - Add porn sites
