@@ -3,6 +3,9 @@
 # * generated automatically using pmaint *
 
 app-admin/gb-chroot:host - Enable this on a chroot host
+app-editors/vscode:builtin-extensions - Download and install builtin extensions from Visual Studio Marketplace
+app-editors/vscode:openvsx - Use Eclipse Open VSX instead of Visual Studio Marketplace
+app-editors/vscode:substitute-urls - Even though telemetry is disabled by default in this ebuild, one might want to replace telemetry reporting urls with 0.0.0.0
 app-misc/font-manager:manager - Build font-manager
 app-misc/font-manager:nautilus - Build Nautilus extension
 app-misc/font-manager:nemo - Build Nemo extension
