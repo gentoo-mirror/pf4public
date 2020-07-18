@@ -1,5 +1,6 @@
 app-admin/gb-chroot 0.6 0.7 9999: gb-chroot is a collection of scripts for building Gentoo's binpkgs
 app-editors/vscode 9999: Visual Studio Code - Open Source
+app-eselect/eselect-electron 0.1: Utility to select the default Electron slot
 app-misc/font-manager 0.7.7 0.7.8 9999: A simple font management application for Gtk+ Desktop Environments
 dev-util/electron 8.3.3: Cross platform application development framework based on web technologies
 net-misc/sb-hosts 2.6.29 2.7.0 9999: A hosts file from several well-curated sources
