@@ -3,7 +3,7 @@ app-editors/vscode 9999: Visual Studio Code - Open Source
 app-eselect/eselect-electron 0.1: Utility to select the default Electron slot
 app-misc/font-manager 0.7.7 0.7.8 9999: A simple font management application for Gtk+ Desktop Environments
 dev-util/electron 8.3.3 9.1.0: Cross platform application development framework based on web technologies
-net-misc/sb-hosts 2.7.2 2.7.3 9999: A hosts file from several well-curated sources
+net-misc/sb-hosts 2.7.3 2.7.4 9999: A hosts file from several well-curated sources
 sys-kernel/linux-image 4.4.221 4.4.228 4.4.229 4.9.221 4.9.228 4.9.229 4.14.178 4.14.185 4.14.186 4.14.187 4.19.120 4.19.129 4.19.130 4.19.131 5.4.38 5.4.48 5.4.49 5.4.50 5.6.19 5.7.4 5.7.5 5.7.6 5.7.7: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
 www-client/ungoogled-chromium 84.0.4147.105_p1: Modifications to Chromium for removing Google integration and enhancing privacy
