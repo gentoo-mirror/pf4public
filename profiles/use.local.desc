@@ -46,7 +46,6 @@ www-client/ungoogled-chromium:convert-dict - Patch and build the convert_dict ut
 www-client/ungoogled-chromium:enable-driver - Build chromedriver
 www-client/ungoogled-chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
 www-client/ungoogled-chromium:headless - Build Ozone only with headless backend, NOT RECOMMENDED for general uses
-www-client/ungoogled-chromium:libcxx - Build against sys-devel/libcxx, which requires that all C++ dependencies must be built with '-stdlib=libc++'
 www-client/ungoogled-chromium:optimize-thinlto - Whether to enable ThinLTO optimizations. Turning ThinLTO optimizations on can substantially increase link time and binary size, but they generally also make binaries a fair bit faster.
 www-client/ungoogled-chromium:optimize-webui - Optimize parts of Chromium's UI written with web technologies (HTML/CSS/JS) for runtime performance purposes. This does more work at compile time for speed benefits at runtime.
 www-client/ungoogled-chromium:ozone - Enable Ozone platform abstraction layer with X11 backend
