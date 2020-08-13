@@ -38,7 +38,6 @@ net-misc/sb-hosts:fakenews - Add fake news sites
 net-misc/sb-hosts:gambling - Add common online betting sites
 net-misc/sb-hosts:porn - Add porn sites
 net-misc/sb-hosts:social - Add social media sites
-sys-kernel/linux-image:initramfs - Build also initramfs
 www-client/opera:gtk - Install support libraries and runtime dependencies to support GTK+/GNOME desktop integration
 www-client/ungoogled-chromium:cfi - Build with CFI (Control Flow Integrity) enabled
 www-client/ungoogled-chromium:clang - Use Clang compiler instead of GCC
