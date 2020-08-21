@@ -1,10 +1,10 @@
 app-admin/gb-chroot 0.6 0.7 0.8 9999: gb-chroot is a collection of scripts for building Gentoo's binpkgs
-app-editors/vscode 1.48.0 9999: Visual Studio Code - Open Source
+app-editors/vscode 1.48.0 1.48.1 9999: Visual Studio Code - Open Source
 app-eselect/eselect-electron 0.1: Utility to select the default Electron slot
 app-misc/font-manager 0.7.7 0.7.8 9999: A simple font management application for Gtk+ Desktop Environments
 dev-util/electron 8.3.3 9.1.0 9.2.0: Cross platform application development framework based on web technologies
-net-misc/sb-hosts 2.7.8 2.7.11 9999: A hosts file from several well-curated sources
+net-misc/sb-hosts 2.7.11 2.7.12 9999: A hosts file from several well-curated sources
 sys-kernel/linux-image 4.4.221 4.4.228 4.4.229 4.4.230 4.4.231 4.4.232 4.9.221 4.9.228 4.9.229 4.9.230 4.9.231 4.9.232 4.14.178 4.14.185 4.14.188 4.14.189 4.14.190 4.14.191 4.14.192 4.14.193 4.19.120 4.19.129 4.19.133 4.19.134 4.19.135 4.19.136 4.19.137 4.19.138 4.19.139 5.4.38 5.4.48 5.4.52 5.4.53 5.4.54 5.4.55 5.4.56 5.4.57 5.4.58 5.7.8 5.7.9 5.7.10 5.7.11 5.7.12 5.7.13 5.7.14 5.7.15 5.8.0 5.8.0-r1 5.8.1: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
-www-client/ungoogled-chromium 84.0.4147.125_p1 84.0.4147.135_p1: Modifications to Chromium for removing Google integration and enhancing privacy
-www-client/ungoogled-chromium-bin 84.0.4147.125_p1: Modifications to Chromium for removing Google integration and enhancing privacy
+www-client/ungoogled-chromium 84.0.4147.135_p1: Modifications to Chromium for removing Google integration and enhancing privacy
+www-client/ungoogled-chromium-bin 84.0.4147.135_p1: Modifications to Chromium for removing Google integration and enhancing privacy
