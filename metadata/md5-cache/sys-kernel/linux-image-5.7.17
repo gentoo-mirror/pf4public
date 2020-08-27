@@ -1,5 +1,5 @@
 DEFINED_PHASES=compile configure install postinst prepare unpack
-DEPEND=~sys-kernel/gentoo-sources-5.7.10
+DEPEND=~sys-kernel/gentoo-sources-5.7.17
 DESCRIPTION=linux-image ebuild is used to build linux kernel image using savedconfig
 EAPI=7
 HOMEPAGE=https://github.com/PF4Public/gentoo-overlay/tree/master/sys-kernel/linux-image
@@ -8,6 +8,6 @@ KEYWORDS=~alpha ~amd64 ~arm ~arm64 ~hppa ~ia64 ~mips ~ppc ~ppc64 ~s390 ~sparc ~x
 LICENSE=GPL-2
 REQUIRED_USE=savedconfig
 RESTRICT=strip
-SLOT=5.7.10
+SLOT=5.7.17
 _eclasses_=multilib	2477ebe553d3e4d2c606191fe6c33602	portability	e8f7ef3a41965b21a734550f8a94c1c6	savedconfig	0bc45cb0429003c9abc73bae24a0d5bd	toolchain-funcs	605c126bed8d87e4378d5ff1645330cb
 _md5_=6ee8b0e452137467381f50346ce7da97
