@@ -15,6 +15,7 @@ app-misc/font-manager:manager - Build font-manager
 app-misc/font-manager:nautilus - Build Nautilus extension
 app-misc/font-manager:nemo - Build Nemo extension
 app-misc/font-manager:reproducible - Make the build reproducible
+app-misc/font-manager:thunar - Build Thunar extension
 app-misc/font-manager:viewer - Build font-viewer
 dev-util/electron:clang - Use Clang compiler instead of GCC
 dev-util/electron:closure-compile - Enable closure type-checking for Chrome's web technology-based UI. Requires Java and bundled binary compiler.jar in sources tree
