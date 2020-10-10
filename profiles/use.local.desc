@@ -50,6 +50,7 @@ www-client/ungoogled-chromium:headless - Build Ozone only with headless backend,
 www-client/ungoogled-chromium:optimize-thinlto - Whether to enable ThinLTO optimizations. Turning ThinLTO optimizations on can substantially increase link time and binary size, but they generally also make binaries a fair bit faster.
 www-client/ungoogled-chromium:optimize-webui - Optimize parts of Chromium's UI written with web technologies (HTML/CSS/JS) for runtime performance purposes. This does more work at compile time for speed benefits at runtime.
 www-client/ungoogled-chromium:ozone - Enable Ozone platform abstraction layer with X11 backend
+www-client/ungoogled-chromium:ozone-wayland - Enable Wayland backend for Ozone
 www-client/ungoogled-chromium:proprietary-codecs - Enable proprietary codecs like H.264, MP3
 www-client/ungoogled-chromium:suid - Build the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels
 www-client/ungoogled-chromium:system-ffmpeg - Use the system media-video/ffmpeg instead of the bundled one
@@ -62,7 +63,6 @@ www-client/ungoogled-chromium:system-openh264 - Use the system media-libs/openh2
 www-client/ungoogled-chromium:system-openjpeg - Use the system-wide media-libs/openjpeg instead of the bundled one. OpenJPEG use are exclusively for Chromium's PDF viewer.
 www-client/ungoogled-chromium:tcmalloc - Use bundled tcmalloc instead of system malloc
 www-client/ungoogled-chromium:thinlto - Build with ThinLTO support. LTO (Link Time Optimization) achieves better runtime performance through whole-program analysis and cross-module optimization (highly recommended).
-www-client/ungoogled-chromium:wayland - Enable Wayland backend for Ozone
 www-client/ungoogled-chromium:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
 www-client/ungoogled-chromium-bin:convert-dict - Install also the convert_dict utility. The script will be installed into /opt/chromium-browser/update-dicts.sh More info here: https://github.com/Eloston/ungoogled-chromium/issues/188#issuecomment-444752907
 www-client/ungoogled-chromium-bin:core2 - Pull in a binary, built for core2
