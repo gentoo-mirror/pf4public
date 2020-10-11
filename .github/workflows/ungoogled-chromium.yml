@@ -17,7 +17,7 @@ jobs:
         use:
           - vaapi -system-libvpx
           - vaapi system-libvpx
-          - vaapi ozone
+          - vaapi ozone -system-libvpx
           - vdpau
           - cfi thinlto
           - -clang
@@ -29,6 +29,7 @@ jobs:
           - ozone ozone-wayland
           - widevine
           - custom-cflags
+          - system-libvpx
 
     steps:
       - uses: actions/checkout@v2
