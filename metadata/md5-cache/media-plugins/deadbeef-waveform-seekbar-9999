@@ -3,9 +3,9 @@ DEPEND=dev-db/sqlite:3 media-sound/deadbeef >=dev-vcs/git-1.8.2.1[curl]
 DESCRIPTION=Waveform Seekbar plugin for DeaDBeeF audio player
 EAPI=6
 HOMEPAGE=https://github.com/cboxdoerfer/ddb_waveform_seekbar
-LICENSE=GPL-3
+LICENSE=GPL-2
 PROPERTIES=live
 RDEPEND=dev-db/sqlite:3 media-sound/deadbeef
 SLOT=0
 _eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441
-_md5_=d5e5d76e822d1099d9452d71b389afd7
+_md5_=8c7d2730ef7168b4972629ce41e1feba
