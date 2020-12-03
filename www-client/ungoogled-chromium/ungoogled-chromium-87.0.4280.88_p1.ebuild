@@ -14,7 +14,7 @@ inherit check-reqs chromium-2 desktop flag-o-matic multilib ninja-utils pax-util
 UGC_PV="${PV/_p/-}"
 UGC_P="${PN}-${UGC_PV}"
 UGC_URL="https://github.com/Eloston/${PN}/archive/"
-UGC_COMMIT_ID="43fbd1d76cda2367dbb869e4984ada276833cf5e"
+UGC_COMMIT_ID="b78cb927fa8beaee0ddfb4385277edb96444c40f"
 
 if [ -z "$UGC_COMMIT_ID" ]
 then
@@ -37,7 +37,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/chro
 LICENSE="BSD"
 SLOT="0"
 # KEYWORDS="amd64 ~x86"
-IUSE="cfi +clang closure-compile convert-dict cups custom-cflags enable-driver hangouts headless kerberos +official optimize-thinlto optimize-webui +proprietary-codecs pulseaudio selinux suid +system-ffmpeg +system-harfbuzz +system-icu +system-jsoncpp +system-libevent +system-libvpx +system-openh264 system-openjpeg +tcmalloc thinlto vaapi vdpau wayland widevine"
+IUSE="cfi +clang closure-compile convert-dict cups custom-cflags enable-driver hangouts headless kerberos +official optimize-thinlto optimize-webui pgo +proprietary-codecs pulseaudio selinux suid +system-ffmpeg +system-harfbuzz +system-icu +system-jsoncpp +system-libevent +system-libvpx +system-openh264 system-openjpeg +system-re2 +tcmalloc thinlto vaapi vdpau wayland widevine"
 RESTRICT="
 	!system-ffmpeg? ( proprietary-codecs? ( bindist ) )
 	!system-openh264? ( bindist )
@@ -48,6 +48,7 @@ REQUIRED_USE="
 	thinlto? ( clang )
 	optimize-thinlto? ( thinlto )
 	cfi? ( thinlto )
+	pgo? ( clang )
 	x86? ( !thinlto )
 "
 
@@ -129,7 +130,7 @@ COMMON_DEPEND="
 	system-openjpeg? ( media-libs/openjpeg:2= )
 	app-arch/snappy:=
 	dev-libs/libxslt:=
-	>=dev-libs/re2-0.2019.08.01:=
+	system-re2? ( dev-libs/re2:= )
 	>=media-libs/openh264-1.6.0:=
 	system-icu? ( >=dev-libs/icu-67.1:= )
 "
@@ -319,9 +320,13 @@ src_prepare() {
 		ewarn "Keeping binary compiler.jar in sources tree for closure-compile"
 		sed -i '\!third_party/closure_compiler/compiler/compiler.jar!d' "${ugc_pruning_list}" || die
 	fi
+	if use pgo; then
+		ewarn "Keeping binary profile data in sources tree for pgo"
+		sed -i '\!chrome/build/pgo_profiles/.*!d' "${ugc_pruning_list}" || die
+	fi
 
 	ebegin "Pruning binaries"
-	# "${UGC_WD}/utils/prune_binaries.py" -q . "${UGC_WD}/pruning.list"
+	"${UGC_WD}/utils/prune_binaries.py" -q . "${UGC_WD}/pruning.list"
 	eend $? || die
 
 	ebegin "Applying ungoogled-chromium patches"
@@ -654,8 +659,10 @@ src_configure() {
 	use system-openh264 && gn_system_libraries+=(
 		openh264
 	)
-	gn_system_libraries+=(
+	use system-re2 && gn_system_libraries+=(
 		re2
+	)
+	gn_system_libraries+=(
 		snappy
 		zlib
 	)
@@ -697,6 +704,10 @@ src_configure() {
 	if use cfi; then
 		myconf_gn+=" use_cfi_icall=true"
 		myconf_gn+=" use_cfi_cast=true"
+	fi
+
+	if ! use pgo; then
+		myconf_gn+=" chrome_pgo_phase=0"
 	fi
 
 	myconf_gn+=" use_thin_lto=$(usex thinlto true false)"
@@ -870,9 +881,6 @@ src_configure() {
 		# Allow building against system libraries in official builds
 		sed -i 's/OFFICIAL_BUILD/GOOGLE_CHROME_BUILD/' \
 			tools/generate_shim_headers/generate_shim_headers.py || die
-		# Disable PGO, because profile data is missing in tarball
-		# (https://groups.google.com/a/chromium.org/g/chromium-packagers/c/2ID9c4j6UkY)
-		# myconf_gn+=" chrome_pgo_phase=0"
 	fi
 
 	# Facilitate deterministic builds (taken from build/config/compiler/BUILD.gn)
