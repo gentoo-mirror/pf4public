@@ -22,14 +22,20 @@ VALA_USE_DEPEND="vapigen"
 
 LICENSE="GPL-3"
 SLOT="0"
-IUSE="doc +manager nautilus nemo reproducible thunar +viewer +nls"
+IUSE="doc gnome-search-provider google-fonts +manager nautilus nemo reproducible thunar +viewer +nls"
 
 RDEPEND="gnome-base/gnome-common
-	dev-libs/json-glib
+	>=dev-db/sqlite-3.8
+	>=dev-libs/json-glib-0.15
 	>=dev-libs/libxml2-2.9
+	>=media-libs/fontconfig-2.1
 	>=media-libs/freetype-2.5
 	>=x11-libs/gtk+-3.22
-	>=dev-db/sqlite-3.8
+	>=x11-libs/pango-1.4
+	google-fonts? (
+		>=net-libs/libsoup-2.62
+		>=net-libs/webkit-gtk-2.24
+	)
 	nautilus? ( gnome-base/nautilus )
 	nemo? ( gnome-extra/nemo )
 	thunar? ( xfce-base/thunar )
@@ -37,9 +43,10 @@ RDEPEND="gnome-base/gnome-common
 
 DEPEND="${RDEPEND}
 	$(vala_depend)
-	dev-util/ninja
-	dev-util/meson
-	doc? ( app-text/yelp-tools )
+	doc? (
+		app-text/yelp-tools
+		dev-util/gtk-doc
+	)
 "
 
 src_prepare() {
@@ -56,7 +63,10 @@ src_configure() {
 		$(meson_use nautilus) \
 		$(meson_use nemo) \
 		$(meson_use thunar) \
-		-Denable-nls=$(usex nls true false) \
-		-Dyelp-doc=$(usex doc true false) \
+		$(meson_use gnome-search-provider search-provider) \
+		$(meson_use google-fonts webkit) \
+		$(meson_use nls enable-nls) \
+		$(meson_use doc yelp-doc) \
+		$(meson_use doc gtk-doc) \
 		--buildtype=release
 }
