@@ -9,4 +9,4 @@ LICENSE=MIT
 RDEPEND=
 SLOT=0
 SRC_URI=https://github.com/StevenBlack/hosts/archive/3.2.12.tar.gz -> sb-hosts-3.2.12.tar.gz
-_md5_=074154fcedfdef6ccdc0b7162b64f991
+_md5_=e24f36937cdc47f7464831132d947d5d
