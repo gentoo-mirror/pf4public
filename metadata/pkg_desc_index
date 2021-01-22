@@ -7,5 +7,5 @@ media-plugins/deadbeef-waveform-seekbar 9999: Waveform Seekbar plugin for DeaDBe
 net-misc/sb-hosts 3.3.3 3.3.4 9999: A hosts file from several well-curated sources
 sys-kernel/linux-image 4.4.240 4.4.241 4.4.242 4.4.243 4.4.244 4.4.245 4.4.246 4.4.247 4.9.240 4.9.241 4.9.242 4.9.243 4.9.246 4.9.247 4.14.202 4.14.205 4.14.206 4.14.209 4.14.210 4.19.152 4.19.156 4.19.157 4.19.160 4.19.161 5.4.72 5.4.76 5.4.77 5.4.80-r1 5.4.81 5.8.18 5.9.6 5.9.7 5.9.8 5.9.11 5.9.12: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
-www-client/ungoogled-chromium 87.0.4280.141_p1 88.0.4324.96-r1: Modifications to Chromium for removing Google integration and enhancing privacy
+www-client/ungoogled-chromium 87.0.4280.141_p1 88.0.4324.96-r1 88.0.4324.104-r1: Modifications to Chromium for removing Google integration and enhancing privacy
 www-client/ungoogled-chromium-bin 87.0.4280.141_p1: Modifications to Chromium for removing Google integration and enhancing privacy
