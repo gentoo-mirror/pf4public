@@ -14,7 +14,7 @@ inherit check-reqs chromium-2 desktop flag-o-matic multilib ninja-utils pax-util
 UGC_PVR="${PVR/r}"
 UGC_PF="${PN}-${UGC_PVR}"
 UGC_URL="https://github.com/Eloston/${PN}/archive/"
-UGC_COMMIT_ID="a9140d5b6fdf0dc308c385bc69668be8f85deb4c"
+# UGC_COMMIT_ID="a9140d5b6fdf0dc308c385bc69668be8f85deb4c"
 
 if [ -z "$UGC_COMMIT_ID" ]
 then
@@ -224,6 +224,13 @@ pkg_pretend() {
 	if use custom-cflags && [[ "${MERGE_TYPE}" != binary ]]; then
 		ewarn
 		ewarn "USE=custom-cflags bypasses strip-flags"
+		ewarn "Consider disabling this USE flag if something breaks"
+		ewarn
+	fi
+	if use system-libvpx; then
+		ewarn
+		ewarn "Chromium is notorious of relying upon the newest libvpx"
+		ewarn "that is absent from Gentoo, which might result in build failure"
 		ewarn "Consider disabling this USE flag if something breaks"
 		ewarn
 	fi
