@@ -8,4 +8,4 @@ net-misc/sb-hosts 3.3.9 3.3.10 9999: A hosts file from several well-curated sour
 sys-kernel/linux-image 4.4.246 4.4.251 4.4.252 4.4.253 4.4.254 4.9.246 4.9.251 4.9.252 4.9.253 4.9.254 4.14.209 4.14.215 4.14.216 4.14.217 4.14.218 4.19.160 4.19.168 4.19.169 4.19.170 4.19.171 4.19.172 5.4.80-r1 5.4.90 5.4.91 5.4.92 5.4.93 5.4.94 5.10.8 5.10.9 5.10.10 5.10.11 5.10.12: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
 www-client/ungoogled-chromium 88.0.4324.96-r1 88.0.4324.146-r1: Modifications to Chromium for removing Google integration and enhancing privacy
-www-client/ungoogled-chromium-bin 88.0.4324.96: Modifications to Chromium for removing Google integration and enhancing privacy
+www-client/ungoogled-chromium-bin 88.0.4324.146: Modifications to Chromium for removing Google integration and enhancing privacy
