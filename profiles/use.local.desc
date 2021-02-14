@@ -22,7 +22,6 @@ app-misc/font-manager:viewer - Build font-viewer
 dev-util/electron:clang - Use Clang compiler instead of GCC
 dev-util/electron:closure-compile - Enable closure type-checking for Chrome's web technology-based UI. Requires Java and bundled binary compiler.jar in sources tree
 dev-util/electron:enable-driver - Build chromedriver
-dev-util/electron:gnome - Improve integration with GIO (libgio).
 dev-util/electron:hangouts - Enable support for Google Hangouts features such as screen sharing
 dev-util/electron:optimize-thinlto - Whether to enable ThinLTO optimizations. Turning ThinLTO optimizations on can substantially increase link time and binary size, but they generally also make binaries a fair bit faster.
 dev-util/electron:optimize-webui - Optimize parts of Chromium's UI written with web technologies (HTML/CSS/JS) for runtime performance purposes. This does more work at compile time for speed benefits at runtime.
