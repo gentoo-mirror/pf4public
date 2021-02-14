@@ -36,6 +36,7 @@ dev-util/electron:system-openh264 - Use the system media-libs/openh264 instead o
 dev-util/electron:system-openjpeg - Use the system-wide media-libs/openjpeg instead of bundled. OpenJPEG use are exclusively for Chromium's PDF viewer.
 dev-util/electron:tcmalloc - Use bundled tcmalloc instead of system malloc.
 dev-util/electron:thinlto - Build with ThinLTO support. LTO (Link Time Optimization) achieves better runtime performance through whole-program analysis and cross-module optimization (highly recommended).
+net-im/element-web:build-online - If yarn fails with cached dependencies, it is possible to temporarily allow networking during build with USE="build-online" FEATURES="-network-sandbox" emerge
 net-misc/sb-hosts:fakenews - Add fake news sites
 net-misc/sb-hosts:gambling - Add common online betting sites
 net-misc/sb-hosts:porn - Add porn sites
