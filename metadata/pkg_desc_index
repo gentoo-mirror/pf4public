@@ -6,6 +6,7 @@ dev-python/ewmh 0.1.6: An implementation of Extended Window Manager Hints, based
 dev-python/pulsectl 20.5.1: High-level interface and ctypes-based bindings for PulseAudio
 dev-util/electron 11.2.2 11.2.3: Cross platform application development framework based on web technologies
 media-plugins/deadbeef-waveform-seekbar 9999: Waveform Seekbar plugin for DeaDBeeF audio player
+net-im/element-desktop 1.7.20: A glossy Matrix collaboration client for desktop
 net-im/element-web 1.7.20: A glossy Matrix collaboration client for the web
 net-misc/sb-hosts 3.3.13 3.3.14 9999: A hosts file from several well-curated sources
 sys-kernel/linux-image 4.4.246 4.4.251 4.4.252 4.4.253 4.4.254 4.4.255 4.4.256 4.4.257 4.9.246 4.9.251 4.9.252 4.9.253 4.9.254 4.9.255 4.9.256 4.9.257 4.14.209 4.14.215 4.14.216 4.14.217 4.14.218 4.14.219 4.14.220 4.14.221 4.19.160 4.19.168 4.19.169 4.19.170 4.19.171 4.19.172 4.19.173 4.19.174 4.19.175 5.4.80-r1 5.4.90 5.4.91 5.4.92 5.4.93 5.4.94 5.4.95 5.4.96 5.4.97 5.10.8 5.10.9 5.10.10 5.10.11 5.10.12 5.10.13 5.10.14 5.10.15: linux-image ebuild is used to build linux kernel image using savedconfig
