@@ -38,7 +38,7 @@ dev-util/electron:tcmalloc - Use bundled tcmalloc instead of system malloc.
 dev-util/electron:thinlto - Build with ThinLTO support. LTO (Link Time Optimization) achieves better runtime performance through whole-program analysis and cross-module optimization (highly recommended).
 net-im/element-desktop:build-online - Disable network-sandbox and open Pandora's box!
 net-im/element-desktop:native-modules - Build native modules (for searching in encrypted rooms and secure storage)
-net-im/element-web:build-online - If yarn fails with cached dependencies, it is possible to temporarily allow networking during build with USE="build-online" FEATURES="-network-sandbox" emerge
+net-im/element-web:build-online - Disable network-sandbox and open Pandora's box!
 net-misc/sb-hosts:fakenews - Add fake news sites
 net-misc/sb-hosts:gambling - Add common online betting sites
 net-misc/sb-hosts:porn - Add porn sites
