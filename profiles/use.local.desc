@@ -4,7 +4,7 @@
 
 app-admin/gb-chroot:host - Enable this on a chroot host
 app-editors/vscode:badge-providers - Allow various badge providers
-app-editors/vscode:build-online - If yarn fails with cached dependencies, it is possible to temporarily allow networking during build with USE="build-online" FEATURES="-network-sandbox" emerge
+app-editors/vscode:build-online - Disable network-sandbox and open Pandora's box!
 app-editors/vscode:builtin-extensions - Download and install builtin extensions from Visual Studio Marketplace
 app-editors/vscode:ignore-gpu-blacklist - Append --ignore-gpu-blacklist to commandline
 app-editors/vscode:insiders - Allow insiders API !WARNING! Enabling this might be illegal!
