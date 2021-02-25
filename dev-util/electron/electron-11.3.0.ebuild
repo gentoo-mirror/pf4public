@@ -1380,6 +1380,7 @@ src_prepare() {
 	pushd "${WORKDIR}/${P}" > /dev/null || die
 	sed -i '/test\/mjsunit/Q' "patches/v8/merged_deoptimizer_stricter_checks_during_deoptimization.patch" || die
 	sed -i '/test\/mjsunit/Q' "patches/v8/cherry-pick-36abafa0a316.patch" || die
+	sed -i '/test\/mjsunit/Q' "patches/v8/merged_interpreter_store_accumulator_to_callee_after_optional.patch" || die
 	sed -i '/web_tests/Q' "patches/chromium/add_restrictions_to_allowed_extensions_for_file_system_access_api.patch" || die
 	popd > /dev/null || die
 
@@ -1423,6 +1424,7 @@ src_prepare() {
 		["electron/patches/node"]="third_party/electron_node"
 		["electron/patches/sqlite"]="third_party/sqlite/src"
 		["electron/patches/icu"]="third_party/icu"
+		["electron/patches/skia"]="third_party/skia"
 		["electron/patches/usrsctp"]="third_party/usrsctp/usrsctplib"
 	)
 	for patch_folder in "${!patches[@]}";
@@ -1434,6 +1436,7 @@ src_prepare() {
 			if [ "$i" = "cherry-pick-2f5b8357dca2.patch" ] ||
 				[ "$i" = "cherry-pick-5c7ad5393f74.patch" ] ||
 				[ "$i" = "cherry-pick-47e21abe349a.patch" ] ||
+				[ "$i" = "cherry-pick-5902d1aa722a.patch" ] ||
 				[ "$i" = "cherry-pick-8f5a08079948.patch" ]; then
 				einfo "Skipping ${i}"
 				continue;
