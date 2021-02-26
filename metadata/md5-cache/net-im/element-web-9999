@@ -10,4 +10,4 @@ RESTRICT=mirror build-online? ( network-sandbox )
 SLOT=0
 SRC_URI=!build-online? ( https://github.com/matrix-org/matrix-react-sdk/archive/v3.13.1.tar.gz -> matrix-react-sdk-v3.13.1.tar.gz https://github.com/matrix-org/matrix-js-sdk/archive/v9.6.0.tar.gz -> matrix-js-sdk-v9.6.0.tar.gz )
 _eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441
-_md5_=217cb5acecde34eed35c592832497734
+_md5_=a5a8dfef867ad5e394900d3ee99c4980
