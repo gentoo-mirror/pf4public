@@ -56,6 +56,7 @@ www-client/ungoogled-chromium:optimize-thinlto - Whether to enable ThinLTO optim
 www-client/ungoogled-chromium:optimize-webui - Optimize parts of Chromium's UI written with web technologies (HTML/CSS/JS) for runtime performance purposes. This does more work at compile time for speed benefits at runtime.
 www-client/ungoogled-chromium:pgo - Enable PGO. Requires clnang and bundled binary profile data in sources tree.
 www-client/ungoogled-chromium:proprietary-codecs - Enable proprietary codecs like H.264, MP3
+www-client/ungoogled-chromium:screencast - Enable support for remote desktop and screen cast using media-video/pipewire
 www-client/ungoogled-chromium:suid - Build the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels
 www-client/ungoogled-chromium:system-ffmpeg - Use the system media-video/ffmpeg instead of the bundled one
 www-client/ungoogled-chromium:system-harfbuzz - Use the system media-libs/harfbuzz instead of the bundled one
