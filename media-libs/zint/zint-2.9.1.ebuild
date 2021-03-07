@@ -42,10 +42,10 @@ src_prepare(){
 }
 
 src_install() {
-	default
+	cmake_src_install
 
 	if use qt5; then
-		insinto /usr/share/
+		insinto /usr/share/applications/
 		doins *.desktop
 	fi
 }
