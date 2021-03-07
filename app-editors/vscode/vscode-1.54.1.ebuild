@@ -17,7 +17,7 @@ if [[ ${PV} = *9999* ]]; then
 	IUSE="badge-providers +build-online builtin-extensions ignore-gpu-blacklist insiders liveshare openvsx substitute-urls"
 else
 	IUSE="badge-providers build-online builtin-extensions ignore-gpu-blacklist insiders liveshare openvsx substitute-urls"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 ~x86"
 	DOWNLOAD="${REPO}/archive/"
 	if [ -z "$CODE_COMMIT_ID" ]
 	then
@@ -1832,8 +1832,8 @@ src_prepare() {
 
 	einfo "Editing dirs.js"
 	sed -i '/remote/d' build/npm/dirs.js || die
-	sed -i '/emmet/d' build/npm/dirs.js || die
-	rm -rf extensions/emmet
+	#sed -i '/emmet/d' build/npm/dirs.js || die
+	#rm -rf extensions/emmet
 	sed -i '/test\/automation/d' build/npm/dirs.js || die
 	sed -i '/test\/integration\/browser/d' build/npm/dirs.js || die
 	sed -i '/test\/smoke/d' build/npm/dirs.js || die
