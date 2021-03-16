@@ -1,5 +1,5 @@
 app-admin/gb-chroot 0.9 0.10 9999: gb-chroot is a collection of scripts for building Gentoo's binpkgs
-app-editors/vscode 1.54.2 9999: Visual Studio Code - Open Source
+app-editors/vscode 1.54.2 1.54.3 9999: Visual Studio Code - Open Source
 app-eselect/eselect-electron 0.2: Utility to select the default Electron slot
 app-misc/font-manager 0.8.3 0.8.4 9999: A simple font management application for Gtk+ Desktop Environments
 dev-python/ewmh 0.1.6: An implementation of Extended Window Manager Hints, based on Xlib
@@ -8,8 +8,8 @@ dev-util/electron 11.3.0: Cross platform application development framework based
 media-libs/zint 2.9.1 9999: Barcode encoding library supporting over 50 symbologies
 media-plugins/deadbeef-waveform-seekbar 9999: Waveform Seekbar plugin for DeaDBeeF audio player
 net-im/element-desktop 1.7.22 9999: A glossy Matrix collaboration client for desktop
-net-im/element-web 1.7.22 9999: A glossy Matrix collaboration client for the web
-net-misc/sb-hosts 3.4.6 3.5.0 9999: A hosts file from several well-curated sources
+net-im/element-web 1.7.23 9999: A glossy Matrix collaboration client for the web
+net-misc/sb-hosts 3.5.0 3.5.1 9999: A hosts file from several well-curated sources
 sys-kernel/linux-image 4.4.246 4.4.251 4.4.252 4.4.253 4.4.254 4.4.255 4.4.256 4.4.257 4.9.246 4.9.251 4.9.252 4.9.253 4.9.254 4.9.255 4.9.256 4.9.257 4.14.209 4.14.215 4.14.216 4.14.217 4.14.218 4.14.219 4.14.220 4.14.221 4.19.160 4.19.168 4.19.169 4.19.170 4.19.171 4.19.172 4.19.173 4.19.174 4.19.175 5.4.80-r1 5.4.90 5.4.91 5.4.92 5.4.93 5.4.94 5.4.95 5.4.96 5.4.97 5.10.8 5.10.9 5.10.10 5.10.11 5.10.12 5.10.13 5.10.14 5.10.15: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
 www-client/ungoogled-chromium 89.0.4389.90-r1: Modifications to Chromium for removing Google integration and enhancing privacy
