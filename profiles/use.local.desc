@@ -54,7 +54,7 @@ www-client/ungoogled-chromium:headless - Build Ozone only with headless backend,
 www-client/ungoogled-chromium:official - Enable Official build instead of Developer build.
 www-client/ungoogled-chromium:optimize-thinlto - Whether to enable ThinLTO optimizations. Turning ThinLTO optimizations on can substantially increase link time and binary size, but they generally also make binaries a fair bit faster.
 www-client/ungoogled-chromium:optimize-webui - Optimize parts of Chromium's UI written with web technologies (HTML/CSS/JS) for runtime performance purposes. This does more work at compile time for speed benefits at runtime.
-www-client/ungoogled-chromium:pgo - Enable PGO. Requires clnang and bundled binary profile data in sources tree.
+www-client/ungoogled-chromium:pgo - Enable PGO. Requires clang and bundled binary profile data in sources tree.
 www-client/ungoogled-chromium:proprietary-codecs - Enable proprietary codecs like H.264, MP3
 www-client/ungoogled-chromium:screencast - Enable support for remote desktop and screen cast using media-video/pipewire
 www-client/ungoogled-chromium:suid - Build the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels
