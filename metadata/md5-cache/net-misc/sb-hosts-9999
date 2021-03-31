@@ -3,11 +3,12 @@ DEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DESCRIPTION=A hosts file from several well-curated sources
 EAPI=6
 HOMEPAGE=https://github.com/StevenBlack/hosts
+INHERIT=git-r3
 IUSE=fakenews gambling porn social
 KEYWORDS=~amd64 ~x86
 LICENSE=MIT
 PROPERTIES=live
 RDEPEND=
 SLOT=0
-_eclasses_=git-r3	3e7ec3d6619213460c85e2aa48398441
+_eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52
 _md5_=e24f36937cdc47f7464831132d947d5d
