@@ -27,9 +27,9 @@ if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="${REPO}.git"
 	DOWNLOAD=""
-	IUSE="badge-providers +build-online builtin-extensions ignore-gpu-blacklist insiders liveshare openvsx substitute-urls"
+	IUSE="badge-providers +build-online ignore-gpu-blacklist insiders liveshare openvsx substitute-urls"
 else
-	IUSE="badge-providers build-online builtin-extensions ignore-gpu-blacklist insiders liveshare openvsx substitute-urls"
+	IUSE="badge-providers build-online ignore-gpu-blacklist insiders liveshare openvsx substitute-urls"
 	KEYWORDS="~amd64 ~x86"
 	DOWNLOAD="${REPO}/archive/"
 	if [ -z "$CODE_COMMIT_ID" ]
@@ -41,22 +41,7 @@ else
 	fi
 fi
 
-declare -A builtin_exts=(
-	["node-debug"]="1.44.17"
-	["node-debug2"]="1.42.5"
-	["references-view"]="0.0.77"
-	["js-debug-companion"]="1.0.9"
-	["js-debug"]="1.54.4"
-	["vscode-js-profile-table"]="0.0.11"
-	["remotehub"]="0.1.0"
-)
-SRC_URI+="${DOWNLOAD}
-builtin-extensions? ("
-for ext in "${!builtin_exts[@]}";
-do
-	SRC_URI+=" https://marketplace.visualstudio.com/_apis/public/gallery/publishers/ms-vscode/vsextensions/${ext}/${builtin_exts[${ext}]}/vspackage -> ms-vscode.${ext}-${builtin_exts[${ext}]}.zip.gz "
-done
-SRC_URI+=") "
+SRC_URI+="${DOWNLOAD}"
 
 RESTRICT="mirror build-online? ( network-sandbox )"
 
@@ -284,20 +269,6 @@ src_install() {
 	doexe "${WORKDIR}"/VSCode-linux-${VSCODE_ARCH}/bin/code-oss
 	dosym "${VSCODE_HOME}/code-oss" /usr/bin/code-oss
 
-	if use builtin-extensions
-	then
-	einfo "Installing builtin extensions"
-	pushd "${T}" > /dev/null || die
-	for ext in "${!builtin_exts[@]}";
-	do
-		cp "${DISTDIR}/ms-vscode.${ext}-${builtin_exts[${ext}]}.zip.gz" "${T}" || die
-		gunzip "ms-vscode.${ext}-${builtin_exts[${ext}]}.zip.gz" || die
-		unzip "ms-vscode.${ext}-${builtin_exts[${ext}]}.zip" extension/* > /dev/null || die
-		mv extension "${WORKDIR}/VSCode-linux-${VSCODE_ARCH}/extensions/ms-vscode.${ext}" || die
-	done
-	popd > /dev/null || die
-	fi
-
 	insinto "${VSCODE_HOME}"
 	doins -r "${WORKDIR}"/VSCode-linux-${VSCODE_ARCH}/extensions
 	doins -r "${WORKDIR}"/VSCode-linux-${VSCODE_ARCH}/out
@@ -325,6 +296,11 @@ pkg_postinst() {
 		ewarn "this might be against Microsoft licensing terms."
 		ewarn
 	fi
+
+	elog
+	elog "normally vscode ships some builtin extensions"
+	elog "You may install them manually if you need them"
+	elog
 }
 
 pkg_postrm() {
