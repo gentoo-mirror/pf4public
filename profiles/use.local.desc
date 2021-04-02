@@ -24,6 +24,7 @@ dev-util/electron:enable-driver - Build chromedriver
 dev-util/electron:hangouts - Enable support for Google Hangouts features such as screen sharing
 dev-util/electron:optimize-thinlto - Whether to enable ThinLTO optimizations. Turning ThinLTO optimizations on can substantially increase link time and binary size, but they generally also make binaries a fair bit faster.
 dev-util/electron:optimize-webui - Optimize parts of Chromium's UI written with web technologies (HTML/CSS/JS) for runtime performance purposes. This does more work at compile time for speed benefits at runtime.
+dev-util/electron:pgo - Enable PGO
 dev-util/electron:proprietary-codecs - Enable proprietary codecs like H.264, MP3.
 dev-util/electron:system-ffmpeg - Use the system media-video/ffmpeg instead of bundled.
 dev-util/electron:system-harfbuzz - Use the system media-libs/harfbuzz instead of bundled.
