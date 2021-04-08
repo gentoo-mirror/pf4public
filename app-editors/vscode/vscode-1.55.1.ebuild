@@ -147,6 +147,7 @@ SRC_URI="!build-online? (
 	https://registry.yarnpkg.com/bindings/-/bindings-1.3.0.tgz
 	https://registry.yarnpkg.com/bindings/-/bindings-1.5.0.tgz
 	https://registry.yarnpkg.com/bl/-/bl-4.0.3.tgz
+	https://registry.yarnpkg.com/bl/-/bl-4.1.0.tgz
 	https://registry.yarnpkg.com/block-stream/-/block-stream-0.0.9.tgz
 	https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz
 	https://registry.yarnpkg.com/bn.js/-/bn.js-4.12.0.tgz
@@ -171,8 +172,8 @@ SRC_URI="!build-online? (
 	https://registry.yarnpkg.com/buffer-alloc/-/buffer-alloc-1.2.0.tgz
 	https://registry.yarnpkg.com/buffer-alloc-unsafe/-/buffer-alloc-unsafe-1.1.0.tgz
 	https://registry.yarnpkg.com/buffer/-/buffer-4.9.2.tgz
-	https://registry.yarnpkg.com/buffer/-/buffer-5.5.0.tgz
 	https://registry.yarnpkg.com/buffer/-/buffer-5.6.0.tgz
+	https://registry.yarnpkg.com/buffer/-/buffer-5.7.1.tgz
 	https://registry.yarnpkg.com/buffer-crc32/-/buffer-crc32-0.2.13.tgz
 	https://registry.yarnpkg.com/buffer-equal/-/buffer-equal-1.0.0.tgz
 	https://registry.yarnpkg.com/buffer-fill/-/buffer-fill-1.0.0.tgz
@@ -923,6 +924,7 @@ SRC_URI="!build-online? (
 	https://registry.yarnpkg.com/next-tick/-/next-tick-1.1.0.tgz
 	https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz
 	https://registry.yarnpkg.com/node-abi/-/node-abi-2.19.3.tgz
+	https://registry.yarnpkg.com/node-abi/-/node-abi-2.21.0.tgz
 	https://registry.yarnpkg.com/node-abort-controller/-/node-abort-controller-1.1.0.tgz
 	https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-3.0.2.tgz
 	https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-3.1.0.tgz
@@ -1113,7 +1115,7 @@ SRC_URI="!build-online? (
 	https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-3.3.1.tgz
 	https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.0.2.tgz
 	https://registry.yarnpkg.com/postcss-value-parser/-/postcss-value-parser-4.1.0.tgz
-	https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-6.0.0.tgz
+	https://registry.yarnpkg.com/prebuild-install/-/prebuild-install-6.1.1.tgz
 	https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz
 	https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz
 	https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz
@@ -1311,7 +1313,6 @@ SRC_URI="!build-online? (
 	https://registry.yarnpkg.com/stream-to-array/-/stream-to-array-2.3.0.tgz
 	https://registry.yarnpkg.com/string_decoder/-/string_decoder-0.10.31.tgz
 	https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.1.1.tgz
-	https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.2.0.tgz
 	https://registry.yarnpkg.com/string_decoder/-/string_decoder-1.3.0.tgz
 	https://registry.yarnpkg.com/string.prototype.padend/-/string.prototype.padend-3.1.1.tgz
 	https://registry.yarnpkg.com/string.prototype.trimend/-/string.prototype.trimend-1.0.3.tgz
@@ -1350,7 +1351,7 @@ SRC_URI="!build-online? (
 	https://registry.yarnpkg.com/table/-/table-5.4.6.tgz
 	https://registry.yarnpkg.com/tapable/-/tapable-1.1.3.tgz
 	https://registry.yarnpkg.com/tar-fs/-/tar-fs-2.1.1.tgz
-	https://registry.yarnpkg.com/tar-stream/-/tar-stream-2.1.4.tgz
+	https://registry.yarnpkg.com/tar-stream/-/tar-stream-2.2.0.tgz
 	https://registry.yarnpkg.com/tar/-/tar-2.2.1.tgz
 	https://registry.yarnpkg.com/tar/-/tar-6.0.5.tgz
 	https://registry.yarnpkg.com/tas-client-umd/-/tas-client-umd-0.1.4.tgz
@@ -1615,7 +1616,7 @@ SRC_URI="!build-online? (
 	https://registry.yarnpkg.com/vscode-nls/-/vscode-nls-4.1.2.tgz
 	https://registry.yarnpkg.com/vscode-nls/-/vscode-nls-5.0.0.tgz
 	https://registry.yarnpkg.com/vscode-oniguruma/-/vscode-oniguruma-1.3.1.tgz
-	https://registry.yarnpkg.com/vscode-proxy-agent/-/vscode-proxy-agent-0.8.1.tgz
+	https://registry.yarnpkg.com/vscode-proxy-agent/-/vscode-proxy-agent-0.8.2.tgz
 	https://registry.yarnpkg.com/vscode-regexpp/-/vscode-regexpp-3.1.0.tgz
 	https://registry.yarnpkg.com/vscode-ripgrep/-/vscode-ripgrep-1.11.1.tgz
 	https://registry.yarnpkg.com/vscode-sqlite3/-/vscode-sqlite3-4.0.10.tgz
@@ -1655,7 +1656,6 @@ SRC_URI="!build-online? (
 	https://registry.yarnpkg.com/when/-/when-3.7.8.tgz
 	https://registry.yarnpkg.com/which-module/-/which-module-1.0.0.tgz
 	https://registry.yarnpkg.com/which-module/-/which-module-2.0.0.tgz
-	https://registry.yarnpkg.com/which-pm-runs/-/which-pm-runs-1.0.0.tgz
 	https://registry.yarnpkg.com/which-pm/-/which-pm-2.0.0.tgz
 	https://registry.yarnpkg.com/which/-/which-1.3.0.tgz
 	https://registry.yarnpkg.com/which/-/which-1.3.1.tgz
