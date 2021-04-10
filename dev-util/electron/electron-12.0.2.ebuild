@@ -1362,10 +1362,9 @@ src_prepare() {
 	eapply "${FILESDIR}/openssl_fips-r2.patch" || die
 	popd > /dev/null || die
 
-	# pushd "${WORKDIR}/${P}" > /dev/null || die
-	# sed -i '/web_tests/Q' "patches/chromium/add_restrictions_to_allowed_extensions_for_file_system_access_api.patch" || die
-	# sed -i '/web_tests/Q' "patches/chromium/add_restrictions_to_allowed_extensions_for_file_system_access_api.patch" || die
-	# popd > /dev/null || die
+	pushd "${WORKDIR}/${P}" > /dev/null || die
+	sed -i '/web_tests/Q' "patches/chromium/word_break_between_space_and_alphanumeric.patch" || die
+	popd > /dev/null || die
 
 	use custom-cflags || rm "${WORKDIR}/patches/chromium-88-compiler.patch" || die
 
@@ -1408,10 +1407,11 @@ src_prepare() {
 		einfo "- ${patch_folder}"
 		for i in "${topatch[@]}";
 		do
-			# if [ "$i" = "cherry-pick-8f5a08079948.patch" ]; then
-			# 	einfo "Skipping ${i}"
-			# 	continue;
-			# fi
+			if [ "$i" = "cherry-pick-5902d1aa722a.patch" ] ||
+				[ "$i" = "cherry-pick-5c7ad5393f74.patch" ]; then
+				einfo "Skipping ${i}"
+				continue;
+			fi
 			# if [ "$i" = "fix_apply_tzdata2020f_to_icu.patch" ]; then
 			# 	einfo "Git binary patch: ${i}"
 			# 	pushd "${patches[$patch_folder]}" > /dev/null || die
