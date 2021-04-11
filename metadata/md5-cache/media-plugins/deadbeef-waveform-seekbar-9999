@@ -9,4 +9,4 @@ PROPERTIES=live
 RDEPEND=dev-db/sqlite:3 media-sound/deadbeef
 SLOT=0
 _eclasses_=git-r3	b8e8c92aa5fe8df7187e466138eb4e52
-_md5_=8c7d2730ef7168b4972629ce41e1feba
+_md5_=7e6062d3bdba08a58f55d88898982549
