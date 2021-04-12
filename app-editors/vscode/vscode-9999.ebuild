@@ -11,16 +11,17 @@ DESCRIPTION="Visual Studio Code - Open Source"
 HOMEPAGE="https://github.com/microsoft/vscode"
 LICENSE="MIT"
 SLOT="0"
+VS_RIPGREP_V="1.11.3"
 SRC_URI="!build-online? (
 	https://registry.yarnpkg.com/esbuild/-/esbuild-0.8.30.tgz
 	https://registry.npmjs.org/esbuild-linux-64/-/esbuild-linux-64-0.8.30.tgz
 	https://registry.npmjs.org/esbuild-linux-32/-/esbuild-linux-32-0.8.30.tgz
 	)
-	https://registry.yarnpkg.com/vscode-ripgrep/-/vscode-ripgrep-1.11.1.tgz
+	https://registry.yarnpkg.com/vscode-ripgrep/-/vscode-ripgrep-${VS_RIPGREP_V}.tgz
 "
 
 REPO="https://github.com/microsoft/vscode"
-ELECTRON_SLOT="12"
+ELECTRON_SLOT="11"
 #CODE_COMMIT_ID="ae245c9b1f06e79cec4829f8cd1555206b0ec8f2"
 
 if [[ ${PV} = *9999* ]]; then
@@ -41,8 +42,7 @@ else
 	fi
 fi
 
-SRC_URI+="${DOWNLOAD}
-	${REPO}/commit/f95b7e935f0edf1b41a2195fbe380078b29ab8f8.patch -> ${PN}-f95b7e935f0edf1b41a2195fbe380078b29ab8f8.patch"
+SRC_URI+="${DOWNLOAD}"
 
 RESTRICT="mirror build-online? ( network-sandbox )"
 
@@ -82,10 +82,8 @@ src_unpack() {
 src_prepare() {
 	default
 
-	#! delme ------✁------
-	einfo "Restoring electron 12 support"
-	patch -Rup1 -i "${DISTDIR}/${PN}-f95b7e935f0edf1b41a2195fbe380078b29ab8f8.patch" || die
-	#! delme ------✁------
+	# einfo "Restoring electron 12 support"
+	# patch -Rup1 -i "${DISTDIR}/${PN}-f95b7e935f0edf1b41a2195fbe380078b29ab8f8.patch" || die
 
 	einfo "Removing vscode-ripgrep and other dependencies"
 	sed -i '/"vscode-ripgrep"/d' package.json || die
@@ -207,13 +205,13 @@ src_configure() {
 
 	einfo "Restoring vscode-ripgrep"
 	pushd node_modules > /dev/null || die
-	tar -xf "${DISTDIR}/vscode-ripgrep-1.11.1.tgz"
+	tar -xf "${DISTDIR}/vscode-ripgrep-${VS_RIPGREP_V}.tgz"
 	mv package vscode-ripgrep
 	sed -i 's$module.exports.rgPath.*$module.exports.rgPath = "/usr/bin/rg";\n$' vscode-ripgrep/lib/index.js || die
 	sed -i '/"postinstall"/d' vscode-ripgrep/package.json || die
 	popd > /dev/null || die
 	eend $? || die
-	sed -i 's/"dependencies": {/"dependencies": {"vscode-ripgrep": "^1.11.1",/' package.json || die
+	sed -i "s/\"dependencies\": {/\"dependencies\": {\"vscode-ripgrep\": \"^${VS_RIPGREP_V}\",/" package.json || die
 
 	if ! use build-online; then
 	einfo "Restoring esbuild"
