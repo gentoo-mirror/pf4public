@@ -25,17 +25,17 @@ dev-util/electron:js-type-check - Enable JavaScript type-checking for Chrome's w
 dev-util/electron:optimize-thinlto - Whether to enable ThinLTO optimizations. Turning ThinLTO optimizations on can substantially increase link time and binary size, but they generally also make binaries a fair bit faster.
 dev-util/electron:optimize-webui - Optimize parts of Chromium's UI written with web technologies (HTML/CSS/JS) for runtime performance purposes. This does more work at compile time for speed benefits at runtime.
 dev-util/electron:pgo - Enable PGO
-dev-util/electron:proprietary-codecs - Enable proprietary codecs like H.264, MP3.
-dev-util/electron:system-ffmpeg - Use the system media-video/ffmpeg instead of bundled.
-dev-util/electron:system-harfbuzz - Use the system media-libs/harfbuzz instead of bundled.
-dev-util/electron:system-icu - Use the system dev-libs/icu instead of bundled.
-dev-util/electron:system-jsoncpp - Use the system dev-libs/jsoncpp instead of bundled.
-dev-util/electron:system-libevent - Use the system dev-libs/libevent instead of bundled.
-dev-util/electron:system-libvpx - Use the system media-libs/libvpx instead of bundled.
-dev-util/electron:system-openh264 - Use the system media-libs/openh264 instead of bundled. If disabled, it will restrict USE=bindist.
-dev-util/electron:system-openjpeg - Use the system-wide media-libs/openjpeg instead of bundled. OpenJPEG use are exclusively for Chromium's PDF viewer.
+dev-util/electron:proprietary-codecs - Enable proprietary codecs like H.264, MP3
+dev-util/electron:system-ffmpeg - Use the system media-video/ffmpeg instead of the bundled one
+dev-util/electron:system-harfbuzz - Use the system media-libs/harfbuzz instead of the bundled one
+dev-util/electron:system-icu - Use the system dev-libs/icu instead of the bundled one
+dev-util/electron:system-jsoncpp - Use the system dev-libs/jsoncpp instead of the bundled one
+dev-util/electron:system-libevent - Use the system dev-libs/libevent instead of the bundled one
+dev-util/electron:system-libvpx - Use the system media-libs/libvpx instead of the bundled one
+dev-util/electron:system-openh264 - Use the system media-libs/openh264 instead of the bundled one. If disabled, it will restrict USE=bindist.
+dev-util/electron:system-openjpeg - Use the system-wide media-libs/openjpeg instead of the bundled one. OpenJPEG use are exclusively for Chromium's PDF viewer.
 dev-util/electron:system-re2 - Use the system-wide dev-libs/re2 instead of the bundled one
-dev-util/electron:tcmalloc - Use bundled tcmalloc instead of system malloc.
+dev-util/electron:tcmalloc - By default Chromium uses PartitionAlloc, use tcmalloc instead
 dev-util/electron:thinlto - Build with ThinLTO support. LTO (Link Time Optimization) achieves better runtime performance through whole-program analysis and cross-module optimization (highly recommended).
 net-im/element-desktop:build-online - Disable network-sandbox and open Pandora's box!
 net-im/element-desktop:native-modules - Build native modules (for searching in encrypted rooms and secure storage)
