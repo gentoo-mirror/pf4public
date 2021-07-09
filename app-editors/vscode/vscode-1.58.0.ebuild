@@ -1737,7 +1737,7 @@ if [[ ${PV} = *9999* ]]; then
 	IUSE="badge-providers +build-online ignore-gpu-blacklist insiders liveshare openvsx substitute-urls"
 else
 	IUSE="badge-providers build-online ignore-gpu-blacklist insiders liveshare openvsx substitute-urls"
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 ~x86"
 	DOWNLOAD="${REPO}/archive/"
 	if [ -z "$CODE_COMMIT_ID" ]
 	then
@@ -1794,18 +1794,18 @@ src_prepare() {
 	einfo "Removing vscode-ripgrep and other dependencies"
 	sed -i '/"vscode-ripgrep"/d' package.json || die
 	sed -i '/"vscode-telemetry-extractor"/d' package.json || die
-	
+
 	if ! use build-online; then
 		sed -i '/"esbuild"/d' extensions/package.json || die
 		sed -i '/"esbuild"/d' build/package.json || die
 
 		einfo "Removing markdown-math. Enable build-online if you need it."
 		rm -r extensions/markdown-math
-		sed -i '/"markdown-math"/d' build/filters.js || die
-		sed -i '/"markdown-math"/d' build/npm/dirs.js || die
-		sed -i '/"markdown-math"/d' build/gulpfile.extensions.js || die
-		sed -i '/"markdown-math"/d' build/lib/extensions.js || die
-		sed -i '/"markdown-math"/d' build/lib/extensions.ts || die
+		sed -i '/markdown-math/d' build/filters.js || die
+		sed -i '/markdown-math/d' build/npm/dirs.js || die
+		sed -i '/markdown-math/d' build/gulpfile.extensions.js || die
+		sed -i '/markdown-math/d' build/lib/extensions.js || die
+		sed -i '/markdown-math/d' build/lib/extensions.ts || die
 	fi
 
 	#sed -i '/"electron"/d' package.json || die
