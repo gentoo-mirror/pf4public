@@ -1,0 +1,82 @@
+# This file is deprecated as per GLEP 56 in favor of metadata.xml.
+# Please add your descriptions to your package's metadata.xml ONLY.
+# * generated automatically using pmaint *
+
+app-admin/gb-chroot:host - Enable this on a chroot host
+app-editors/vscode:badge-providers - Allow various badge providers
+app-editors/vscode:build-online - Disable network-sandbox and open Pandora's box!
+app-editors/vscode:electron-16 - Build against electron-16 instead of the default one. Use at your own risk!
+app-editors/vscode:insiders - Allow insiders API !WARNING! Enabling this might be illegal!
+app-editors/vscode:liveshare - Allow liveshare API
+app-editors/vscode:openvsx - Use Eclipse Open VSX instead of Visual Studio Marketplace
+app-editors/vscode:substitute-urls - Even though telemetry is disabled by default in this ebuild, one might want to replace telemetry reporting urls with 0.0.0.0
+app-misc/font-manager:gnome-search-provider - Install GNOME shell search provider
+app-misc/font-manager:google-fonts - Google Fonts integration
+app-misc/font-manager:manager - Build font-manager
+app-misc/font-manager:nautilus - Build Nautilus extension
+app-misc/font-manager:nemo - Build Nemo extension
+app-misc/font-manager:reproducible - Make the build reproducible
+app-misc/font-manager:thunar - Build Thunar extension
+app-misc/font-manager:viewer - Build font-viewer
+dev-util/electron:clang - Use Clang compiler instead of GCC
+dev-util/electron:enable-driver - Build chromedriver
+dev-util/electron:hangouts - Enable support for Google Hangouts features such as screen sharing
+dev-util/electron:js-type-check - Enable JavaScript type-checking for Chrome's web technology-based UI. Requires Java.
+dev-util/electron:optimize-thinlto - Whether to enable ThinLTO optimizations. Turning ThinLTO optimizations on can substantially increase link time and binary size, but they generally also make binaries a fair bit faster.
+dev-util/electron:optimize-webui - Optimize parts of Chromium's UI written with web technologies (HTML/CSS/JS) for runtime performance purposes. This does more work at compile time for speed benefits at runtime.
+dev-util/electron:partition - Use PartitionAlloc explicitly
+dev-util/electron:pgo - Enable PGO
+dev-util/electron:proprietary-codecs - Enable proprietary codecs like H.264, MP3
+dev-util/electron:system-ffmpeg - Use the system media-video/ffmpeg instead of the bundled one
+dev-util/electron:system-harfbuzz - Use the system media-libs/harfbuzz instead of the bundled one
+dev-util/electron:system-icu - Use the system dev-libs/icu instead of the bundled one
+dev-util/electron:system-jsoncpp - Use the system dev-libs/jsoncpp instead of the bundled one
+dev-util/electron:system-libevent - Use the system dev-libs/libevent instead of the bundled one
+dev-util/electron:system-libvpx - Use the system media-libs/libvpx instead of the bundled one
+dev-util/electron:system-openh264 - Use the system media-libs/openh264 instead of the bundled one. If disabled, it will restrict USE=bindist.
+dev-util/electron:system-openjpeg - Use the system-wide media-libs/openjpeg instead of the bundled one. OpenJPEG use are exclusively for Chromium's PDF viewer.
+dev-util/electron:system-re2 - Use the system-wide dev-libs/re2 instead of the bundled one
+dev-util/electron:tcmalloc - Use tcmalloc explicitly
+dev-util/electron:thinlto - Build with ThinLTO support. LTO (Link Time Optimization) achieves better runtime performance through whole-program analysis and cross-module optimization (highly recommended).
+dev-util/electron:ungoogled - Apply ungoogled-chromium modifications. Not yet thoroughly tested! Might break electron apps or electron itself!
+net-im/element-desktop:build-online - Disable network-sandbox and open Pandora's box!
+net-im/element-desktop:electron-16 - Build against electron-16 instead of the default one. Use at your own risk!
+net-im/element-desktop:native-modules - Build native modules (for searching in encrypted rooms and secure storage)
+net-im/element-web:build-online - Disable network-sandbox and open Pandora's box!
+net-misc/sb-hosts:fakenews - Add fake news sites
+net-misc/sb-hosts:gambling - Add common online betting sites
+net-misc/sb-hosts:porn - Add porn sites
+net-misc/sb-hosts:social - Add social media sites
+www-client/opera:gtk - Install support libraries and runtime dependencies to support GTK+/GNOME desktop integration
+www-client/ungoogled-chromium:cfi - Build with CFI (Control Flow Integrity) enabled. It requires "-stdlib=libc++", see #40 for more details.
+www-client/ungoogled-chromium:clang - Use Clang compiler instead of GCC
+www-client/ungoogled-chromium:convert-dict - Patch and build the convert_dict utility. The script will be installed into /usr/lib64/chromium-browser/update-dicts.sh. More info here: https://github.com/Eloston/ungoogled-chromium/issues/188#issuecomment-444752907
+www-client/ungoogled-chromium:debug - Enable DCHECK feature with severity configurable at runtime. Mostly intended for debugging and development, NOT RECOMMENDED for general use.
+www-client/ungoogled-chromium:enable-driver - Build chromedriver
+www-client/ungoogled-chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
+www-client/ungoogled-chromium:headless - Build Ozone only with headless backend, NOT RECOMMENDED for general uses
+www-client/ungoogled-chromium:js-type-check - Enable JavaScript type-checking for Chrome's web technology-based UI. Requires Java.
+www-client/ungoogled-chromium:official - Enable Official build instead of Developer build.
+www-client/ungoogled-chromium:optimize-thinlto - Whether to enable ThinLTO optimizations. Turning ThinLTO optimizations on can substantially increase link time and binary size, but they generally also make binaries a fair bit faster.
+www-client/ungoogled-chromium:optimize-webui - Optimize parts of Chromium's UI written with web technologies (HTML/CSS/JS) for runtime performance purposes. This does more work at compile time for speed benefits at runtime.
+www-client/ungoogled-chromium:partition - Use PartitionAlloc explicitly
+www-client/ungoogled-chromium:pgo - Enable PGO. Requires clang and bundled binary profile data in sources tree.
+www-client/ungoogled-chromium:proprietary-codecs - Enable proprietary codecs like H.264, MP3
+www-client/ungoogled-chromium:screencast - Enable support for remote desktop and screen cast using media-video/pipewire
+www-client/ungoogled-chromium:suid - Build the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels
+www-client/ungoogled-chromium:system-ffmpeg - Use the system media-video/ffmpeg instead of the bundled one
+www-client/ungoogled-chromium:system-harfbuzz - Use the system media-libs/harfbuzz instead of the bundled one
+www-client/ungoogled-chromium:system-icu - Use the system dev-libs/icu instead of the bundled one
+www-client/ungoogled-chromium:system-jsoncpp - Use the system dev-libs/jsoncpp instead of the bundled one
+www-client/ungoogled-chromium:system-libevent - Use the system dev-libs/libevent instead of the bundled one
+www-client/ungoogled-chromium:system-libvpx - Use the system media-libs/libvpx instead of the bundled one
+www-client/ungoogled-chromium:system-openh264 - Use the system media-libs/openh264 instead of the bundled one. If disabled, it will restrict USE=bindist.
+www-client/ungoogled-chromium:system-openjpeg - Use the system-wide media-libs/openjpeg instead of the bundled one. OpenJPEG use are exclusively for Chromium's PDF viewer.
+www-client/ungoogled-chromium:system-re2 - Use the system-wide dev-libs/re2 instead of the bundled one
+www-client/ungoogled-chromium:tcmalloc - Use tcmalloc explicitly
+www-client/ungoogled-chromium:thinlto - Build with ThinLTO support. LTO (Link Time Optimization) achieves better runtime performance through whole-program analysis and cross-module optimization (highly recommended).
+www-client/ungoogled-chromium:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
+www-client/ungoogled-chromium-bin:convert-dict - Install also the convert_dict utility. The script will be installed into /opt/chromium-browser/update-dicts.sh More info here: https://github.com/Eloston/ungoogled-chromium/issues/188#issuecomment-444752907
+www-client/ungoogled-chromium-bin:core2 - Pull in a binary, built for core2
+www-client/ungoogled-chromium-bin:generic - Pull in a binary, built for a generic x86 or x86-64
+www-client/ungoogled-chromium-bin:haswell - Pull in a binary, built for haswell
