@@ -72,6 +72,7 @@ www-client/ungoogled-chromium:system-libevent - Use the system dev-libs/libevent
 www-client/ungoogled-chromium:system-libvpx - Use the system media-libs/libvpx instead of the bundled one
 www-client/ungoogled-chromium:system-openh264 - Use the system media-libs/openh264 instead of the bundled one. If disabled, it will restrict USE=bindist.
 www-client/ungoogled-chromium:system-openjpeg - Use the system-wide media-libs/openjpeg instead of the bundled one. OpenJPEG use are exclusively for Chromium's PDF viewer.
+www-client/ungoogled-chromium:system-png - Use system libpng instead of the bundled one
 www-client/ungoogled-chromium:system-re2 - Use the system-wide dev-libs/re2 instead of the bundled one
 www-client/ungoogled-chromium:tcmalloc - Use tcmalloc explicitly
 www-client/ungoogled-chromium:thinlto - Build with ThinLTO support. LTO (Link Time Optimization) achieves better runtime performance through whole-program analysis and cross-module optimization (highly recommended).
