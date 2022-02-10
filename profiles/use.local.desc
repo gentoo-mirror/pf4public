@@ -35,6 +35,7 @@ dev-util/electron:system-libevent - Use the system dev-libs/libevent instead of 
 dev-util/electron:system-libvpx - Use the system media-libs/libvpx instead of the bundled one
 dev-util/electron:system-openh264 - Use the system media-libs/openh264 instead of the bundled one. If disabled, it will restrict USE=bindist.
 dev-util/electron:system-openjpeg - Use the system-wide media-libs/openjpeg instead of the bundled one. OpenJPEG use are exclusively for Chromium's PDF viewer.
+dev-util/electron:system-png - Use system libpng instead of the bundled one
 dev-util/electron:system-re2 - Use the system-wide dev-libs/re2 instead of the bundled one
 dev-util/electron:tcmalloc - Use tcmalloc explicitly
 dev-util/electron:thinlto - Build with ThinLTO support. LTO (Link Time Optimization) achieves better runtime performance through whole-program analysis and cross-module optimization (highly recommended).
