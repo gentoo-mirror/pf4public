@@ -1354,7 +1354,6 @@ src_prepare() {
 	local PATCHES=(
 		"${WORKDIR}/patches"
 		"${FILESDIR}/chromium-93-InkDropHost-crash.patch"
-		"${FILESDIR}/chromium-97-arm-tflite-cast.patch"
 		"${FILESDIR}/chromium-98-EnumTable-crash.patch"
 		"${FILESDIR}/chromium-98-system-libdrm.patch"
 		"${FILESDIR}/chromium-glibc-2.34.patch"
@@ -2066,10 +2065,9 @@ src_configure() {
 		myconf_gn+=" icu_use_data_file=false"
 	fi
 
-	# Enable ozone wayland and/or headless support
+	# Enable ozone wayland support
 	myconf_gn+=" use_ozone=true ozone_auto_platforms=false"
-	myconf_gn+=" ozone_platform_headless=true"
-	myconf_gn+=" ozone_platform_x11=$(usex headless false true)"
+	myconf_gn+=" ozone_platform_x11=true"
 	if use wayland; then
 		myconf_gn+=" ozone_platform_wayland=true"
 		myconf_gn+=" use_system_libdrm=true"
