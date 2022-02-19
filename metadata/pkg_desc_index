@@ -9,7 +9,7 @@ media-libs/zint 2.9.1 2.10.0 9999: Barcode encoding library supporting over 50 s
 media-plugins/deadbeef-waveform-seekbar 0.5 9999: Waveform Seekbar plugin for DeaDBeeF audio player
 net-im/element-desktop 1.10.4 9999: A glossy Matrix collaboration client for desktop
 net-im/element-web 1.10.4 9999: A glossy Matrix collaboration client for the web
-net-misc/sb-hosts 3.9.44 3.9.45 9999: A hosts file from several well-curated sources
+net-misc/sb-hosts 3.9.45 3.9.49 9999: A hosts file from several well-curated sources
 sys-kernel/linux-image 4.9.301 4.14.266 4.19.229 5.4.179 5.10.100 5.15.23 5.16.9: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
 www-client/ungoogled-chromium 98.0.4758.102-r1: Modifications to Chromium for removing Google integration and enhancing privacy
