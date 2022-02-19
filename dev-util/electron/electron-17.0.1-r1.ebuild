@@ -1345,10 +1345,10 @@ src_prepare() {
 		sed -i 's/std::vector<const/std::vector</' shell/browser/api/electron_api_app.h || die
 		sed -i 's/NODE_DIR = os.path.join/NODE_DIR = os.path.abspath(os.path.join/' script/generate-config-gypi.py || die
 		sed -i "s/'electron_node')/'electron_node'))/" script/generate-config-gypi.py || die
-		grep "\'--openssl-no-asm\'" script/generate-config-gypi.py || die
+		grep "'--openssl-no-asm'" script/generate-config-gypi.py || die
 		NODE_CONFIG_ARGS="'--without-bundled-v8', '--shared-openssl', '--shared-zlib', '--without-dtrace', '--without-npm', '--shared-cares', '--shared-http-parser', '--shared-nghttp2'"
 		use system-icu && NODE_CONFIG_ARGS+=", '--with-intl=system-icu'"
-		sed -i "s/\'--openssl-no-asm\'/$NODE_CONFIG_ARGS/" script/generate-config-gypi.py || die
+		sed -i "s/'--openssl-no-asm'/$NODE_CONFIG_ARGS/" script/generate-config-gypi.py || die
 
 		if use ungoogled; then
 		# 	sed -i '/SecurityStateTabHelper::GetMaliciousContentStatus/Q' "patches/chromium/ssl_security_state_tab_helper.patch" || die
