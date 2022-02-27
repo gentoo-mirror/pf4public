@@ -10,7 +10,7 @@ media-plugins/deadbeef-waveform-seekbar 0.5 9999: Waveform Seekbar plugin for De
 net-im/element-desktop 1.10.4 9999: A glossy Matrix collaboration client for desktop
 net-im/element-web 1.10.4 9999: A glossy Matrix collaboration client for the web
 net-misc/sb-hosts 3.9.49 3.9.51 9999: A hosts file from several well-curated sources
-sys-kernel/linux-image 4.9.301 4.9.302 4.14.266 4.14.267 4.19.229 4.19.230 5.4.179 5.4.180 5.10.100 5.10.101 5.15.23 5.15.24 5.16.9 5.16.10: linux-image ebuild is used to build linux kernel image using savedconfig
+sys-kernel/linux-image 4.9.301 4.9.302 4.9.303 4.14.266 4.14.267 4.14.268 4.19.229 4.19.230 4.19.231 5.4.179 5.4.180 5.4.181 5.10.100 5.10.101 5.10.102 5.15.23 5.15.24 5.15.25 5.16.9 5.16.10 5.16.11: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
 www-client/ungoogled-chromium 98.0.4758.102-r1: Modifications to Chromium for removing Google integration and enhancing privacy
 www-client/ungoogled-chromium-bin 98.0.4758.102: Modifications to Chromium for removing Google integration and enhancing privacy
