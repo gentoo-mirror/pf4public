@@ -55,6 +55,7 @@ www-client/ungoogled-chromium:clang - Use Clang compiler instead of GCC
 www-client/ungoogled-chromium:convert-dict - Patch and build the convert_dict utility. The script will be installed into /usr/lib64/chromium-browser/update-dicts.sh. More info here: https://github.com/Eloston/ungoogled-chromium/issues/188#issuecomment-444752907
 www-client/ungoogled-chromium:debug - Enable DCHECK feature with severity configurable at runtime. Mostly intended for debugging and development, NOT RECOMMENDED for general use.
 www-client/ungoogled-chromium:enable-driver - Build chromedriver
+www-client/ungoogled-chromium:gtk4 - Build with GTK4 headers.
 www-client/ungoogled-chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
 www-client/ungoogled-chromium:headless - Build Ozone only with headless backend, NOT RECOMMENDED for general uses
 www-client/ungoogled-chromium:js-type-check - Enable JavaScript type-checking for Chrome's web technology-based UI. Requires Java.
