@@ -12,4 +12,4 @@ RESTRICT=mirror
 SLOT=0
 SRC_URI=core2? ( https://github.com/PF4Public/ungoogled-chromium-bin/releases/download/99.0.4844.51/core2.tar.bz2 -> ungoogled-chromium-bin-99.0.4844.51-core2.tar.bz2 ) haswell? ( https://github.com/PF4Public/ungoogled-chromium-bin/releases/download/99.0.4844.51/haswell.tar.bz2 -> ungoogled-chromium-bin-99.0.4844.51-haswell.tar.bz2 ) generic? ( amd64? ( https://github.com/PF4Public/ungoogled-chromium-bin/releases/download/99.0.4844.51/x86-64.tar.bz2 -> ungoogled-chromium-bin-99.0.4844.51-x86-64.tar.bz2 ) x86? ( https://github.com/PF4Public/ungoogled-chromium-bin/releases/download/99.0.4844.51/i686.tar.bz2 -> ungoogled-chromium-bin-99.0.4844.51-i686.tar.bz2 ) )
 _eclasses_=toolchain-funcs	badd6e329e1f3e6bee99b35bf8763ce8	multilib	de4beb52bfa93c4c5d96792a6b5e1784	linux-info	2f039741fe92bcea55c78806d16ac0f5	chromium-2	e1f861cb956ab20ffc32a1944eb99a78	desktop	c0d27bf73aa08ca05b663dbd31fbef28	readme.gentoo-r1	eebd0164fe61f4f7b64a683e83fdceb1	xdg-utils	4f29a8b760a594a212abe9c2ba957c31
-_md5_=35848a030f2a0eef693b9b568c7f8b29
+_md5_=53504058ce51d700619d0982d920aa6d
