@@ -4,7 +4,7 @@ app-eselect/eselect-electron 0.2: Utility to select the default Electron slot
 app-misc/font-manager 0.8.7 0.8.8 9999: A simple font management application for Gtk+ Desktop Environments
 dev-python/ewmh 0.1.6: An implementation of Extended Window Manager Hints, based on Xlib
 dev-python/pulsectl 20.5.1: High-level interface and ctypes-based bindings for PulseAudio
-dev-util/electron 13.6.8 16.0.9 17.1.0: Cross platform application development framework based on web technologies
+dev-util/electron 13.6.8 16.0.9 17.1.0 17.1.1: Cross platform application development framework based on web technologies
 media-libs/zint 2.9.1 2.10.0 9999: Barcode encoding library supporting over 50 symbologies
 media-plugins/deadbeef-waveform-seekbar 0.5 9999: Waveform Seekbar plugin for DeaDBeeF audio player
 net-im/element-desktop 1.10.6 9999: A glossy Matrix collaboration client for desktop
