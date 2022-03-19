@@ -8,5 +8,5 @@ KEYWORDS=amd64 x86
 LICENSE=MIT
 RDEPEND=
 SLOT=0
-SRC_URI=https://github.com/StevenBlack/hosts/archive/3.9.54.tar.gz -> sb-hosts-3.9.54.tar.gz
+SRC_URI=https://github.com/StevenBlack/hosts/archive/3.9.57.tar.gz -> sb-hosts-3.9.57.tar.gz
 _md5_=9c1a5e6d2043505e528830865e06ef54
