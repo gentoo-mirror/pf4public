@@ -12,6 +12,6 @@ net-im/element-web 1.10.6 1.10.7 9999: A glossy Matrix collaboration client for 
 net-misc/sb-hosts 3.9.55 3.9.57 9999: A hosts file from several well-curated sources
 sys-kernel/linux-image 4.9.301 4.9.302 4.9.303 4.9.304 4.9.305 4.14.266 4.14.267 4.14.268 4.14.269 4.14.270 4.19.229 4.19.230 4.19.231 4.19.232 4.19.233 5.4.179 5.4.180 5.4.181 5.4.182 5.4.183 5.10.102 5.10.103 5.10.104 5.15.25 5.15.26 5.15.27 5.16.11 5.16.12 5.16.13: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
-www-client/ungoogled-chromium 98.0.4758.102-r1 99.0.4844.74-r1 99.0.4844.82-r1: Modifications to Chromium for removing Google integration and enhancing privacy
+www-client/ungoogled-chromium 98.0.4758.102-r1 99.0.4844.82-r1: Modifications to Chromium for removing Google integration and enhancing privacy
 www-client/ungoogled-chromium-bin 99.0.4844.51 99.0.4844.74: Modifications to Chromium for removing Google integration and enhancing privacy
 x11-misc/caffeine-ng 3.5.1 9999: Stop the desktop from becoming idle in full-screen mode. (Fork of Caffeine)
