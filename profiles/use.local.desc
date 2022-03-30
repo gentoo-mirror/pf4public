@@ -7,6 +7,7 @@ app-editors/vscode:badge-providers - Allow various badge providers
 app-editors/vscode:build-online - Disable network-sandbox and open Pandora's box!
 app-editors/vscode:electron-16 - Build against electron-16 instead of the default one. Use at your own risk!
 app-editors/vscode:electron-17 - Build against electron-17 instead of the default one. Use at your own risk!
+app-editors/vscode:electron-18 - Build against electron-18 instead of the default one. Use at your own risk!
 app-editors/vscode:insiders - Allow insiders API !WARNING! Enabling this might be illegal!
 app-editors/vscode:liveshare - Allow liveshare API
 app-editors/vscode:openvsx - Use Eclipse Open VSX instead of Visual Studio Marketplace
