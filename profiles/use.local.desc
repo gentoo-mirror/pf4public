@@ -20,7 +20,6 @@ app-misc/font-manager:thunar - Build Thunar extension
 app-misc/font-manager:viewer - Build font-viewer
 dev-util/electron:clang - Use Clang compiler instead of GCC
 dev-util/electron:debug - Enable DCHECK feature with severity configurable at runtime. Mostly intended for debugging and development, NOT RECOMMENDED for general use.
-dev-util/electron:enable-driver - Build chromedriver
 dev-util/electron:gtk4 - Build with GTK4 headers.
 dev-util/electron:hangouts - Enable support for Google Hangouts features such as screen sharing
 dev-util/electron:js-type-check - Enable JavaScript type-checking for Chrome's web technology-based UI. Requires Java.
