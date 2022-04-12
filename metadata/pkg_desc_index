@@ -7,8 +7,8 @@ dev-python/pulsectl 20.5.1: High-level interface and ctypes-based bindings for P
 dev-util/electron 17.3.1 17.4.0 18.0.2 18.0.3: Cross platform application development framework based on web technologies
 media-libs/zint 2.9.1 2.10.0 9999: Barcode encoding library supporting over 50 symbologies
 media-plugins/deadbeef-waveform-seekbar 0.5 9999: Waveform Seekbar plugin for DeaDBeeF audio player
-net-im/element-desktop 1.10.7 1.10.8 9999: A glossy Matrix collaboration client for desktop
-net-im/element-web 1.10.7 1.10.8 9999: A glossy Matrix collaboration client for the web
+net-im/element-desktop 1.10.7 1.10.8 1.10.9 9999: A glossy Matrix collaboration client for desktop
+net-im/element-web 1.10.7 1.10.8 1.10.9 9999: A glossy Matrix collaboration client for the web
 net-misc/sb-hosts 3.9.61 3.9.62 9999: A hosts file from several well-curated sources
 sys-kernel/linux-image 4.9.309 4.14.275 4.19.237 5.4.188 5.10.109 5.10.110 5.15.32-r1 5.15.33 5.16.18-r1 5.16.19 5.17.1 5.17.1-r1 5.17.2: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
