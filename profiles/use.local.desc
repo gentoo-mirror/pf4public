@@ -64,7 +64,6 @@ www-client/ungoogled-chromium:js-type-check - Enable JavaScript type-checking fo
 www-client/ungoogled-chromium:official - Enable Official build instead of Developer build.
 www-client/ungoogled-chromium:optimize-thinlto - Whether to enable ThinLTO optimizations. Turning ThinLTO optimizations on can substantially increase link time and binary size, but they generally also make binaries a fair bit faster.
 www-client/ungoogled-chromium:optimize-webui - Optimize parts of Chromium's UI written with web technologies (HTML/CSS/JS) for runtime performance purposes. This does more work at compile time for speed benefits at runtime.
-www-client/ungoogled-chromium:partition - Use PartitionAlloc explicitly
 www-client/ungoogled-chromium:pgo - Enable PGO. Requires clang and bundled binary profile data in sources tree.
 www-client/ungoogled-chromium:pic - Disable optimized assembly code that is not PIC friendly
 www-client/ungoogled-chromium:proprietary-codecs - Enable proprietary codecs like H.264, MP3
@@ -82,7 +81,6 @@ www-client/ungoogled-chromium:system-openjpeg - Use the system-wide media-libs/o
 www-client/ungoogled-chromium:system-png - Use system libpng instead of the bundled one
 www-client/ungoogled-chromium:system-re2 - Use the system-wide dev-libs/re2 instead of the bundled one
 www-client/ungoogled-chromium:system-snappy - Use the system-wide app-arch/snappy instead of the bundled one
-www-client/ungoogled-chromium:tcmalloc - Use tcmalloc explicitly
 www-client/ungoogled-chromium:thinlto - Build with ThinLTO support. LTO (Link Time Optimization) achieves better runtime performance through whole-program analysis and cross-module optimization (highly recommended).
 www-client/ungoogled-chromium:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
 www-client/ungoogled-chromium-bin:convert-dict - Install also the convert_dict utility. The script will be installed into /opt/chromium-browser/update-dicts.sh More info here: https://github.com/Eloston/ungoogled-chromium/issues/188#issuecomment-444752907
