@@ -9,6 +9,5 @@ LICENSE=Apache-2.0
 PROPERTIES=live
 RESTRICT=mirror build-online? ( network-sandbox )
 SLOT=0
-SRC_URI=!build-online? ( https://github.com/matrix-org/matrix-js-sdk/archive/v17.1.0.tar.gz -> matrix-js-sdk-17.1.0.tar.gz https://github.com/matrix-org/matrix-react-sdk/archive/v3.43.0.tar.gz -> matrix-react-sdk-3.43.0.tar.gz )
 _eclasses_=git-r3	b9ac6f96d2a88edb5b351df634dc5e53
-_md5_=72deffdb6d93587831c3fededdef3775
+_md5_=5bd243ba2c129d8b22a684bd4a37e5cc
