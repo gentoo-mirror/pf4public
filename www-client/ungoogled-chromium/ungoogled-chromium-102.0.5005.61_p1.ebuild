@@ -14,7 +14,7 @@ inherit check-reqs chromium-2 desktop flag-o-matic ninja-utils pax-utils python-
 UGC_PV="${PV/_p/-}"
 UGC_PF="${PN}-${UGC_PV}"
 UGC_URL="https://github.com/Eloston/${PN}/archive/"
-#UGC_COMMIT_ID="93bc5c4c27856f46cf0e15af009fae341abc39de"
+UGC_COMMIT_ID="4552de1c87ae70cde375b268d71df4360198e40b"
 
 # Use following environment variables to customise the build
 # EXTRA_GN — pass extra options to gn
@@ -34,7 +34,7 @@ fi
 
 DESCRIPTION="Modifications to Chromium for removing Google integration and enhancing privacy"
 HOMEPAGE="https://github.com/Eloston/ungoogled-chromium"
-PATCHSET="4"
+PATCHSET="5"
 PATCHSET_NAME="chromium-$(ver_cut 1)-patchset-${PATCHSET}"
 PATCHSET_NAME_PPC64="chromium_101.0.4951.41-2raptor0.debian"
 SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/chromium-${PV/_*}.tar.xz
@@ -45,7 +45,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/chro
 
 LICENSE="BSD"
 SLOT="0"
-# KEYWORDS="amd64 ~arm64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm64 ~x86"
 IUSE="cfi +clang convert-dict cups cpu_flags_arm_neon custom-cflags debug enable-driver gtk4 hangouts headless js-type-check kerberos +official optimize-thinlto optimize-webui pgo pic +proprietary-codecs pulseaudio screencast selinux suid +system-ffmpeg +system-harfbuzz +system-icu +system-jsoncpp +system-libevent +system-libusb system-libvpx +system-openh264 system-openjpeg +system-png +system-re2 +system-snappy thinlto vaapi vdpau wayland widevine"
 RESTRICT="
 	!system-ffmpeg? ( proprietary-codecs? ( bindist ) )
@@ -178,6 +178,7 @@ BDEPEND="
 	>=dev-util/gn-0.1807
 	>=dev-util/gperf-3.0.3
 	>=dev-util/ninja-1.7.2
+	dev-vcs/git
 	>=net-libs/nodejs-7.6.0[inspector]
 	>=sys-devel/bison-2.4.3
 	sys-devel/flex
@@ -375,6 +376,11 @@ src_prepare() {
 	mkdir -p third_party/node/linux/node-linux-x64/bin || die
 	ln -s "${EPREFIX}"/usr/bin/node third_party/node/linux/node-linux-x64/bin/node || die
 
+	# only required to fulfill gn dependencies
+	touch third_party/blink/tools/merge_web_test_results.pydeps || die
+	mkdir -p third_party/blink/tools/blinkpy/web_tests || die
+	touch third_party/blink/tools/blinkpy/web_tests/merge_results.pydeps || die
+
 	# adjust python interpreter version
 	sed -i -e "s|\(^script_executable = \).*|\1\"${EPYTHON}\"|g" .gn || die
 
@@ -519,8 +525,8 @@ src_prepare() {
 		third_party/cros_system_api
 		third_party/dav1d
 		third_party/dawn
+		third_party/dawn/third_party/gn/webgpu-cts
 		third_party/dawn/third_party/khronos
-		third_party/dawn/third_party/tint
 		third_party/depot_tools
 		third_party/devscripts
 		third_party/devtools-frontend
@@ -571,7 +577,6 @@ src_prepare() {
 		third_party/jstemplate
 		third_party/khronos
 		third_party/leveldatabase
-		third_party/libXNVCtrl
 		third_party/libaddressinput
 		third_party/libaom
 		third_party/libaom/source/libaom/third_party/fastfeat
@@ -622,7 +627,6 @@ src_prepare() {
 		third_party/node
 		third_party/node/node_modules/polymer-bundler/lib/third_party/UglifyJS2
 		third_party/one_euro_filter
-		third_party/opencv
 		third_party/openscreen
 		third_party/openscreen/src/third_party/mozilla
 		third_party/openscreen/src/third_party/tinycbor/src/src
@@ -675,6 +679,7 @@ src_prepare() {
 		third_party/swiftshader/third_party/marl
 		third_party/swiftshader/third_party/subzero
 		third_party/swiftshader/third_party/SPIRV-Headers/include/spirv/unified1
+		third_party/swiftshader/third_party/SPIRV-Tools
 		third_party/tensorflow-text
 		third_party/tflite
 		third_party/tflite/src/third_party/eigen3
@@ -682,7 +687,6 @@ src_prepare() {
 		third_party/ruy
 		third_party/six
 		third_party/ukey2
-		third_party/usrsctp
 		third_party/utf
 		third_party/vulkan
 		third_party/web-animations-js
