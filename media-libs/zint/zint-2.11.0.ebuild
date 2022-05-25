@@ -12,14 +12,16 @@ HOMEPAGE="http://zint.org.uk"
 LICENSE="GPL-2"
 SLOT="0"
 
-IUSE="debug +png qt5 static-libs"
+IUSE="debug doc +png qt5 static-libs"
+
+DOCS=( README )
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
 	EGIT_REPO_URI="https://git.code.sf.net/p/zint/code"
 	SRC_URI=""
 else
-	KEYWORDS="~amd64 ~x86"
+	KEYWORDS="amd64 x86"
 	SRC_URI="mirror://sourceforge/${PN}/${P}-src.tar.gz"
 	S="${WORKDIR}"
 fi
@@ -54,6 +56,12 @@ src_configure() {
 }
 
 src_install() {
+
+	#TODO: docs generation maybe?
+	if use doc; then
+		DOCS+=( ChangeLog )
+	fi
+
 	cmake_src_install
 
 	if use qt5; then
