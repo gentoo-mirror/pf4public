@@ -1,0 +1,16 @@
+BDEPEND=>=app-portage/elt-patches-20170815 app-arch/xz-utils >=dev-util/meson-0.59.4 >=dev-util/ninja-1.8.2 dev-util/meson-format-array
+DEFINED_PHASES=compile configure install postinst postrm preinst prepare test
+DEPEND=gnome-base/gnome-common >=dev-db/sqlite-3.8 >=dev-libs/json-glib-0.15 >=dev-libs/libxml2-2.9 >=media-libs/fontconfig-2.12 >=media-libs/freetype-2.5 >=x11-libs/gtk+-3.22 >=x11-libs/pango-1.4 google-fonts? ( >=net-libs/libsoup-2.62 >=net-libs/webkit-gtk-2.24 ) nautilus? ( gnome-base/nautilus ) nemo? ( gnome-extra/nemo ) thunar? ( xfce-base/thunar ) || ( dev-lang/vala:0.56[vapigen(+)] dev-lang/vala:0.54[vapigen(+)] dev-lang/vala:0.52[vapigen(+)] dev-lang/vala:0.50[vapigen(+)] dev-lang/vala:0.48[vapigen(+)] dev-lang/vala:0.46[vapigen(+)] ) doc? ( app-text/yelp-tools dev-util/gtk-doc )
+DESCRIPTION=A simple font management application for Gtk+ Desktop Environments
+EAPI=8
+HOMEPAGE=https://fontmanager.github.io
+IDEPEND=dev-util/desktop-file-utils x11-misc/shared-mime-info
+INHERIT=gnome2 meson vala
+IUSE=doc gnome-search-provider google-fonts +manager nautilus nemo reproducible thunar +viewer +nls
+KEYWORDS=amd64 x86
+LICENSE=GPL-3
+RDEPEND=gnome-base/gnome-common >=dev-db/sqlite-3.8 >=dev-libs/json-glib-0.15 >=dev-libs/libxml2-2.9 >=media-libs/fontconfig-2.12 >=media-libs/freetype-2.5 >=x11-libs/gtk+-3.22 >=x11-libs/pango-1.4 google-fonts? ( >=net-libs/libsoup-2.62 >=net-libs/webkit-gtk-2.24 ) nautilus? ( gnome-base/nautilus ) nemo? ( gnome-extra/nemo ) thunar? ( xfce-base/thunar )
+SLOT=0
+SRC_URI=https://github.com/FontManager/font-manager/archive/0.8.8.tar.gz -> font-manager-0.8.8.tar.gz
+_eclasses_=toolchain-funcs	e9da88162e7a3c60376e80c2c2adcdfb	multilib	4fbbbc98f236f1b43acd99476bc3cd85	libtool	241a8f577b9781a42a7421e53448a44e	gnome.org	429073e99d7067d3462e875bf5c6e14a	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	gnome2-utils	2116cec8f46f4d1b0a88c5b1f1575dd3	xdg	6024fbc93167fad782e2032933654857	gnome2	4f729d9211b2e3c00a285d6301a557e1	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	python-utils-r1	32313e7e2fbfba8f62a99ef923fc923c	meson	2cc95670908abda0d67e9e16a6b4341e	vala	9badd41d5aab740ae5ac301c4416c5f8
+_md5_=475941173f019e871b3b51e18f924e0f
