@@ -5,7 +5,6 @@
 app-admin/gb-chroot:host - Enable this on a chroot host
 app-editors/vscode:badge-providers - Allow various badge providers
 app-editors/vscode:build-online - Disable network-sandbox and open Pandora's box!
-app-editors/vscode:electron-18 - Build against electron-18 instead of the default one. Use at your own risk!
 app-editors/vscode:electron-19 - Build against electron-19 instead of the default one. Use at your own risk!
 app-editors/vscode:insiders - Allow insiders API !WARNING! Enabling this might be illegal!
 app-editors/vscode:liveshare - Allow liveshare API
@@ -26,7 +25,6 @@ dev-util/electron:hangouts - Enable support for Google Hangouts features such as
 dev-util/electron:js-type-check - Enable JavaScript type-checking for Chrome's web technology-based UI. Requires Java.
 dev-util/electron:optimize-thinlto - Whether to enable ThinLTO optimizations. Turning ThinLTO optimizations on can substantially increase link time and binary size, but they generally also make binaries a fair bit faster.
 dev-util/electron:optimize-webui - Optimize parts of Chromium's UI written with web technologies (HTML/CSS/JS) for runtime performance purposes. This does more work at compile time for speed benefits at runtime.
-dev-util/electron:partition - Use PartitionAlloc explicitly
 dev-util/electron:pgo - Enable PGO. Requires clang and bundled binary profile data in sources tree.
 dev-util/electron:pic - Disable optimized assembly code that is not PIC friendly
 dev-util/electron:proprietary-codecs - Enable proprietary codecs like H.264, MP3
@@ -44,7 +42,6 @@ dev-util/electron:system-openjpeg - Use the system-wide media-libs/openjpeg inst
 dev-util/electron:system-png - Use system libpng instead of the bundled one
 dev-util/electron:system-re2 - Use the system-wide dev-libs/re2 instead of the bundled one
 dev-util/electron:system-snappy - Use the system-wide app-arch/snappy instead of the bundled one
-dev-util/electron:tcmalloc - Use tcmalloc explicitly
 dev-util/electron:thinlto - Build with ThinLTO support. LTO (Link Time Optimization) achieves better runtime performance through whole-program analysis and cross-module optimization (highly recommended).
 dev-util/electron:ungoogled - Apply ungoogled-chromium modifications to chromium sources (electron sources are untouched be it better or worse). Not yet thoroughly tested! Might break electron apps or electron itself!
 net-im/element-desktop:build-online - Disable network-sandbox and open Pandora's box!
