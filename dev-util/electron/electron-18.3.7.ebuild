@@ -5,16 +5,16 @@ EAPI=8
 PYTHON_COMPAT=( python3_{8..10} )
 PYTHON_REQ_USE="xml"
 
-CHROMIUM_LANGS="af am ar bg bn ca cs da de el en-GB es es-419 et fa fi fil fr gu he
+CHROMIUM_LANGS="am ar bg bn ca cs da de el en-GB es es-419 et fa fi fil fr gu he
 	hi hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt-BR pt-PT ro ru sk sl sr
-	sv sw ta te th tr uk ur vi zh-CN zh-TW"
+	sv sw ta te th tr uk vi zh-CN zh-TW"
 
 inherit check-reqs chromium-2 desktop flag-o-matic ninja-utils pax-utils python-any-r1 readme.gentoo-r1 toolchain-funcs xdg-utils
 
 CHROMIUM_VERSION_WARNING="true"
-CHROMIUM_VERSION="102.0.5005.115"
+CHROMIUM_VERSION="100.0.4896.127"
 CHROMIUM_P="chromium-${CHROMIUM_VERSION}"
-NODE_VERSION="16.14.2"
+NODE_VERSION="16.13.2"
 NODE_P="node-v${NODE_VERSION}"
 UGC_PVR="${CHROMIUM_VERSION}-1"
 UGC_PF="ungoogled-chromium-${UGC_PVR}"
@@ -29,27 +29,19 @@ UGC_WD="${WORKDIR}/${UGC_PF}"
 
 DESCRIPTION="Cross platform application development framework based on web technologies"
 HOMEPAGE="https://electronjs.org/"
-PATCHSET="6"
-PATCHSET_NAME="chromium-102-patchset-${PATCHSET}"
-PATCHSET_NAME_PPC64="chromium_102.0.5005.61-1raptor0~deb11u1.debian"
+PATCHSET="4"
+PATCHSET_NAME="chromium-100-patchset-${PATCHSET}"
+PATCHSET_PPC64="1"
+PATCHSET_NAME_PPC64="chromium-100-patchset-ppc64le-${PATCHSET_PPC64}"
 SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-official/${CHROMIUM_P}.tar.xz
 	mirror+https://github.com/stha09/chromium-patches/releases/download/${PATCHSET_NAME}/${PATCHSET_NAME}.tar.xz
-	mirror+https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}.tar.xz
 	https://github.com/electron/electron/archive/v${PV}.tar.gz -> ${P}.tar.gz
-	ppc64? ( https://ppa.quickbuild.io/raptor-engineering-public/chromium/ubuntu/pool/main/c/chromium/${PATCHSET_NAME_PPC64}.tar.xz )
+	https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}.tar.xz
+	ppc64? ( https://dev.gentoo.org/~sultan/distfiles/www-client/chromium/${PATCHSET_NAME_PPC64}.tar.xz )
 	ungoogled? (
 		https://github.com/Eloston/ungoogled-chromium/archive/${UGC_PVR}.tar.gz -> ${UGC_PF}.tar.gz
 	)
 
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
 	https://registry.yarnpkg.com/@azure/abort-controller/-/abort-controller-1.0.4.tgz -> @azure-abort-controller-1.0.4.tgz
 	https://registry.yarnpkg.com/@azure/core-asynciterator-polyfill/-/core-asynciterator-polyfill-1.0.2.tgz -> @azure-core-asynciterator-polyfill-1.0.2.tgz
 	https://registry.yarnpkg.com/@azure/core-auth/-/core-auth-1.3.2.tgz -> @azure-core-auth-1.3.2.tgz
@@ -61,7 +53,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/@azure/storage-blob/-/storage-blob-12.9.0.tgz -> @azure-storage-blob-12.9.0.tgz
 	https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.5.5.tgz -> @babel-code-frame-7.5.5.tgz
 	https://registry.yarnpkg.com/@babel/highlight/-/highlight-7.5.0.tgz -> @babel-highlight-7.5.0.tgz
-	https://registry.yarnpkg.com/@electron/docs-parser/-/docs-parser-0.12.4.tgz -> @electron-docs-parser-0.12.4.tgz
+	https://registry.yarnpkg.com/@electron/docs-parser/-/docs-parser-0.12.3.tgz -> @electron-docs-parser-0.12.3.tgz
 	https://registry.yarnpkg.com/@electron/typescript-definitions/-/typescript-definitions-8.9.5.tgz -> @electron-typescript-definitions-8.9.5.tgz
 	https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.3.tgz -> @nodelib-fs.scandir-2.1.3.tgz
 	https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-2.0.3.tgz -> @nodelib-fs.stat-2.0.3.tgz
@@ -184,7 +176,10 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/aggregate-error/-/aggregate-error-3.0.1.tgz
 	https://registry.yarnpkg.com/ajv-errors/-/ajv-errors-1.0.1.tgz
 	https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-3.4.1.tgz
-	https://registry.yarnpkg.com/ajv/-/ajv-6.12.6.tgz
+	https://registry.yarnpkg.com/ajv/-/ajv-6.10.1.tgz
+	https://registry.yarnpkg.com/ajv/-/ajv-6.10.2.tgz
+	https://registry.yarnpkg.com/ajv/-/ajv-6.12.2.tgz
+	https://registry.yarnpkg.com/ajv/-/ajv-6.12.3.tgz
 	https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-4.1.1.tgz
 	https://registry.yarnpkg.com/ansi-escapes/-/ansi-escapes-4.3.1.tgz
 	https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.1.1.tgz
@@ -440,9 +435,10 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/extend/-/extend-3.0.2.tgz
 	https://registry.yarnpkg.com/external-editor/-/external-editor-3.1.0.tgz
 	https://registry.yarnpkg.com/extglob/-/extglob-2.0.4.tgz
-	https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz
+	https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-2.0.1.tgz
+	https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.1.tgz
 	https://registry.yarnpkg.com/fast-glob/-/fast-glob-3.2.4.tgz
-	https://registry.yarnpkg.com/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz
+	https://registry.yarnpkg.com/fast-json-stable-stringify/-/fast-json-stable-stringify-2.0.0.tgz
 	https://registry.yarnpkg.com/fast-levenshtein/-/fast-levenshtein-2.0.6.tgz
 	https://registry.yarnpkg.com/fastq/-/fastq-1.8.0.tgz
 	https://registry.yarnpkg.com/fault/-/fault-2.0.0.tgz
@@ -726,7 +722,8 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz
 	https://registry.yarnpkg.com/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz
 	https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz
-	https://registry.yarnpkg.com/minimist/-/minimist-1.2.6.tgz
+	https://registry.yarnpkg.com/minimist/-/minimist-1.2.0.tgz
+	https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz
 	https://registry.yarnpkg.com/minipass/-/minipass-2.9.0.tgz
 	https://registry.yarnpkg.com/minizlib/-/minizlib-1.3.3.tgz
 	https://registry.yarnpkg.com/mississippi/-/mississippi-3.0.0.tgz
@@ -737,6 +734,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/ms/-/ms-2.1.1.tgz
 	https://registry.yarnpkg.com/ms/-/ms-2.1.2.tgz
 	https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.8.tgz
+	https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz
 	https://registry.yarnpkg.com/nanomatch/-/nanomatch-1.2.13.tgz
 	https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz
 	https://registry.yarnpkg.com/needle/-/needle-2.4.0.tgz
@@ -811,7 +809,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-0.1.7.tgz
 	https://registry.yarnpkg.com/path-type/-/path-type-2.0.0.tgz
 	https://registry.yarnpkg.com/path-type/-/path-type-4.0.0.tgz
-	https://registry.yarnpkg.com/pathval/-/pathval-1.1.1.tgz
+	https://registry.yarnpkg.com/pathval/-/pathval-1.1.0.tgz
 	https://registry.yarnpkg.com/pbkdf2/-/pbkdf2-3.0.17.tgz
 	https://registry.yarnpkg.com/picomatch/-/picomatch-2.0.7.tgz
 	https://registry.yarnpkg.com/picomatch/-/picomatch-2.2.2.tgz
@@ -1105,7 +1103,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/unset-value/-/unset-value-1.0.0.tgz
 	https://registry.yarnpkg.com/unzip-response/-/unzip-response-2.0.1.tgz
 	https://registry.yarnpkg.com/upath/-/upath-1.1.2.tgz
-	https://registry.yarnpkg.com/uri-js/-/uri-js-4.4.1.tgz
+	https://registry.yarnpkg.com/uri-js/-/uri-js-4.2.2.tgz
 	https://registry.yarnpkg.com/urix/-/urix-0.1.0.tgz
 	https://registry.yarnpkg.com/url-parse-lax/-/url-parse-lax-1.0.0.tgz
 	https://registry.yarnpkg.com/url-parse-lax/-/url-parse-lax-3.0.0.tgz
@@ -1168,8 +1166,8 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 
 LICENSE="BSD"
 SLOT="$(ver_cut 1)/$(ver_cut 2-)"
-KEYWORDS="amd64 ~arm64 ~ppc64 ~x86"
-IUSE="+clang cups cpu_flags_arm_neon custom-cflags debug gtk4 hangouts js-type-check kerberos optimize-thinlto optimize-webui pgo pic +proprietary-codecs pulseaudio screencast selinux suid +system-ffmpeg +system-harfbuzz +system-icu +system-jsoncpp +system-libevent +system-libusb system-libvpx +system-openh264 system-openjpeg +system-png +system-re2 +system-snappy thinlto ungoogled vaapi vdpau wayland"
+KEYWORDS="~amd64 ~ppc64 ~x86"
+IUSE="+clang cups custom-cflags debug gtk4 hangouts js-type-check kerberos optimize-thinlto optimize-webui pgo +proprietary-codecs pulseaudio selinux +system-ffmpeg +system-harfbuzz +system-icu +system-jsoncpp +system-libevent +system-libusb system-libvpx +system-openh264 system-openjpeg +system-png +system-re2 +system-snappy thinlto ungoogled vaapi vdpau wayland"
 RESTRICT="
 	!system-ffmpeg? ( proprietary-codecs? ( bindist ) )
 	!system-openh264? ( bindist )
@@ -1195,7 +1193,6 @@ COMMON_X_DEPEND="
 	x11-libs/libxshmfence:=
 	virtual/opengl
 "
-
 COMMON_SNAPSHOT_DEPEND="
 	system-snappy? ( app-arch/snappy )
 	system-jsoncpp? ( dev-libs/jsoncpp )
@@ -1228,19 +1225,16 @@ COMMON_SNAPSHOT_DEPEND="
 			>=media-sound/apulse-0.1.9
 		)
 	)
-	sys-apps/pciutils:=
 	kerberos? ( virtual/krb5 )
-	vaapi? ( >=x11-libs/libva-2.7:=[X] )
+	vaapi? ( >=x11-libs/libva-2.7:=[X,drm] )
 	x11-libs/libX11:=
 	x11-libs/libXext:=
 	x11-libs/libxcb:=
 	x11-libs/libxkbcommon:=
 	wayland? (
 		dev-libs/wayland:=
-		screencast? ( media-video/pipewire:= )
 	)
 "
-
 COMMON_DEPEND="
 	app-eselect/eselect-electron
 	${COMMON_SNAPSHOT_DEPEND}
@@ -1263,6 +1257,7 @@ COMMON_DEPEND="
 	>=app-accessibility/at-spi2-core-2.26:2
 	>=dev-libs/atk-2.26
 	cups? ( >=net-print/cups-1.3.11:= )
+	sys-apps/pciutils:=
 	virtual/udev
 	x11-libs/cairo:=
 	x11-libs/pango:=
@@ -1291,7 +1286,6 @@ BDEPEND="
 	>=dev-util/gn-0.1807
 	>=dev-util/gperf-3.0.3
 	>=dev-util/ninja-1.7.2
-	dev-vcs/git
 	>=net-libs/nodejs-7.6.0[inspector]
 	>=sys-devel/bison-2.4.3
 	sys-devel/flex
@@ -1324,8 +1318,8 @@ pre_build_checks() {
 
 	# Check build requirements, bug #541816 and bug #471810 .
 	CHECKREQS_MEMORY="4G"
-	CHECKREQS_DISK_BUILD="10G"
-	tc-is-cross-compiler && CHECKREQS_DISK_BUILD="13G"
+	CHECKREQS_DISK_BUILD="9G"
+	tc-is-cross-compiler && CHECKREQS_DISK_BUILD="12G"
 	if ( shopt -s extglob; is-flagq '-g?(gdb)?([1-9])' ); then
 		CHECKREQS_DISK_BUILD="16G"
 	fi
@@ -1383,7 +1377,7 @@ src_prepare() {
 	python_setup
 
 	if ! use custom-cflags; then #See #25 #92
-		sed -i '/default_stack_frames/Q' ${WORKDIR}/patches/chromium-*-compiler.patch || die
+		sed -i '/default_stack_frames/Q' "${WORKDIR}/patches/chromium-100-compiler.patch" || die
 	fi
 
 	einfo "Disabling dugite"
@@ -1396,7 +1390,10 @@ src_prepare() {
 	pushd "${WORKDIR}/${P}" > /dev/null || die
 		sed -i '/test-list/Q' "patches/node/process_monitor_for_exit_with_kqueue_on_bsds_3441.patch" || die
 		sed -i '/test-list/Q' "patches/node/macos_avoid_posix_spawnp_cwd_bug_3597.patch" || die
-		# sed -i '/test-embed/Q' "patches/node/feat_add_uv_loop_interrupt_on_io_change_option_to_uv_loop_configure.patch" || die
+		sed -i '/web_tests/Q' "patches/chromium/cherry-pick-6b66a45021a0.patch" || die
+		sed -i '/web_tests/Q' "patches/chromium/cherry-pick-2782c7bc5bbe.patch" || die
+		sed -i '/web_tests/Q' "patches/chromium/cherry-pick-b03797bdb1df.patch" || die
+		sed -i '/cctest/Q' "patches/v8/cherry-pick-44c4e56fea2c.patch" || die
 
 		sed -i 's/std::vector<const/std::vector</' patches/chromium/feat_add_data_parameter_to_processsingleton.patch || die
 		sed -i 's/std::vector<const/std::vector</' shell/browser/api/electron_api_app.cc || die
@@ -1419,69 +1416,16 @@ src_prepare() {
 	local PATCHES=(
 		"${WORKDIR}/patches"
 		"${FILESDIR}/chromium-93-InkDropHost-crash.patch"
-		"${FILESDIR}/chromium-97-arm-tflite-cast.patch"
 		"${FILESDIR}/chromium-98-EnumTable-crash.patch"
 		"${FILESDIR}/chromium-98-gtk4-build.patch"
-		"${FILESDIR}/chromium-101-libxml-unbundle.patch"
 		"${FILESDIR}/chromium-use-oauth2-client-switches-as-default.patch"
 		"${FILESDIR}/chromium-shim_headers.patch"
 		"${FILESDIR}/chromium-cross-compile.patch"
 		"${FILESDIR}/sql-VirtualCursor-standard-layout.patch"
 		"${FILESDIR}/perfetto-system-zlib.patch"
-		"${FILESDIR}/gtk-fix-prefers-color-scheme-query.diff"
-		"${FILESDIR}/restore-x86.patch"
 	)
 
-	use ppc64 && PATCHES+=(
-		"${WORKDIR}/debian/patches/ppc64le/sandbox/0001-linux-seccomp-bpf-ppc64-glibc-workaround-in-SIGSYS-h.patch"
-		"${WORKDIR}/debian/patches/ppc64le/sandbox/0001-sandbox-Enable-seccomp_bpf-for-ppc64.patch"
-		"${WORKDIR}/debian/patches/ppc64le/sandbox/0001-services-service_manager-sandbox-linux-Fix-TCGETS-de.patch"
-		"${WORKDIR}/debian/patches/ppc64le/sandbox/0001-sandbox-linux-bpf_dsl-Update-syscall-ranges-for-ppc6.patch"
-		"${WORKDIR}/debian/patches/ppc64le/sandbox/0001-sandbox-linux-Implement-partial-support-for-ppc64-sy.patch"
-		"${WORKDIR}/debian/patches/ppc64le/sandbox/0001-sandbox-linux-Update-IsSyscallAllowed-in-broker_proc.patch"
-		"${WORKDIR}/debian/patches/ppc64le/sandbox/0001-sandbox-linux-Update-syscall-helpers-lists-for-ppc64.patch"
-		"${WORKDIR}/debian/patches/ppc64le/sandbox/0002-sandbox-linux-bpf_dsl-Modify-seccomp_macros-to-add-s.patch"
-		"${WORKDIR}/debian/patches/ppc64le/sandbox/0003-sandbox-linux-system_headers-Update-linux-seccomp-he.patch"
-		"${WORKDIR}/debian/patches/ppc64le/sandbox/0004-sandbox-linux-system_headers-Update-linux-signal-hea.patch"
-		"${WORKDIR}/debian/patches/ppc64le/sandbox/0005-sandbox-linux-seccomp-bpf-Add-ppc64-syscall-stub.patch"
-		"${WORKDIR}/debian/patches/ppc64le/sandbox/0005-sandbox-linux-update-unit-test-for-ppc64.patch"
-		"${WORKDIR}/debian/patches/ppc64le/sandbox/0006-sandbox-linux-disable-timedwait-time64-ppc64.patch"
-		"${WORKDIR}/debian/patches/ppc64le/sandbox/0007-sandbox-linux-add-ppc64-stat.patch"
-		"${WORKDIR}/debian/patches/ppc64le/sandbox/Sandbox-linux-services-credentials.cc-PPC.patch"
-		"${WORKDIR}/debian/patches/ppc64le/sandbox/0008-sandbox-fix-ppc64le-glibc234.patch"
-		"${WORKDIR}/debian/patches/ppc64le/third_party/0001-third_party-angle-Include-missing-header-cstddef-in-.patch"
-		"${WORKDIR}/debian/patches/ppc64le/third_party/0001-third_party-boringssl-Properly-detect-ppc64le-in-BUI.patch"
-		"${WORKDIR}/debian/patches/ppc64le/third_party/0001-third_party-libvpx-Properly-generate-gni-on-ppc64.patch"
-		"${WORKDIR}/debian/patches/ppc64le/third_party/0001-third_party-lss-Don-t-look-for-mmap2-on-ppc64.patch"
-		"${WORKDIR}/debian/patches/ppc64le/third_party/0001-third_party-pffft-Include-altivec.h-on-ppc64-with-SI.patch"
-		"${WORKDIR}/debian/patches/ppc64le/third_party/0002-third_party-libvpx-Add-ppc64-sources-to-gni.patch"
-		"${WORKDIR}/debian/patches/ppc64le/third_party/0002-third_party-lss-kernel-structs.patch"
-		"${WORKDIR}/debian/patches/ppc64le/third_party/0001-Enable-third-party-libgav1-parser.patch"
-		"${WORKDIR}/debian/patches/ppc64le/webrtc/Modules-desktop_capture-differ_block.cc-PPC.patch"
-		"${WORKDIR}/debian/patches/ppc64le/webrtc/Rtc_base-system-arch.h-PPC.patch"
-		"${WORKDIR}/debian/patches/ppc64le/crashpad/0002-Include-cstddef-to-fix-build.patch"
-		"${WORKDIR}/debian/patches/ppc64le/third_party/0004-third_party-crashpad-port-curl-transport-ppc64.patch"
-		"${WORKDIR}/debian/patches/ppc64le/workarounds/HACK-third_party-libvpx-use-generic-gnu.patch"
-		"${WORKDIR}/debian/patches/ppc64le/libaom/0001-Add-ppc64-target-to-libaom.patch"
-		"${WORKDIR}/debian/patches/ppc64le/libaom/0001-Add-pregenerated-config-for-libaom-on-ppc64.patch"
-		"${WORKDIR}/debian/patches/ppc64le/third_party/0003-third_party-libvpx-Add-ppc64-generated-config.patch"
-		"${WORKDIR}/debian/patches/ppc64le/third_party/0003-third_party-ffmpeg-Add-ppc64-generated-config.patch"
-		"${WORKDIR}/debian/patches/ppc64le/third_party/0004-third_party-libvpx-work-around-ambiguous-vsx.patch"
-		"${WORKDIR}/debian/patches/ppc64le/ffmpeg/0001-Add-support-for-ppc64.patch"
-		"${WORKDIR}/debian/patches/ppc64le/breakpad/0001-Implement-support-for-ppc64-on-Linux.patch"
-		"${WORKDIR}/debian/patches/ppc64le/crashpad/0001-Implement-support-for-PPC64-on-Linux.patch"
-		"${WORKDIR}/debian/patches/ppc64le/database/0001-Properly-detect-little-endian-PPC64-systems.patch"
-		"${WORKDIR}/debian/patches/ppc64le/third_party/0001-Force-baseline-POWER8-AltiVec-VSX-CPU-features-when-.patch"
-		"${FILESDIR}/ppc64le/fix-breakpad-compile.patch"
-		"${WORKDIR}/debian/patches/ppc64le/v8/0002-Add-ppc64-trap-instructions.patch"
-		"${WORKDIR}/debian/patches/ppc64le/third_party/0001-Add-PPC64-support-for-libdav1d.patch"
-		"${WORKDIR}/debian/patches/ppc64le/third_party/0001-Fix-libdav1d-compilation-on-clang-ppc.patch"
-		"${WORKDIR}/debian/patches/ppc64le/sandbox/fix-ppc64-linux-syscalls-headers.patch"
-		"${WORKDIR}/debian/patches/ppc64le/third_party/0003-thirdparty-fix-dav1d-gn.patch"
-		"${WORKDIR}/debian/patches/ppc64le/third_party/use-sysconf-page-size-on-ppc64.patch"
-		"${FILESDIR}/ppc64le/libpng-pdfium-compile-98.patch"
-		"${FILESDIR}/ppc64le/fix-swiftshader-compile.patch"
-	)
+	use ppc64 && PATCHES+=( "${WORKDIR}/patches-ppc64" )
 
 	default
 
@@ -1501,29 +1445,20 @@ src_prepare() {
 
 	use system-ffmpeg && eapply "${FILESDIR}/chromium-99-opus.patch"
 
-	if use system-ffmpeg; then
-		if has_version "<media-video/ffmpeg-5.0"; then
-			eapply "${FILESDIR}/chromium-93-ffmpeg-4.4.patch"
-			eapply "${FILESDIR}/unbundle-ffmpeg-av_stream_get_first_dts.patch"
-		fi
-		eapply "${FILESDIR}/reverse-roll-src-third_party-ffmpeg.patch"
+	if use system-ffmpeg && has_version "<media-video/ffmpeg-5.0"; then
+		eapply "${FILESDIR}/chromium-93-ffmpeg-4.4.patch"
+		eapply "${FILESDIR}/unbundle-ffmpeg-av_stream_get_first_dts.patch"
 	fi
 
-	use system-openjpeg && eapply "${FILESDIR}/chromium-system-openjpeg-r3.patch"
+	use system-openjpeg && eapply "${FILESDIR}/chromium-system-openjpeg-r2.patch"
 
 	use vdpau && eapply "${FILESDIR}/vdpau-support-r4.patch"
-
-	if has_version ">=sys-devel/clang-15"; then
-		eapply "${FILESDIR}/clang-15.patch"
-	fi
 
 	if use ungoogled; then
 		# From here we adapt ungoogled-chromium's patches to our needs
 		local ugc_pruning_list="${UGC_WD}/pruning.list"
 		local ugc_patch_series="${UGC_WD}/patches/series"
 		local ugc_substitution_list="${UGC_WD}/domain_substitution.list"
-
-		UGC_SKIP_SUBSTITUTION="${UGC_SKIP_SUBSTITUTION} first_party_sets_handler_impl.h"
 
 		local ugc_unneeded=(
 			# GN bootstrap
@@ -1599,36 +1534,28 @@ src_prepare() {
 		einfo "- ${patch_folder}"
 		for i in "${topatch[@]}";
 		do
-			if	[ "$i" = "feat_add_uv_loop_interrupt_on_io_change_option_to_uv_loop_configure.patch" ]; then
-				einfo "Applying trimmed down version of ${i}"
-				pushd "${patches[$patch_folder]}" > /dev/null || die
-				eapply "${FILESDIR}/$i" || die
-				popd > /dev/null || die
+			# if [ "$i" = "cherry-pick-5902d1aa722a.patch" ] ||
+			if	[ "$i" = "version_10_2_154_10_cherry-pick.patch" ]; then
+				einfo "Skipping ${i}: Just skipping :)"
 				continue;
 			fi
-			# if [ "$i" = "cherry-pick-5902d1aa722a.patch" ] ||
-			# if	[ "$i" = "regexp_add_a_currently_failing_cctest_for_irregexp_reentrancy.patch" ]; then
-			# 	einfo "Skipping ${i}: No files to patch."
-			# 	continue;
-			# fi
 			# if	[ "$i" = "feat_add_data_parameter_to_processsingleton.patch" ]; then
 			#  	einfo "Skipping ${i}: Not adding data parameter to ProcessSingleton, which will also be absent from app.requestSingleInstanceLock API."
 			#  	continue;
 			# fi
-			if [ "$i" = "sysroot.patch" ] ||
-			[ "$i" = "build_disable_print_content_analysis.patch" ] ; then
+			if [ "$i" = "sysroot.patch" ]; then
 			if use ungoogled; then
 				ewarn "Skipping ${i} due to ungoogled."
 				continue;
 			fi
 			fi
-			if [ "$i" = "fix_preserve_proper_method_names_as-is_in_error_stack.patch" ]; then
-				einfo "Git binary patch: ${i}"
-				pushd "${patches[$patch_folder]}" > /dev/null || die
-				git apply -p1 < "${S}/${patch_folder}/$i" || die
-				popd > /dev/null || die
-				continue;
-			fi
+			# if [ "$i" = "fix_apply_tzdata2020f_to_icu.patch" ]; then
+			# 	einfo "Git binary patch: ${i}"
+			# 	pushd "${patches[$patch_folder]}" > /dev/null || die
+			# 	git apply -p1 < "${S}/${patch_folder}/$i" || die
+			# 	popd > /dev/null || die
+			# 	continue;
+			# fi
 			pushd "${patches[$patch_folder]}" > /dev/null || die
 			eapply "${S}/${patch_folder}/$i" || die
 			popd > /dev/null || die
@@ -1694,8 +1621,8 @@ src_prepare() {
 		third_party/cros_system_api
 		third_party/dav1d
 		third_party/dawn
-		third_party/dawn/third_party/gn/webgpu-cts
 		third_party/dawn/third_party/khronos
+		third_party/dawn/third_party/tint
 		third_party/depot_tools
 		third_party/devscripts
 		third_party/devtools-frontend
@@ -1746,6 +1673,7 @@ src_prepare() {
 		third_party/jstemplate
 		third_party/khronos
 		third_party/leveldatabase
+		third_party/libXNVCtrl
 		third_party/libaddressinput
 		third_party/libaom
 		third_party/libaom/source/libaom/third_party/fastfeat
@@ -1796,6 +1724,7 @@ src_prepare() {
 		third_party/node
 		third_party/node/node_modules/polymer-bundler/lib/third_party/UglifyJS2
 		third_party/one_euro_filter
+		third_party/opencv
 		third_party/openscreen
 		third_party/openscreen/src/third_party/mozilla
 		third_party/openscreen/src/third_party/tinycbor/src/src
@@ -1825,6 +1754,8 @@ src_prepare() {
 		third_party/protobuf/third_party/six
 		third_party/pyjson5
 		third_party/qcms
+	)
+	keeplibs+=(
 		third_party/rnnoise
 		third_party/s2cellid
 		third_party/securemessage
@@ -1848,7 +1779,6 @@ src_prepare() {
 		third_party/swiftshader/third_party/marl
 		third_party/swiftshader/third_party/subzero
 		third_party/swiftshader/third_party/SPIRV-Headers/include/spirv/unified1
-		third_party/swiftshader/third_party/SPIRV-Tools
 		third_party/tensorflow-text
 		third_party/tflite
 		third_party/tflite/src/third_party/eigen3
@@ -1856,6 +1786,7 @@ src_prepare() {
 		third_party/ruy
 		third_party/six
 		third_party/ukey2
+		third_party/usrsctp
 		third_party/utf
 		third_party/vulkan
 		third_party/web-animations-js
@@ -1966,15 +1897,8 @@ src_configure() {
 
 	if use clang && ! tc-is-clang ; then
 		einfo "Enforcing the use of clang due to USE=clang ..."
-		if tc-is-cross-compiler; then
-			CC="${CBUILD}-clang -target ${CHOST} --sysroot ${ESYSROOT}"
-			CXX="${CBUILD}-clang++ -target ${CHOST} --sysroot ${ESYSROOT}"
-			BUILD_CC=${CBUILD}-clang
-			BUILD_CXX=${CBUILD}-clang++
-		else
-			CC=${CHOST}-clang
-			CXX=${CHOST}-clang++
-		fi
+		CC=${CHOST}-clang
+		CXX=${CHOST}-clang++
 		AR=llvm-ar #thinlto fails otherwise
 		strip-unsupported-flags
 	elif ! use clang && ! tc-is-gcc ; then
@@ -1998,7 +1922,7 @@ src_configure() {
 		tc-export BUILD_{AR,CC,CXX,NM}
 		myconf_gn+=" host_toolchain=\"//build/toolchain/linux/unbundle:host\""
 		myconf_gn+=" v8_snapshot_toolchain=\"//build/toolchain/linux/unbundle:host\""
-		myconf_gn+=" pkg_config=\"$(tc-getPKG_CONFIG)\""
+		myconf_gn+=" pkg_config=\"$(tc-get_PKG_CONFIG)\""
 		myconf_gn+=" host_pkg_config=\"$(tc-getBUILD_PKG_CONFIG)\""
 
 		# setup cups-config, build system only uses --libs option
@@ -2082,7 +2006,6 @@ src_configure() {
 	myconf_gn+=" use_kerberos=$(usex kerberos true false)"
 	myconf_gn+=" use_pulseaudio=$(usex pulseaudio true false)"
 	myconf_gn+=" use_vaapi=$(usex vaapi true false)"
-	myconf_gn+=" rtc_use_pipewire=$(usex screencast true false)"
 	myconf_gn+=" gtk_version=$(usex gtk4 4 3)"
 
 	myconf_gn+=" disable_fieldtrial_testing_config=true"
@@ -2225,10 +2148,8 @@ src_configure() {
 
 	# Disable external code space for V8 for ppc64. It is disabled for ppc64
 	# by default, but cross-compiling on amd64 enables it again.
-	if tc-is-cross-compiler; then
-		if ! use amd64 && ! use arm64; then
-			myconf_gn+=" v8_enable_external_code_space=false"
-		fi
+	if use ppc64; then
+		myconf_gn+=" v8_enable_external_code_space=false"
 	fi
 
 	# Bug 491582.
@@ -2389,8 +2310,9 @@ src_install() {
 	#	doins out/Release/swiftshader/*.so
 	#fi
 
+	insinto "${CHROMIUM_HOME}/node_modules"
 	doins -r "${WORKDIR}/${NODE_P}/deps/npm"
-	fperms -R 755 "${CHROMIUM_HOME}/npm/bin/"
+	fperms -R 755 "${CHROMIUM_HOME}/node_modules/npm/bin/"
 
 	insinto "/usr/include/electron-${PV%%.*}/"
 	doins -r out/Release/gen/node_headers/include/node
@@ -2404,12 +2326,6 @@ pkg_postinst() {
 		elog "by adding --enable-features=VaapiVideoDecoder and "
 		elog "--disable-features=UseChromeOSDirectVideoDecoder to CHROMIUM_FLAGS"
 		elog "in /etc/chromium/default."
-	fi
-	if use screencast; then
-		elog "Screencast is disabled by default at runtime. Either enable it"
-		elog "by navigating to chrome://flags/#enable-webrtc-pipewire-capturer"
-		elog "inside Chromium or add --enable-features=WebRTCPipeWireCapturer"
-		elog "to CHROMIUM_FLAGS in /etc/chromium/default."
 	fi
 	if use gtk4; then
 		elog "Chromium prefers GTK3 over GTK4 at runtime. To override this"
