@@ -1590,13 +1590,13 @@ src_prepare() {
 		einfo "- ${patch_folder}"
 		for i in "${topatch[@]}";
 		do
-			# if	[ "$i" = "feat_add_uv_loop_interrupt_on_io_change_option_to_uv_loop_configure.patch" ]; then
-			# 	einfo "Applying trimmed down version of ${i}"
-			# 	pushd "${patches[$patch_folder]}" > /dev/null || die
-			# 	eapply "${FILESDIR}/$i" || die
-			# 	popd > /dev/null || die
-			# 	continue;
-			# fi
+			if	[ "$i" = "feat_add_uv_loop_interrupt_on_io_change_option_to_uv_loop_configure.patch" ]; then
+				einfo "Partially applying ${i}"
+				pushd "${patches[$patch_folder]}" > /dev/null || die
+				git apply -p1 --exclude="test" --exclude="loop.rst" < "${FILESDIR}/$i" || die
+				popd > /dev/null || die
+				continue;
+			fi
 			# if [ "$i" = "cherry-pick-5902d1aa722a.patch" ] ||
 			# if	[ "$i" = "regexp_add_a_currently_failing_cctest_for_irregexp_reentrancy.patch" ]; then
 			# 	einfo "Skipping ${i}: No files to patch."
@@ -1613,13 +1613,13 @@ src_prepare() {
 				continue;
 			fi
 			fi
-			# if [ "$i" = "fix_preserve_proper_method_names_as-is_in_error_stack.patch" ]; then
-			# 	einfo "Git binary patch: ${i}"
-			# 	pushd "${patches[$patch_folder]}" > /dev/null || die
-			# 	git apply -p1 < "${S}/${patch_folder}/$i" || die
-			# 	popd > /dev/null || die
-			# 	continue;
-			# fi
+			if [ "$i" = "fix_preserve_proper_method_names_as-is_in_error_stack.patch" ]; then
+				einfo "Git binary patch: ${i}"
+				pushd "${patches[$patch_folder]}" > /dev/null || die
+				git apply -p1 < "${S}/${patch_folder}/$i" || die
+				popd > /dev/null || die
+				continue;
+			fi
 			pushd "${patches[$patch_folder]}" > /dev/null || die
 			eapply "${S}/${patch_folder}/$i" || die
 			popd > /dev/null || die
