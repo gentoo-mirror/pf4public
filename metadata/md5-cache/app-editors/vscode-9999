@@ -1,16 +1,16 @@
 BDEPEND=|| ( >=dev-lang/python-3.10.4:3.10 >=dev-lang/python-3.9.12:3.9 >=dev-lang/python-3.8.13:3.8 ) sys-apps/yarn >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
-DEPEND=>=app-crypt/libsecret-0.18.8:= >=x11-libs/libX11-1.6.9:= >=x11-libs/libxkbfile-1.1.0:= sys-apps/ripgrep electron-19? ( dev-util/electron:19 ) !electron-19? ( dev-util/electron:18 )
+DEPEND=>=app-crypt/libsecret-0.18.8:= >=x11-libs/libX11-1.6.9:= >=x11-libs/libxkbfile-1.1.0:= sys-apps/ripgrep electron-20? ( dev-util/electron:20 ) !electron-20? ( dev-util/electron:19 )
 DESCRIPTION=Visual Studio Code - Open Source
 EAPI=7
 HOMEPAGE=https://github.com/microsoft/vscode
 INHERIT=desktop flag-o-matic multilib ninja-utils pax-utils portability python-any-r1 toolchain-funcs xdg-utils git-r3
-IUSE=badge-providers +build-online electron-19 insiders liveshare openvsx substitute-urls
+IUSE=badge-providers +build-online electron-20 insiders liveshare openvsx substitute-urls
 LICENSE=MIT
 PROPERTIES=live
-RDEPEND=>=app-crypt/libsecret-0.18.8:= >=x11-libs/libX11-1.6.9:= >=x11-libs/libxkbfile-1.1.0:= sys-apps/ripgrep electron-19? ( dev-util/electron:19 ) !electron-19? ( dev-util/electron:18 )
+RDEPEND=>=app-crypt/libsecret-0.18.8:= >=x11-libs/libX11-1.6.9:= >=x11-libs/libxkbfile-1.1.0:= sys-apps/ripgrep electron-20? ( dev-util/electron:20 ) !electron-20? ( dev-util/electron:19 )
 RESTRICT=mirror build-online? ( network-sandbox )
 SLOT=0
 SRC_URI=https://registry.yarnpkg.com/@vscode/ripgrep/-/ripgrep-1.14.2.tgz -> @vscode-ripgrep-1.14.2.tgz
 _eclasses_=desktop	22952d8f27cac191d75529d4c38e6bfa	toolchain-funcs	1542e649be915f43f6908a9e93909961	multilib	5ca4e49abed8e3a2f7b56920eadee157	edos2unix	33e347e171066657f91f8b0c72ec8773	strip-linguas	ac3ee41ee2d31d8c41a77c0838320cc7	wrapper	4a1902f969e5718126434fc35f3a0d9c	eutils	8f942ebdcf04334697649d4a0bf65a32	flag-o-matic	38d6ec96711cea42a5cb1cc723a6e906	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	58ec4e54962bf45d065fb95030701514	pax-utils	91d47e5d20627c717aa878b9167c62a8	portability	d33a77692bb47e8227f27e17fb9c3c05	eapi8-dosym	cd7d420bb5be5ee079f27239ce76b8f5	python-utils-r1	dd5e1098e305ad508d21f496e9e37046	python-any-r1	a3e9c0524a795d7f2767a2cf12a2e8c0	xdg-utils	fffb53a53cf17c9c0c998a3c0a590c7e	git-r3	b9ac6f96d2a88edb5b351df634dc5e53
-_md5_=fa7588d849898e88028b6fa653313c7f
+_md5_=df4378f86fdde4441d604f69275ff515
