@@ -9,7 +9,7 @@ media-libs/zint 2.10.0 2.11.0 2.11.1 9999: Barcode encoding library supporting o
 net-im/element-desktop 1.11.2 1.11.3 9999: A glossy Matrix collaboration client for desktop
 net-im/element-web 1.11.2 1.11.3 9999: A glossy Matrix collaboration client for the web
 net-misc/sb-hosts 3.11.9 3.11.10 9999: A hosts file from several well-curated sources
-sys-kernel/linux-image 4.9.321 4.9.324 4.9.325 4.14.286 4.14.289 4.14.290 4.19.250 4.19.253 4.19.254 4.19.255 5.4.203 5.4.208 5.4.209 5.4.210 5.10.135 5.10.136 5.10.137 5.15.59 5.15.60 5.15.61 5.15.62 5.18.17 5.18.18 5.18.19 5.18.19-r1 5.19.2 5.19.2-r1 5.19.3: linux-image ebuild is used to build linux kernel image using savedconfig
+sys-kernel/linux-image 4.9.321 4.9.324 4.9.325 4.9.326 4.14.286 4.14.289 4.14.290 4.14.291 4.19.250 4.19.253 4.19.254 4.19.255 4.19.256 5.4.203 5.4.208 5.4.209 5.4.210 5.4.211 5.10.135 5.10.136 5.10.137 5.10.138 5.15.59 5.15.60 5.15.61 5.15.62 5.15.63 5.18.19 5.18.19-r1 5.19.2 5.19.2-r1 5.19.3 5.19.4: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
 www-client/ungoogled-chromium 104.0.5112.101_p1 105.0.5195.52_p1: Modifications to Chromium for removing Google integration and enhancing privacy
 www-client/ungoogled-chromium-bin 103.0.5060.134 104.0.5112.79 104.0.5112.101: Modifications to Chromium for removing Google integration and enhancing privacy
