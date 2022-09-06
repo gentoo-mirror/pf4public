@@ -48,7 +48,8 @@ REQUIRED_USE="
 
 #UGC_COMMIT_ID="6189820f350e6d7e7316bd6bd0e85fd60230dbf5"
 UGC_PR_COMMITS=(
-	50e1f2bb0b67a1c73b43682fa6cb7f868350e272
+	390d9b8f0c4fdc800d390d5989c24377b4d78280
+	2449c63df9e4a4dfae8969943d253ac58903890c
 )
 
 UGC_PV="${PV/_p/-}"
@@ -66,7 +67,7 @@ fi
 SRC_URI+="${UGC_URL}
 "
 
-if [ ! -z "${UGC_PR_COMMITS[@]}" ]; then
+if [ ! -z "${UGC_PR_COMMITS[*]}" ]; then
 	for i in "${UGC_PR_COMMITS[@]}"; do
 		SRC_URI+="https://github.com/ungoogled-software/${PN}/commit/$i.patch -> ${PN}-$i.patch
 		"
@@ -416,7 +417,7 @@ src_prepare() {
 	use vdpau && eapply "${FILESDIR}/vdpau-support-r4.patch"
 
 	#* Applying UGC PRs here
-	if [ ! -z "${UGC_PR_COMMITS[@]}" ]; then
+	if [ ! -z "${UGC_PR_COMMITS[*]}" ]; then
 		pushd "${UGC_WD}" >/dev/null
 		for i in "${UGC_PR_COMMITS[@]}"; do
 			eapply "${DISTDIR}/${PN}-$i.patch"
