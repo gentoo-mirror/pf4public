@@ -62,6 +62,7 @@ www-client/ungoogled-chromium:enable-driver - Build chromedriver
 www-client/ungoogled-chromium:gtk4 - Build with GTK4 headers.
 www-client/ungoogled-chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
 www-client/ungoogled-chromium:headless - Build Ozone only with headless backend, NOT RECOMMENDED for general uses
+www-client/ungoogled-chromium:hevc - Enable HEVC decoding support. Should work with system-ffmpeg, but might require additional patching for the built-in one.
 www-client/ungoogled-chromium:js-type-check - Enable JavaScript type-checking for Chrome's web technology-based UI. Requires Java.
 www-client/ungoogled-chromium:official - Enable Official build instead of Developer build.
 www-client/ungoogled-chromium:optimize-thinlto - Whether to enable ThinLTO optimizations. Turning ThinLTO optimizations on can substantially increase link time and binary size, but they generally also make binaries a fair bit faster.
