@@ -4,7 +4,7 @@ app-eselect/eselect-electron 0.2: Utility to select the default Electron slot
 app-misc/font-manager 0.8.7 0.8.8 9999: A simple font management application for Gtk+ Desktop Environments
 dev-python/ewmh 0.1.6: An implementation of Extended Window Manager Hints, based on Xlib
 dev-python/pulsectl 20.5.1: High-level interface and ctypes-based bindings for PulseAudio
-dev-util/electron 19.0.16 19.0.17 20.1.4 20.2.0: Cross platform application development framework based on web technologies
+dev-util/electron 19.0.16 19.0.17 19.1.0 20.1.4 20.2.0: Cross platform application development framework based on web technologies
 media-libs/zint 2.10.0 2.11.0 2.11.1 9999: Barcode encoding library supporting over 50 symbologies
 net-im/element-desktop 1.11.4 1.11.5 9999: A glossy Matrix collaboration client for desktop
 net-im/element-web 1.11.4 1.11.5 9999: A glossy Matrix collaboration client for the web
