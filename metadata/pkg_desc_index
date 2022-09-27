@@ -6,8 +6,8 @@ dev-python/ewmh 0.1.6: An implementation of Extended Window Manager Hints, based
 dev-python/pulsectl 20.5.1: High-level interface and ctypes-based bindings for PulseAudio
 dev-util/electron 19.0.17 19.1.0 20.1.4 20.2.0: Cross platform application development framework based on web technologies
 media-libs/zint 2.10.0 2.11.0 2.11.1 9999: Barcode encoding library supporting over 50 symbologies
-net-im/element-desktop 1.11.4 1.11.5 9999: A glossy Matrix collaboration client for desktop
-net-im/element-web 1.11.4 1.11.5 9999: A glossy Matrix collaboration client for the web
+net-im/element-desktop 1.11.4 1.11.5 1.11.6 9999: A glossy Matrix collaboration client for desktop
+net-im/element-web 1.11.4 1.11.5 1.11.6 9999: A glossy Matrix collaboration client for the web
 net-misc/sb-hosts 3.11.17 3.11.18 9999: A hosts file from several well-curated sources
 sys-kernel/linux-image 4.9.321 4.9.329 4.14.286 4.14.294 4.19.250 4.19.259 5.4.203 5.4.214 5.10.135 5.10.144 5.10.145 5.15.59 5.15.69 5.15.70 5.19.9 5.19.10 5.19.11: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
