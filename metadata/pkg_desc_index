@@ -1,13 +1,13 @@
 app-admin/gb-chroot 0.14 0.15 9999: gb-chroot is a collection of scripts for building Gentoo's binpkgs
-app-editors/vscode 1.71.2 1.72.0 9999: Visual Studio Code - Open Source
+app-editors/vscode 1.71.2 1.72.0 1.72.1 9999: Visual Studio Code - Open Source
 app-eselect/eselect-electron 0.2: Utility to select the default Electron slot
 app-misc/font-manager 0.8.7 0.8.8 9999: A simple font management application for Gtk+ Desktop Environments
 dev-python/ewmh 0.1.6: An implementation of Extended Window Manager Hints, based on Xlib
 dev-python/pulsectl 20.5.1: High-level interface and ctypes-based bindings for PulseAudio
 dev-util/electron 19.1.1 19.1.2 20.2.0 20.3.0 20.3.1: Cross platform application development framework based on web technologies
 media-libs/zint 2.10.0 2.11.0 2.11.1 9999: Barcode encoding library supporting over 50 symbologies
-net-im/element-desktop 1.11.8 1.11.9 9999: A glossy Matrix collaboration client for desktop
-net-im/element-web 1.11.8 1.11.9 9999: A glossy Matrix collaboration client for the web
+net-im/element-desktop 1.11.8 1.11.9 1.11.10 9999: A glossy Matrix collaboration client for desktop
+net-im/element-web 1.11.8 1.11.9 1.11.10 9999: A glossy Matrix collaboration client for the web
 net-misc/sb-hosts 3.11.20 3.11.21 9999: A hosts file from several well-curated sources
 sys-kernel/linux-image 4.9.321 4.9.329 4.9.330 4.14.286 4.14.294 4.14.295 4.19.250 4.19.259 4.19.260 4.19.261 5.4.203 5.4.214 5.4.215 5.4.216 5.4.217 5.10.135 5.10.144 5.10.145 5.10.146 5.10.147 5.15.59 5.15.69 5.15.70 5.15.71 5.15.72 5.19.10 5.19.11 5.19.13 5.19.14 6.0.0: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
