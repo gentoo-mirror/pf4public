@@ -72,6 +72,7 @@ www-client/ungoogled-chromium:pic - Disable optimized assembly code that is not 
 www-client/ungoogled-chromium:proprietary-codecs - Enable proprietary codecs like H.264, MP3
 www-client/ungoogled-chromium:screencast - Enable support for remote desktop and screen cast using media-video/pipewire
 www-client/ungoogled-chromium:suid - Build the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels
+www-client/ungoogled-chromium:system-av1 - Use the system media-libs/libaom and media-libs/dav1d instead of the bundled ones
 www-client/ungoogled-chromium:system-ffmpeg - Use the system media-video/ffmpeg instead of the bundled one
 www-client/ungoogled-chromium:system-harfbuzz - Use the system media-libs/harfbuzz instead of the bundled one
 www-client/ungoogled-chromium:system-icu - Use the system dev-libs/icu instead of the bundled one
