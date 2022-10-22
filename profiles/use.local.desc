@@ -6,6 +6,7 @@ app-admin/gb-chroot:host - Enable this on a chroot host
 app-editors/vscode:badge-providers - Allow various badge providers
 app-editors/vscode:build-online - Disable network-sandbox and open Pandora's box!
 app-editors/vscode:electron-20 - Build against electron-20 instead of the default one. Use at your own risk!
+app-editors/vscode:electron-21 - Build against electron-21 instead of the default one. Use at your own risk!
 app-editors/vscode:insiders - Allow insiders API !WARNING! Enabling this might be illegal!
 app-editors/vscode:liveshare - Allow liveshare API
 app-editors/vscode:openvsx - Use Eclipse Open VSX instead of Visual Studio Marketplace
@@ -48,6 +49,7 @@ dev-util/electron:thinlto - Build with ThinLTO support. LTO (Link Time Optimizat
 dev-util/electron:ungoogled - Apply ungoogled-chromium modifications to chromium sources (electron sources are untouched be it better or worse). Not yet thoroughly tested! Might break electron apps or electron itself!
 net-im/element-desktop:build-online - Disable network-sandbox and open Pandora's box!
 net-im/element-desktop:electron-20 - Build against electron-20 instead of the default one. Use at your own risk!
+net-im/element-desktop:electron-21 - Build against electron-21 instead of the default one. Use at your own risk!
 net-im/element-desktop:native-modules - Build native modules (for searching in encrypted rooms and secure storage)
 net-im/element-web:build-online - Disable network-sandbox and open Pandora's box!
 net-misc/sb-hosts:fakenews - Add fake news sites
