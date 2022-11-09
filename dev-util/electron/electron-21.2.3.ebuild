@@ -2,8 +2,8 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-PYTHON_COMPAT=( python3_{8..10} )
-PYTHON_REQ_USE="xml"
+PYTHON_COMPAT=( python3_{8..11} )
+PYTHON_REQ_USE="xml(+)"
 
 CHROMIUM_LANGS="af am ar bg bn ca cs da de el en-GB es es-419 et fa fi fil fr gu he
 	hi hr hu id it ja kn ko lt lv ml mr ms nb nl pl pt-BR pt-PT ro ru sk sl sr
@@ -12,9 +12,9 @@ CHROMIUM_LANGS="af am ar bg bn ca cs da de el en-GB es es-419 et fa fi fil fr gu
 inherit check-reqs chromium-2 desktop flag-o-matic ninja-utils pax-utils python-any-r1 readme.gentoo-r1 toolchain-funcs xdg-utils
 
 CHROMIUM_VERSION_WARNING="true"
-CHROMIUM_VERSION="104.0.5112.102"
+CHROMIUM_VERSION="106.0.5249.119"
 CHROMIUM_P="chromium-${CHROMIUM_VERSION}"
-NODE_VERSION="16.15.0"
+NODE_VERSION="16.16.0"
 NODE_P="node-v${NODE_VERSION}"
 UGC_PVR="${CHROMIUM_VERSION}-1"
 UGC_PF="ungoogled-chromium-${UGC_PVR}"
@@ -29,9 +29,9 @@ UGC_WD="${WORKDIR}/${UGC_PF}"
 
 DESCRIPTION="Cross platform application development framework based on web technologies"
 HOMEPAGE="https://electronjs.org/"
-PATCHSET="2"
-PATCHSET_NAME="chromium-104-patchset-${PATCHSET}"
-PATCHSET_NAME_PPC64="chromium_104.0.5112.101-1raptor0~deb11u1.debian"
+PATCHSET="3"
+PATCHSET_NAME="chromium-106-patchset-${PATCHSET}"
+PATCHSET_NAME_PPC64="chromium_106.0.5249.103-1raptor1~deb11u2.debian"
 SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-official/${CHROMIUM_P}.tar.xz
 	mirror+https://github.com/stha09/chromium-patches/releases/download/${PATCHSET_NAME}/${PATCHSET_NAME}.tar.xz
 	mirror+https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}.tar.xz
@@ -41,7 +41,6 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 		https://github.com/ungoogled-software/ungoogled-chromium/archive/${UGC_PVR}.tar.gz -> ${UGC_PF}.tar.gz
 	)
 
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
 	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
 	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
 	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
@@ -57,6 +56,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/@azure/storage-blob/-/storage-blob-12.9.0.tgz -> @azure-storage-blob-12.9.0.tgz
 	https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.5.5.tgz -> @babel-code-frame-7.5.5.tgz
 	https://registry.yarnpkg.com/@babel/highlight/-/highlight-7.5.0.tgz -> @babel-highlight-7.5.0.tgz
+	https://registry.yarnpkg.com/@electron/asar/-/asar-3.2.1.tgz -> @electron-asar-3.2.1.tgz
 	https://registry.yarnpkg.com/@electron/docs-parser/-/docs-parser-0.12.4.tgz -> @electron-docs-parser-0.12.4.tgz
 	https://registry.yarnpkg.com/@electron/typescript-definitions/-/typescript-definitions-8.9.5.tgz -> @electron-typescript-definitions-8.9.5.tgz
 	https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.3.tgz -> @nodelib-fs.scandir-2.1.3.tgz
@@ -77,11 +77,14 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/@opentelemetry/api/-/api-1.0.4.tgz -> @opentelemetry-api-1.0.4.tgz
 	https://registry.yarnpkg.com/@primer/octicons/-/octicons-10.0.0.tgz -> @primer-octicons-10.0.0.tgz
 	https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.14.0.tgz -> @sindresorhus-is-0.14.0.tgz
+	https://registry.yarnpkg.com/@sindresorhus/is/-/is-4.6.0.tgz -> @sindresorhus-is-4.6.0.tgz
 	https://registry.yarnpkg.com/@szmarczak/http-timer/-/http-timer-1.1.2.tgz -> @szmarczak-http-timer-1.1.2.tgz
+	https://registry.yarnpkg.com/@szmarczak/http-timer/-/http-timer-4.0.6.tgz -> @szmarczak-http-timer-4.0.6.tgz
 	https://registry.yarnpkg.com/@types/anymatch/-/anymatch-1.3.1.tgz -> @types-anymatch-1.3.1.tgz
 	https://registry.yarnpkg.com/@types/basic-auth/-/basic-auth-1.1.3.tgz -> @types-basic-auth-1.1.3.tgz
 	https://registry.yarnpkg.com/@types/body-parser/-/body-parser-1.19.0.tgz -> @types-body-parser-1.19.0.tgz
 	https://registry.yarnpkg.com/@types/busboy/-/busboy-0.2.3.tgz -> @types-busboy-0.2.3.tgz
+	https://registry.yarnpkg.com/@types/cacheable-request/-/cacheable-request-6.0.2.tgz -> @types-cacheable-request-6.0.2.tgz
 	https://registry.yarnpkg.com/@types/chai-as-promised/-/chai-as-promised-7.1.1.tgz -> @types-chai-as-promised-7.1.1.tgz
 	https://registry.yarnpkg.com/@types/chai-as-promised/-/chai-as-promised-7.1.3.tgz -> @types-chai-as-promised-7.1.3.tgz
 	https://registry.yarnpkg.com/@types/chai/-/chai-4.1.7.tgz -> @types-chai-4.1.7.tgz
@@ -97,12 +100,15 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-9.0.1.tgz -> @types-fs-extra-9.0.1.tgz
 	https://registry.yarnpkg.com/@types/glob/-/glob-7.1.1.tgz -> @types-glob-7.1.1.tgz
 	https://registry.yarnpkg.com/@types/highlight.js/-/highlight.js-9.12.4.tgz -> @types-highlight.js-9.12.4.tgz
+	https://registry.yarnpkg.com/@types/http-cache-semantics/-/http-cache-semantics-4.0.1.tgz -> @types-http-cache-semantics-4.0.1.tgz
 	https://registry.yarnpkg.com/@types/is-empty/-/is-empty-1.2.0.tgz -> @types-is-empty-1.2.0.tgz
 	https://registry.yarnpkg.com/@types/js-yaml/-/js-yaml-4.0.2.tgz -> @types-js-yaml-4.0.2.tgz
+	https://registry.yarnpkg.com/@types/json-buffer/-/json-buffer-3.0.0.tgz -> @types-json-buffer-3.0.0.tgz
 	https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.3.tgz -> @types-json-schema-7.0.3.tgz
 	https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.4.tgz -> @types-json-schema-7.0.4.tgz
 	https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz -> @types-json5-0.0.29.tgz
 	https://registry.yarnpkg.com/@types/jsonwebtoken/-/jsonwebtoken-8.5.0.tgz -> @types-jsonwebtoken-8.5.0.tgz
+	https://registry.yarnpkg.com/@types/keyv/-/keyv-3.1.4.tgz -> @types-keyv-3.1.4.tgz
 	https://registry.yarnpkg.com/@types/klaw/-/klaw-3.0.1.tgz -> @types-klaw-3.0.1.tgz
 	https://registry.yarnpkg.com/@types/linkify-it/-/linkify-it-2.1.0.tgz -> @types-linkify-it-2.1.0.tgz
 	https://registry.yarnpkg.com/@types/lru-cache/-/lru-cache-5.1.0.tgz -> @types-lru-cache-5.1.0.tgz
@@ -125,6 +131,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/@types/qs/-/qs-6.9.3.tgz -> @types-qs-6.9.3.tgz
 	https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.3.tgz -> @types-range-parser-1.2.3.tgz
 	https://registry.yarnpkg.com/@types/repeat-string/-/repeat-string-1.6.1.tgz -> @types-repeat-string-1.6.1.tgz
+	https://registry.yarnpkg.com/@types/responselike/-/responselike-1.0.0.tgz -> @types-responselike-1.0.0.tgz
 	https://registry.yarnpkg.com/@types/semver/-/semver-7.3.3.tgz -> @types-semver-7.3.3.tgz
 	https://registry.yarnpkg.com/@types/send/-/send-0.14.5.tgz -> @types-send-0.14.5.tgz
 	https://registry.yarnpkg.com/@types/serve-static/-/serve-static-1.13.10.tgz -> @types-serve-static-1.13.10.tgz
@@ -208,7 +215,6 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/array-unique/-/array-unique-0.3.2.tgz
 	https://registry.yarnpkg.com/array.prototype.flat/-/array.prototype.flat-1.2.3.tgz
 	https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz
-	https://registry.yarnpkg.com/asar/-/asar-3.1.0.tgz
 	https://registry.yarnpkg.com/asn1.js/-/asn1.js-4.10.1.tgz
 	https://registry.yarnpkg.com/assert/-/assert-1.5.0.tgz
 	https://registry.yarnpkg.com/assertion-error/-/assertion-error-1.1.0.tgz
@@ -243,6 +249,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/browserify-zlib/-/browserify-zlib-0.2.0.tgz
 	https://registry.yarnpkg.com/buffer-equal-constant-time/-/buffer-equal-constant-time-1.0.1.tgz
 	https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.1.tgz
+	https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.2.tgz
 	https://registry.yarnpkg.com/buffer-xor/-/buffer-xor-1.0.3.tgz
 	https://registry.yarnpkg.com/buffer/-/buffer-4.9.2.tgz
 	https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz
@@ -250,11 +257,12 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/bytes/-/bytes-3.1.0.tgz
 	https://registry.yarnpkg.com/cacache/-/cacache-12.0.3.tgz
 	https://registry.yarnpkg.com/cache-base/-/cache-base-1.0.1.tgz
+	https://registry.yarnpkg.com/cacheable-lookup/-/cacheable-lookup-5.0.4.tgz
 	https://registry.yarnpkg.com/cacheable-request/-/cacheable-request-6.1.0.tgz
+	https://registry.yarnpkg.com/cacheable-request/-/cacheable-request-7.0.2.tgz
 	https://registry.yarnpkg.com/callsites/-/callsites-3.1.0.tgz
 	https://registry.yarnpkg.com/camelcase/-/camelcase-5.3.1.tgz
 	https://registry.yarnpkg.com/camelcase/-/camelcase-6.2.0.tgz
-	https://registry.yarnpkg.com/capture-stack-trace/-/capture-stack-trace-1.0.1.tgz
 	https://registry.yarnpkg.com/chai/-/chai-4.2.0.tgz
 	https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz
 	https://registry.yarnpkg.com/chalk/-/chalk-3.0.0.tgz
@@ -293,12 +301,13 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/colors/-/colors-1.3.3.tgz
 	https://registry.yarnpkg.com/colors/-/colors-1.4.0.tgz
 	https://registry.yarnpkg.com/combined-stream/-/combined-stream-1.0.8.tgz
-	https://registry.yarnpkg.com/commander/-/commander-2.20.0.tgz
+	https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz
 	https://registry.yarnpkg.com/commander/-/commander-4.1.1.tgz
 	https://registry.yarnpkg.com/commander/-/commander-5.1.0.tgz
 	https://registry.yarnpkg.com/commander/-/commander-6.2.0.tgz
 	https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz
 	https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.3.0.tgz
+	https://registry.yarnpkg.com/compress-brotli/-/compress-brotli-1.3.8.tgz
 	https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz
 	https://registry.yarnpkg.com/concat-stream/-/concat-stream-1.6.2.tgz
 	https://registry.yarnpkg.com/concat-stream/-/concat-stream-2.0.0.tgz
@@ -315,7 +324,6 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz
 	https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-6.0.0.tgz
 	https://registry.yarnpkg.com/create-ecdh/-/create-ecdh-4.0.3.tgz
-	https://registry.yarnpkg.com/create-error-class/-/create-error-class-3.0.2.tgz
 	https://registry.yarnpkg.com/create-hash/-/create-hash-1.2.0.tgz
 	https://registry.yarnpkg.com/create-hmac/-/create-hmac-1.1.7.tgz
 	https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-6.0.5.tgz
@@ -331,12 +339,14 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz
 	https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz
 	https://registry.yarnpkg.com/decompress-response/-/decompress-response-3.3.0.tgz
+	https://registry.yarnpkg.com/decompress-response/-/decompress-response-6.0.0.tgz
 	https://registry.yarnpkg.com/dedent/-/dedent-0.7.0.tgz
 	https://registry.yarnpkg.com/deep-eql/-/deep-eql-3.0.1.tgz
 	https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.6.0.tgz
 	https://registry.yarnpkg.com/deep-is/-/deep-is-0.1.3.tgz
 	https://registry.yarnpkg.com/defaults/-/defaults-1.0.3.tgz
 	https://registry.yarnpkg.com/defer-to-connect/-/defer-to-connect-1.1.3.tgz
+	https://registry.yarnpkg.com/defer-to-connect/-/defer-to-connect-2.0.1.tgz
 	https://registry.yarnpkg.com/define-properties/-/define-properties-1.1.3.tgz
 	https://registry.yarnpkg.com/define-property/-/define-property-0.2.5.tgz
 	https://registry.yarnpkg.com/define-property/-/define-property-1.0.0.tgz
@@ -482,9 +492,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/get-own-enumerable-property-symbols/-/get-own-enumerable-property-symbols-3.0.0.tgz
 	https://registry.yarnpkg.com/get-stdin/-/get-stdin-7.0.0.tgz
 	https://registry.yarnpkg.com/get-stdin/-/get-stdin-8.0.0.tgz
-	https://registry.yarnpkg.com/get-stream/-/get-stream-3.0.0.tgz
 	https://registry.yarnpkg.com/get-stream/-/get-stream-4.1.0.tgz
-	https://registry.yarnpkg.com/get-stream/-/get-stream-5.1.0.tgz
 	https://registry.yarnpkg.com/get-stream/-/get-stream-5.2.0.tgz
 	https://registry.yarnpkg.com/get-value/-/get-value-2.0.6.tgz
 	https://registry.yarnpkg.com/glob-parent/-/glob-parent-3.1.0.tgz
@@ -498,7 +506,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/global-prefix/-/global-prefix-3.0.0.tgz
 	https://registry.yarnpkg.com/globals/-/globals-12.4.0.tgz
 	https://registry.yarnpkg.com/globby/-/globby-11.0.1.tgz
-	https://registry.yarnpkg.com/got/-/got-6.7.1.tgz
+	https://registry.yarnpkg.com/got/-/got-11.8.5.tgz
 	https://registry.yarnpkg.com/got/-/got-9.6.0.tgz
 	https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.15.tgz
 	https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.0.tgz
@@ -523,9 +531,10 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/http-cache-semantics/-/http-cache-semantics-4.1.0.tgz
 	https://registry.yarnpkg.com/http-errors/-/http-errors-1.7.2.tgz
 	https://registry.yarnpkg.com/http-errors/-/http-errors-1.7.3.tgz
+	https://registry.yarnpkg.com/http2-wrapper/-/http2-wrapper-1.0.3.tgz
 	https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz
 	https://registry.yarnpkg.com/human-signals/-/human-signals-1.1.1.tgz
-	https://registry.yarnpkg.com/husky/-/husky-6.0.0.tgz
+	https://registry.yarnpkg.com/husky/-/husky-8.0.1.tgz
 	https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.24.tgz
 	https://registry.yarnpkg.com/ieee754/-/ieee754-1.1.13.tgz
 	https://registry.yarnpkg.com/iferr/-/iferr-0.1.5.tgz
@@ -583,12 +592,9 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-4.0.0.tgz
 	https://registry.yarnpkg.com/is-plain-object/-/is-plain-object-2.0.4.tgz
 	https://registry.yarnpkg.com/is-plain-object/-/is-plain-object-4.1.1.tgz
-	https://registry.yarnpkg.com/is-redirect/-/is-redirect-1.0.0.tgz
 	https://registry.yarnpkg.com/is-regex/-/is-regex-1.0.4.tgz
 	https://registry.yarnpkg.com/is-regex/-/is-regex-1.1.0.tgz
 	https://registry.yarnpkg.com/is-regexp/-/is-regexp-1.0.0.tgz
-	https://registry.yarnpkg.com/is-retry-allowed/-/is-retry-allowed-1.2.0.tgz
-	https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz
 	https://registry.yarnpkg.com/is-stream/-/is-stream-2.0.0.tgz
 	https://registry.yarnpkg.com/is-string/-/is-string-1.0.5.tgz
 	https://registry.yarnpkg.com/is-symbol/-/is-symbol-1.0.2.tgz
@@ -604,6 +610,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.0.tgz
 	https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.1.0.tgz
 	https://registry.yarnpkg.com/json-buffer/-/json-buffer-3.0.0.tgz
+	https://registry.yarnpkg.com/json-buffer/-/json-buffer-3.0.1.tgz
 	https://registry.yarnpkg.com/json-parse-better-errors/-/json-parse-better-errors-1.0.2.tgz
 	https://registry.yarnpkg.com/json-schema-traverse/-/json-schema-traverse-0.4.1.tgz
 	https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz
@@ -618,6 +625,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/jwa/-/jwa-1.4.1.tgz
 	https://registry.yarnpkg.com/jws/-/jws-3.2.2.tgz
 	https://registry.yarnpkg.com/keyv/-/keyv-3.1.0.tgz
+	https://registry.yarnpkg.com/keyv/-/keyv-4.3.1.tgz
 	https://registry.yarnpkg.com/kind-of/-/kind-of-3.2.2.tgz
 	https://registry.yarnpkg.com/kind-of/-/kind-of-4.0.0.tgz
 	https://registry.yarnpkg.com/kind-of/-/kind-of-5.1.0.tgz
@@ -719,6 +727,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.2.0.tgz
 	https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-2.1.0.tgz
 	https://registry.yarnpkg.com/mimic-response/-/mimic-response-1.0.1.tgz
+	https://registry.yarnpkg.com/mimic-response/-/mimic-response-3.1.0.tgz
 	https://registry.yarnpkg.com/minimalistic-assert/-/minimalistic-assert-1.0.1.tgz
 	https://registry.yarnpkg.com/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz
 	https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz
@@ -747,6 +756,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/normalize-path/-/normalize-path-2.1.1.tgz
 	https://registry.yarnpkg.com/normalize-path/-/normalize-path-3.0.0.tgz
 	https://registry.yarnpkg.com/normalize-url/-/normalize-url-4.5.1.tgz
+	https://registry.yarnpkg.com/normalize-url/-/normalize-url-6.1.0.tgz
 	https://registry.yarnpkg.com/npm-bundled/-/npm-bundled-1.0.6.tgz
 	https://registry.yarnpkg.com/npm-packlist/-/npm-packlist-1.4.4.tgz
 	https://registry.yarnpkg.com/npm-run-path/-/npm-run-path-4.0.1.tgz
@@ -777,6 +787,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/os-tmpdir/-/os-tmpdir-1.0.2.tgz
 	https://registry.yarnpkg.com/osenv/-/osenv-0.1.5.tgz
 	https://registry.yarnpkg.com/p-cancelable/-/p-cancelable-1.1.0.tgz
+	https://registry.yarnpkg.com/p-cancelable/-/p-cancelable-2.1.1.tgz
 	https://registry.yarnpkg.com/p-limit/-/p-limit-1.3.0.tgz
 	https://registry.yarnpkg.com/p-limit/-/p-limit-2.2.0.tgz
 	https://registry.yarnpkg.com/p-locate/-/p-locate-2.0.0.tgz
@@ -823,7 +834,6 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/pre-flight/-/pre-flight-1.1.1.tgz
 	https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz
 	https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz
-	https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz
 	https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz
 	https://registry.yarnpkg.com/pretty-ms/-/pretty-ms-5.0.0.tgz
 	https://registry.yarnpkg.com/pretty-ms/-/pretty-ms-5.1.0.tgz
@@ -845,6 +855,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz
 	https://registry.yarnpkg.com/querystring-es3/-/querystring-es3-0.2.1.tgz
 	https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz
+	https://registry.yarnpkg.com/quick-lru/-/quick-lru-5.1.1.tgz
 	https://registry.yarnpkg.com/ramda/-/ramda-0.27.0.tgz
 	https://registry.yarnpkg.com/randombytes/-/randombytes-2.1.0.tgz
 	https://registry.yarnpkg.com/randomfill/-/randomfill-1.0.4.tgz
@@ -921,6 +932,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/require-directory/-/require-directory-2.1.1.tgz
 	https://registry.yarnpkg.com/require-main-filename/-/require-main-filename-2.0.0.tgz
 	https://registry.yarnpkg.com/requireindex/-/requireindex-1.1.0.tgz
+	https://registry.yarnpkg.com/resolve-alpn/-/resolve-alpn-1.2.1.tgz
 	https://registry.yarnpkg.com/resolve-cwd/-/resolve-cwd-2.0.0.tgz
 	https://registry.yarnpkg.com/resolve-dir/-/resolve-dir-1.0.1.tgz
 	https://registry.yarnpkg.com/resolve-from/-/resolve-from-3.0.0.tgz
@@ -930,6 +942,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/resolve/-/resolve-1.17.0.tgz
 	https://registry.yarnpkg.com/resolve/-/resolve-1.21.0.tgz
 	https://registry.yarnpkg.com/responselike/-/responselike-1.0.2.tgz
+	https://registry.yarnpkg.com/responselike/-/responselike-2.0.0.tgz
 	https://registry.yarnpkg.com/restore-cursor/-/restore-cursor-2.0.0.tgz
 	https://registry.yarnpkg.com/restore-cursor/-/restore-cursor-3.1.0.tgz
 	https://registry.yarnpkg.com/ret/-/ret-0.1.15.tgz
@@ -982,8 +995,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/snapdragon/-/snapdragon-0.8.2.tgz
 	https://registry.yarnpkg.com/source-list-map/-/source-list-map-2.0.1.tgz
 	https://registry.yarnpkg.com/source-map-resolve/-/source-map-resolve-0.5.2.tgz
-	https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.12.tgz
-	https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.19.tgz
+	https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.21.tgz
 	https://registry.yarnpkg.com/source-map-url/-/source-map-url-0.4.0.tgz
 	https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz
 	https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz
@@ -1038,11 +1050,10 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/tar/-/tar-4.4.19.tgz
 	https://registry.yarnpkg.com/temp/-/temp-0.8.3.tgz
 	https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-1.4.3.tgz
-	https://registry.yarnpkg.com/terser/-/terser-4.6.7.tgz
+	https://registry.yarnpkg.com/terser/-/terser-4.8.1.tgz
 	https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz
 	https://registry.yarnpkg.com/through/-/through-2.3.8.tgz
 	https://registry.yarnpkg.com/through2/-/through2-2.0.5.tgz
-	https://registry.yarnpkg.com/timed-out/-/timed-out-4.0.1.tgz
 	https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-1.4.2.tgz
 	https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.10.tgz
 	https://registry.yarnpkg.com/tmp/-/tmp-0.0.33.tgz
@@ -1099,11 +1110,9 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/universalify/-/universalify-1.0.0.tgz
 	https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz
 	https://registry.yarnpkg.com/unset-value/-/unset-value-1.0.0.tgz
-	https://registry.yarnpkg.com/unzip-response/-/unzip-response-2.0.1.tgz
 	https://registry.yarnpkg.com/upath/-/upath-1.1.2.tgz
 	https://registry.yarnpkg.com/uri-js/-/uri-js-4.4.1.tgz
 	https://registry.yarnpkg.com/urix/-/urix-0.1.0.tgz
-	https://registry.yarnpkg.com/url-parse-lax/-/url-parse-lax-1.0.0.tgz
 	https://registry.yarnpkg.com/url-parse-lax/-/url-parse-lax-3.0.0.tgz
 	https://registry.yarnpkg.com/url/-/url-0.10.3.tgz
 	https://registry.yarnpkg.com/url/-/url-0.11.0.tgz
@@ -1164,8 +1173,8 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 
 LICENSE="BSD"
 SLOT="$(ver_cut 1)/$(ver_cut 2-)"
-KEYWORDS="amd64 ~arm64 ~ppc64 ~x86"
-IUSE="+X +clang cups cpu_flags_arm_neon custom-cflags debug dev-dependencies gtk4 hangouts js-type-check kerberos optimize-thinlto optimize-webui pgo pic +proprietary-codecs pulseaudio screencast selinux suid +system-ffmpeg +system-harfbuzz +system-icu +system-jsoncpp +system-libevent +system-libusb system-libvpx +system-openh264 system-openjpeg +system-png +system-re2 +system-snappy thinlto ungoogled vaapi vdpau wayland"
+KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
+IUSE="+X +clang cups cpu_flags_arm_neon custom-cflags debug dev-dependencies gtk4 hangouts hevc js-type-check kerberos optimize-thinlto optimize-webui pgo pic +proprietary-codecs pulseaudio screencast selinux suid +system-ffmpeg +system-harfbuzz +system-icu +system-jsoncpp +system-libevent +system-libusb system-libvpx +system-openh264 system-openjpeg +system-png +system-re2 +system-snappy thinlto ungoogled vaapi vdpau wayland"
 RESTRICT="
 	!system-ffmpeg? ( proprietary-codecs? ( bindist ) )
 	!system-openh264? ( bindist )
@@ -1199,7 +1208,6 @@ COMMON_SNAPSHOT_DEPEND="
 	system-libvpx? ( >=media-libs/libvpx-1.8.2:=[postproc] )
 	system-libusb? ( virtual/libusb:1 )
 	system-icu? ( >=dev-libs/icu-71.1:= )
-	x11-libs/libnotify
 	>=dev-libs/libxml2-2.9.4-r3:=[icu]
 	dev-libs/nspr:=
 	>=dev-libs/nss-3.26:=
@@ -1300,32 +1308,33 @@ BDEPEND="
 S="${WORKDIR}/${CHROMIUM_P}"
 
 python_check_deps() {
-	has_version -b "dev-python/setuptools[${PYTHON_USEDEP}]"
+	python_has_version "dev-python/setuptools[${PYTHON_USEDEP}]"
 }
 
 pre_build_checks() {
-	if [[ ${MERGE_TYPE} != binary ]]; then
-		local -x CPP="$(tc-getCXX) -E"
-		if tc-is-gcc && ! ver_test "$(gcc-version)" -ge 9.2; then
-			[[ -z "${NODIE}" ]] && die "At least gcc 9.2 is required"
-		fi
-		if use clang || tc-is-clang; then
-			tc-is-cross-compiler && CPP=${CBUILD}-clang++ || CPP=${CHOST}-clang++
-			CPP+=" -E"
-			if ! ver_test "$(clang-major-version)" -ge 12; then
-				[[ -z "${NODIE}" ]] && die "At least clang 12 is required"
-			fi
-		fi
-	fi
+	# Commented due to #86
+	# if [[ ${MERGE_TYPE} != binary ]]; then
+	# 	local -x CPP="$(tc-getCXX) -E"
+	# 	if tc-is-gcc && ! ver_test "$(gcc-version)" -ge 9.2; then
+	# 		[[ -z "${NODIE}" ]] && die "At least gcc 9.2 is required"
+	# 	fi
+	# 	if use clang || tc-is-clang; then
+	# 		tc-is-cross-compiler && CPP=${CBUILD}-clang++ || CPP=${CHOST}-clang++
+	# 		CPP+=" -E"
+	# 		if ! ver_test "$(clang-major-version)" -ge 12; then
+	# 			[[ -z "${NODIE}" ]] && die "At least clang 12 is required"
+	# 		fi
+	# 	fi
+	# fi
 
 	# Check build requirements, bug #541816 and bug #471810 .
 	CHECKREQS_MEMORY="4G"
-	CHECKREQS_DISK_BUILD="10G"
-	tc-is-cross-compiler && CHECKREQS_DISK_BUILD="13G"
+	CHECKREQS_DISK_BUILD="12G"
+	tc-is-cross-compiler && CHECKREQS_DISK_BUILD="14G"
 	if ( shopt -s extglob; is-flagq '-g?(gdb)?([1-9])' ); then
 		CHECKREQS_DISK_BUILD="16G"
 	fi
-	check-reqs_pkg_setup
+	check-reqs_${EBUILD_PHASE_FUNC}
 }
 
 pkg_pretend() {
@@ -1399,6 +1408,11 @@ src_prepare() {
 		sed -i 's/NODE_DIR = os.path.join/NODE_DIR = os.path.abspath(os.path.join/' script/generate-config-gypi.py || die
 		sed -i "s/'electron_node')/'electron_node'))/" script/generate-config-gypi.py || die
 
+		#? Funny, huh?
+		sed -i "s/module.exports.getElectronVersion = () => {/module.exports.getElectronVersion = () => {return '${PV}';/" \
+			script/lib/get-version.js || die
+		mkdir -p .git/packed-refs .git/HEAD;
+
 		grep "'--openssl-no-asm'" script/generate-config-gypi.py > /dev/null || die
 		NODE_CONFIG_ARGS="'--without-bundled-v8', '--shared-openssl', '--shared-zlib', '--without-dtrace', '--without-npm', '--shared-cares', '--shared-http-parser', '--shared-nghttp2'"
 		use system-icu && NODE_CONFIG_ARGS+=", '--with-intl=system-icu'"
@@ -1421,14 +1435,15 @@ src_prepare() {
 		"${FILESDIR}/chromium-93-InkDropHost-crash.patch"
 		"${FILESDIR}/chromium-98-EnumTable-crash.patch"
 		"${FILESDIR}/chromium-98-gtk4-build.patch"
-		"${FILESDIR}/chromium-104-tflite-system-zlib.patch"
-		"${FILESDIR}/chromium-104-swiftshader-no-wayland.patch"
+		"${FILESDIR}/chromium-105-swiftshader-no-wayland.patch"
+		"${FILESDIR}/chromium-106-python3_11.patch"
+		"${FILESDIR}/chromium-106-revert-GlobalMediaControlsCastStartStop.patch"
 		"${FILESDIR}/chromium-use-oauth2-client-switches-as-default.patch"
 		"${FILESDIR}/chromium-shim_headers.patch"
 		"${FILESDIR}/chromium-cross-compile.patch"
 		"${FILESDIR}/perfetto-system-zlib.patch"
 		"${FILESDIR}/gtk-fix-prefers-color-scheme-query.diff"
-		"${FILESDIR}/restore-x86.patch"
+		"${FILESDIR}/restore-x86-r2.patch"
 	)
 
 	use ppc64 && PATCHES+=(
@@ -1475,6 +1490,9 @@ src_prepare() {
 		"${WORKDIR}/debian/patches/ppc64le/sandbox/fix-ppc64-linux-syscalls-headers.patch"
 		"${WORKDIR}/debian/patches/ppc64le/third_party/0003-thirdparty-fix-dav1d-gn.patch"
 		"${WORKDIR}/debian/patches/ppc64le/third_party/use-sysconf-page-size-on-ppc64.patch"
+		"${WORKDIR}/debian/patches/ppc64le/third_party/dawn-fix-typos.patch"
+		"${WORKDIR}/debian/patches/ppc64le/third_party/dawn-fix-ppc64le-detection.patch"
+		"${WORKDIR}/debian/patches/ppc64le/workarounds/HACK-debian-clang-disable-skia-musttail.patch"
 		"${FILESDIR}/ppc64le/libpng-pdfium-compile-98.patch"
 		"${FILESDIR}/ppc64le/fix-swiftshader-compile.patch"
 	)
@@ -1497,6 +1515,11 @@ src_prepare() {
 	sed -i '/^.*deps.*third_party\/jsoncpp.*$/{s++public_deps = [ "//third_party/jsoncpp" ]+;h};${x;/./{x;q0};x;q1}' \
 		third_party/webrtc/rtc_base/BUILD.gn || die
 
+	if use hevc; then
+		sed -i '/^bool IsHevcProfileSupported(const VideoType& type) {$/{s++bool IsHevcProfileSupported(const VideoType\& type) { return true;+;h};${x;/./{x;q0};x;q1}' \
+			media/base/supported_types.cc || die
+	fi
+
 	use system-ffmpeg && eapply "${FILESDIR}/chromium-99-opus.patch"
 
 	if use system-ffmpeg; then
@@ -1505,6 +1528,7 @@ src_prepare() {
 			eapply "${FILESDIR}/unbundle-ffmpeg-av_stream_get_first_dts.patch"
 		fi
 		eapply "${FILESDIR}/reverse-roll-src-third_party-ffmpeg.patch"
+		eapply "${FILESDIR}/reverse-roll-src-third_party-ffmpeg_duration.patch"
 	fi
 
 	use system-openjpeg && eapply "${FILESDIR}/chromium-system-openjpeg-r3.patch"
@@ -1582,6 +1606,7 @@ src_prepare() {
 		["electron/patches/chromium"]="."
 		["electron/patches/boringssl"]="third_party/boringssl/src"
 		["electron/patches/devtools_frontend"]="third_party/devtools-frontend/src"
+		["electron/patches/ffmpeg"]="third_party/ffmpeg"
 		["electron/patches/webrtc"]="third_party/webrtc"
 		["electron/patches/v8"]="v8"
 		["electron/patches/node"]="third_party/electron_node"
@@ -1610,11 +1635,12 @@ src_prepare() {
 			#  	continue;
 			# fi
 			if [ "$i" = "sysroot.patch" ] ||
-			[ "$i" = "build_disable_print_content_analysis.patch" ] ; then
-			if use ungoogled; then
-				ewarn "Skipping ${i} due to ungoogled."
-				continue;
-			fi
+				[ "$i" = "build_disable_print_content_analysis.patch" ] ||
+				[ "$i" = "fix_the_gn_gen_for_components_segmentation_platform.patch" ] ; then
+				if use ungoogled; then
+					ewarn "Skipping ${i} due to ungoogled."
+					continue;
+				fi
 			fi
 			# if [ "$i" = "fix_preserve_proper_method_names_as-is_in_error_stack.patch" ]; then
 			# 	einfo "Git binary patch: ${i}"
@@ -1666,6 +1692,7 @@ src_prepare() {
 		third_party/apple_apsl
 		third_party/axe-core
 		third_party/blink
+		third_party/bidimapper
 		third_party/boringssl
 		third_party/boringssl/src/third_party/fiat
 		third_party/breakpad
@@ -1688,6 +1715,7 @@ src_prepare() {
 		third_party/ced
 		third_party/cld_3
 		third_party/closure_compiler
+		third_party/content_analysis_sdk
 		third_party/cpuinfo
 		third_party/crashpad
 		third_party/crashpad/crashpad/third_party/lss
@@ -1741,6 +1769,7 @@ src_prepare() {
 		third_party/hunspell
 		third_party/iccjpeg
 		third_party/inspector_protocol
+		third_party/ipcz
 		third_party/jinja2
 	)
 	use system-jsoncpp || keeplibs+=(
@@ -1756,6 +1785,12 @@ src_prepare() {
 		third_party/libaom/source/libaom/third_party/vector
 		third_party/libaom/source/libaom/third_party/x86inc
 		third_party/libavif
+	)
+	use system-libevent || keeplibs+=(
+		third_party/libevent
+	)
+	keeplibs+=(
+
 		third_party/libgav1
 		third_party/libjingle
 		third_party/libjxl
@@ -1812,7 +1847,7 @@ src_prepare() {
 		third_party/pdfium/third_party/lcms
 	)
 	use system-openjpeg || keeplibs+=(
-		third_party/pdfium/third_party/libopenjpeg20
+		third_party/pdfium/third_party/libopenjpeg
 	)
 	keeplibs+=(
 		third_party/pdfium/third_party/libpng16
@@ -1888,11 +1923,7 @@ src_prepare() {
 		v8/src/third_party/utf8-decoder
 		v8/third_party/inspector_protocol
 		v8/third_party/v8
-	)
-	use system-libevent || keeplibs+=(
-		base/third_party/libevent
-	)
-	keeplibs+=(
+
 		third_party/speech-dispatcher
 		third_party/usb_ids
 		third_party/xdg-utils
@@ -1913,6 +1944,8 @@ src_prepare() {
 	fi
 	if use wayland; then
 		keeplibs+=( third_party/wayland )
+		# only need the .gn files
+		rm -r third_party/wayland/src || die
 	fi
 	if ! use system-openh264; then
 		keeplibs+=( third_party/openh264 )
@@ -1931,8 +1964,7 @@ src_prepare() {
 		# requires git and clang, bug #832803
 		sed -i -e "s|^update_readme||g; s|clang-format|${EPREFIX}/bin/true|g" \
 			generate_gni.sh || die
-		# had to remove || die: see https://bugs.gentoo.org/669748#c45
-		./generate_gni.sh
+		./generate_gni.sh || die
 		popd >/dev/null || die
 
 		pushd third_party/ffmpeg >/dev/null || die
@@ -1979,21 +2011,15 @@ src_configure() {
 			CXX="${CBUILD}-clang++ -target ${CHOST} --sysroot ${ESYSROOT}"
 			BUILD_CC=${CBUILD}-clang
 			BUILD_CXX=${CBUILD}-clang++
-			BUILD_AR=llvm-ar
-			BUILD_NM=llvm-nm
 		else
 			CC=${CHOST}-clang
 			CXX=${CHOST}-clang++
-			AR=llvm-ar #thinlto fails otherwise
-			NM=llvm-nm #just in case
 		fi
 		strip-unsupported-flags
 	elif ! use clang && ! tc-is-gcc ; then
 		einfo "Enforcing the use of gcc due to USE=-clang ..."
 		CC=${CHOST}-gcc
 		CXX=${CHOST}-g++
-		AR=gcc-ar #just in case
-		NM=gcc-nm #just in case
 		strip-unsupported-flags
 	fi
 
@@ -2001,6 +2027,22 @@ src_configure() {
 		myconf_gn+=" is_clang=true clang_use_chrome_plugins=false"
 	else
 		myconf_gn+=" is_clang=false"
+	fi
+
+	# Force lld for lto or pgo builds only, otherwise disable, bug 641556
+	if use thinlto || use pgo; then
+		myconf_gn+=" use_lld=true"
+	else
+		myconf_gn+=" use_lld=false"
+	fi
+
+	if use thinlto || use pgo; then
+		AR=llvm-ar
+		NM=llvm-nm
+		if tc-is-cross-compiler; then
+			BUILD_AR=llvm-ar
+			BUILD_NM=llvm-nm
+		fi
 	fi
 
 	# Define a custom toolchain for GN
@@ -2105,14 +2147,14 @@ src_configure() {
 		myconf_gn+=" chrome_pgo_phase=0"
 	fi
 
-	myconf_gn+=" use_thin_lto=$(usex thinlto true false)"
-	myconf_gn+=" thin_lto_enable_optimizations=$(usex optimize-thinlto true false)"
 	myconf_gn+=" optimize_webui=$(usex optimize-webui true false)"
 	myconf_gn+=" use_system_freetype=$(usex system-harfbuzz true false)"
 	myconf_gn+=" use_system_libopenjpeg2=$(usex system-openjpeg true false)"
 	myconf_gn+=" enable_pdf=true"
 	myconf_gn+=" use_system_lcms2=true"
 	myconf_gn+=" enable_print_preview=true"
+	myconf_gn+=" enable_platform_hevc=$(usex hevc true false)"
+	myconf_gn+=" enable_platform_hevc_decoding=$(usex hevc true false)"
 
 	# Ungoogled flags
 	myconf_gn+=" enable_mdns=false"
@@ -2145,13 +2187,6 @@ src_configure() {
 	# Trying to use gold results in linker crash.
 	myconf_gn+=" use_gold=false use_sysroot=false use_custom_libcxx=false"
 
-	if use clang; then
-	myconf_gn+=" use_lld=true" #x86 fails with gnu ld
-	else
-	# Disable forced lld, bug 641556
-	myconf_gn+=" use_lld=false"
-	fi
-
 	# Disable pseudolocales, only used for testing
 	myconf_gn+=" enable_pseudolocales=false"
 
@@ -2175,9 +2210,9 @@ src_configure() {
 			filter-flags "-g*"
 		fi
 
-		# Prevent libvpx build failures. Bug 530248, 544702, 546984.
+		# Prevent libvpx/xnnpack build failures. Bug 530248, 544702, 546984, 853646.
 		if [[ ${myarch} == amd64 || ${myarch} == x86 ]]; then
-			filter-flags -mno-mmx -mno-sse2 -mno-ssse3 -mno-sse4.1 -mno-avx -mno-avx2 -mno-fma -mno-fma4
+			filter-flags -mno-mmx -mno-sse2 -mno-ssse3 -mno-sse4.1 -mno-avx -mno-avx2 -mno-fma -mno-fma4 -mno-xop -mno-sse4a
 		fi
 	fi
 
@@ -2224,7 +2259,6 @@ src_configure() {
 			build/config/compiler/BUILD.gn || die
 
 		append-ldflags "-Wl,--thinlto-jobs=$(makeopts_jobs)"
-		myconf_gn+=" use_lld=true"
 	fi
 
 	# Make sure that -Werror doesn't get added to CFLAGS by the build system.
@@ -2276,17 +2310,6 @@ src_configure() {
 		fi
 	fi
 
-	# Disable opaque pointers, https://crbug.com/1316298
-	if tc-is-clang; then
-		if test-flag-CXX -Xclang -no-opaque-pointers; then
-			append-flags -Xclang -no-opaque-pointers
-			if tc-is-cross-compiler; then
-				export BUILD_CXXFLAGS+=" -Xclang -no-opaque-pointers"
-				export BUILD_CFLAGS+=" -Xclang -no-opaque-pointers"
-			fi
-		fi
-	fi
-
 	# Explicitly disable ICU data file support for system-icu builds.
 	if use system-icu; then
 		myconf_gn+=" icu_use_data_file=false"
@@ -2301,14 +2324,33 @@ src_configure() {
 	myconf_gn+=" ozone_platform_x11=$(usex X true false)"
 	myconf_gn+=" ozone_platform_wayland=$(usex wayland true false)"
 	myconf_gn+=" ozone_platform=$(usex wayland \"wayland\" \"x11\")"
+	use wayland && myconf_gn+=" use_system_wayland_scanner=true"
+
+	# Results in undefined references in chrome linking, may require CFI to work
+	if use arm64; then
+		myconf_gn+=" arm_control_flow_integrity=\"none\""
+	fi
 
 	# Enable official builds
 	myconf_gn+=" is_official_build=true"
+	myconf_gn+=" use_thin_lto=$(usex thinlto true false)"
+	myconf_gn+=" thin_lto_enable_optimizations=$(usex optimize-thinlto true false)"
 	# Allow building against system libraries in official builds
 	sed -i 's/OFFICIAL_BUILD/GOOGLE_CHROME_BUILD/' \
 		tools/generate_shim_headers/generate_shim_headers.py || die
 	# Don't add symbols to build
 	myconf_gn+=" symbol_level=0"
+
+	# user CXXFLAGS might overwrite -march=armv8-a+crc+crypto, bug #851639
+	if use arm64 && tc-is-gcc; then
+		sed -i '/^#if HAVE_ARM64_CRC32C/a #pragma GCC target ("+crc+crypto")' \
+			third_party/crc32c/src/src/crc32c_arm64.cc || die
+	fi
+
+	# skipping typecheck is only supported on amd64, bug #876157
+	if ! use amd64; then
+		myconf_gn+=" devtools_skip_typecheck=false"
+	fi
 
 	# Facilitate deterministic builds (taken from build/config/compiler/BUILD.gn)
 	append-cflags -Wno-builtin-macro-redefined
@@ -2427,6 +2469,11 @@ pkg_postinst() {
 		elog "VA-API is disabled by default at runtime. You have to enable it"
 		elog "by adding --enable-features=VaapiVideoDecoder and "
 		elog "--disable-features=UseChromeOSDirectVideoDecoder to CHROMIUM_FLAGS"
+		elog "in /etc/chromium/default."
+	fi
+	if use hevc; then
+		elog "HEVC decoding is disabled by default at runtime. You have to enable it"
+		elog "by adding --enable-features=PlatformHEVCDecoderSupport to CHROMIUM_FLAGS"
 		elog "in /etc/chromium/default."
 	fi
 	if use screencast; then
