@@ -7,7 +7,7 @@ EAPI=7
 
 PYTHON_COMPAT=( python3_{8..10} )
 
-inherit distutils-r1 gnome2 meson
+inherit distutils-r1 gnome2-utils
 
 DESCRIPTION="Stop the desktop from becoming idle in full-screen mode. (Fork of Caffeine)"
 HOMEPAGE="https://codeberg.org/WhyNotHugo/caffeine-ng"
@@ -18,7 +18,7 @@ if [[ ${PV} == 9999 ]];then
 	KEYWORDS=""
 	EGIT_REPO_URI="${HOMEPAGE}.git"
 else
-	SRC_URI="${HOMEPAGE}/archive/v${PV}/${P}.tar.gz"
+	SRC_URI="${HOMEPAGE}/archive/v${PV}.tar.gz -> ${P}.tar.gz"
 	KEYWORDS="~amd64 ~arm ~x86"
 fi
 
@@ -44,3 +44,17 @@ DEPEND="
 "
 RDEPEND="${DEPEND}
 	!x11-misc/caffeine"
+
+pkg_preinst(){
+	gnome2_schemas_savelist
+}
+
+pkg_postinst(){
+	gnome2_gconf_install
+	gnome2_schemas_update
+}
+
+pkg_postrm(){
+	gnome2_gconf_uninstall
+	gnome2_schemas_update
+}
