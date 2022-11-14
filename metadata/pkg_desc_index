@@ -8,7 +8,7 @@ dev-util/electron 19.1.4 19.1.5 20.3.4 20.3.5 21.2.2 21.2.3: Cross platform appl
 media-libs/zint 2.10.0 2.11.0 2.11.1 9999: Barcode encoding library supporting over 50 symbologies
 net-im/element-desktop 1.11.13 1.11.14 9999: A glossy Matrix collaboration client for desktop
 net-im/element-web 1.11.13 1.11.14 9999: A glossy Matrix collaboration client for the web
-net-misc/sb-hosts 3.11.28 3.11.29 9999: A hosts file from several well-curated sources
+net-misc/sb-hosts 3.11.29 3.11.30 9999: A hosts file from several well-curated sources
 sys-kernel/linux-image 4.9.321 4.9.329 4.9.330 4.9.331 4.9.332 4.14.286 4.14.294 4.14.295 4.14.296 4.14.297 4.14.298 4.19.250 4.19.259 4.19.260 4.19.261 4.19.262 4.19.263 4.19.264 5.4.220 5.4.221 5.4.222 5.4.223 5.10.150 5.10.151 5.10.152 5.10.153 5.15.75 5.15.76 5.15.77 5.19.17 6.0.5 6.0.6 6.0.7: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
 www-client/ungoogled-chromium 107.0.5304.110_p1: Modifications to Chromium for removing Google integration and enhancing privacy
