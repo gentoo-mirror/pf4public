@@ -1,7 +1,7 @@
 DEFINED_PHASES=install
 DEPEND=app-portage/gentoolkit
 DESCRIPTION=gb-chroot is a collection of scripts for building Gentoo's binpkgs
-EAPI=7
+EAPI=8
 HOMEPAGE=https://pf4public.github.io/gb-chroot/
 INHERIT=bash-completion-r1
 IUSE=doc host
@@ -11,4 +11,4 @@ RDEPEND=app-portage/gentoolkit
 SLOT=0
 SRC_URI=https://github.com/PF4Public/gb-chroot/archive/0.15.tar.gz -> gb-chroot-0.15.tar.gz
 _eclasses_=toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff
-_md5_=a39da499bd6f14f55c34701cd231056e
+_md5_=e2d74f7a12b9a8177d342f9485f1d3a1

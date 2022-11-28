@@ -1,7 +1,8 @@
+BDEPEND=>=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=install unpack
-DEPEND=>=dev-vcs/git-1.8.2.1[curl]
+DEPEND=
 DESCRIPTION=A hosts file from several well-curated sources
-EAPI=6
+EAPI=8
 HOMEPAGE=https://github.com/StevenBlack/hosts
 INHERIT=git-r3
 IUSE=fakenews gambling porn social
@@ -10,4 +11,4 @@ PROPERTIES=live
 RDEPEND=
 SLOT=0
 _eclasses_=git-r3	2347f8fe2d392b2a091191f94be37e6f
-_md5_=a82144c476d45fa07ffff80143265d30
+_md5_=8d78b4c001cbecede5acc35c1c000705
