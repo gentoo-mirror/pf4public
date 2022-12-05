@@ -1,16 +1,16 @@
 BDEPEND=|| ( >=dev-lang/python-3.10.8_p3:3.10 >=dev-lang/python-3.9.15_p3:3.9 >=dev-lang/python-3.8.15_p3:3.8 ) native-modules? ( virtual/rust ) net-libs/nodejs sys-apps/yarn >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile install postinst postrm setup unpack
-DEPEND=~net-im/element-web-9999 native-modules? ( dev-db/sqlcipher ) electron-20? ( dev-util/electron:20 ) electron-21? ( dev-util/electron:21 ) !electron-20? ( !electron-21? ( dev-util/electron:19 ) )
+DEPEND=~net-im/element-web-9999 native-modules? ( dev-db/sqlcipher ) electron-20? ( dev-util/electron:20 ) electron-21? ( dev-util/electron:21 ) electron-22? ( dev-util/electron:21 ) !electron-20? ( !electron-21? ( !electron-22? ( dev-util/electron:19 ) ) )
 DESCRIPTION=A glossy Matrix collaboration client for desktop
 EAPI=8
 HOMEPAGE=https://element.io/
 INHERIT=desktop flag-o-matic multilib python-any-r1 xdg-utils git-r3
-IUSE=+build-online electron-20 electron-21 native-modules
+IUSE=+build-online electron-20 electron-21 electron-22 native-modules
 LICENSE=Apache-2.0
 PROPERTIES=live
-RDEPEND=~net-im/element-web-9999 native-modules? ( dev-db/sqlcipher ) electron-20? ( dev-util/electron:20 ) electron-21? ( dev-util/electron:21 ) !electron-20? ( !electron-21? ( dev-util/electron:19 ) )
+RDEPEND=~net-im/element-web-9999 native-modules? ( dev-db/sqlcipher ) electron-20? ( dev-util/electron:20 ) electron-21? ( dev-util/electron:21 ) electron-22? ( dev-util/electron:21 ) !electron-20? ( !electron-21? ( !electron-22? ( dev-util/electron:19 ) ) )
 REQUIRED_USE=native-modules? ( build-online )
 RESTRICT=mirror build-online? ( network-sandbox )
 SLOT=0
 _eclasses_=desktop	7eb20ad915a0a318176d51bc2508ff5c	toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	flag-o-matic	29a755b1291d64133634d80b0328f153	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	python-utils-r1	25c880c1db58e21b80b684bacc964958	python-any-r1	f2f00fb79b5e888b5011d4c51240ae97	xdg-utils	ac0e315a3688929e34ac75b139e7349a	git-r3	2347f8fe2d392b2a091191f94be37e6f
-_md5_=8781e2616e65defd42cf6293d42eb093
+_md5_=c7cf76eedce435f000f1bff6f2593fad
