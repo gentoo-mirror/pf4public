@@ -10,5 +10,5 @@ LICENSE=MIT
 RDEPEND=app-portage/gentoolkit
 SLOT=0
 SRC_URI=https://github.com/PF4Public/gb-chroot/archive/0.15.tar.gz -> gb-chroot-0.15.tar.gz
-_eclasses_=toolchain-funcs	441f754fd75cd4fd1fa06fbc17da6144	multilib	5ca4e49abed8e3a2f7b56920eadee157	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff
+_eclasses_=toolchain-funcs	959e1d99122907eb98a3a660297a967e	multilib	5ca4e49abed8e3a2f7b56920eadee157	bash-completion-r1	f5e7a020fd9c741740756aac61bf75ff
 _md5_=e2d74f7a12b9a8177d342f9485f1d3a1
