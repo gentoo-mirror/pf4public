@@ -97,3 +97,4 @@ www-client/ungoogled-chromium-bin:convert-dict - Install also the convert_dict u
 www-client/ungoogled-chromium-bin:core2 - Pull in a binary, built for core2
 www-client/ungoogled-chromium-bin:generic - Pull in a binary, built for a generic x86 or x86-64
 www-client/ungoogled-chromium-bin:haswell - Pull in a binary, built for haswell
+www-client/ungoogled-chromium-bin:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
