@@ -4,10 +4,10 @@ app-eselect/eselect-electron 0.2: Utility to select the default Electron slot
 app-misc/font-manager 0.8.7 0.8.8 9999: A simple font management application for Gtk+ Desktop Environments
 dev-python/ewmh 0.1.6: An implementation of Extended Window Manager Hints, based on Xlib
 dev-python/pulsectl 20.5.1: High-level interface and ctypes-based bindings for PulseAudio
-dev-util/electron 19.1.8 19.1.9 20.3.8 20.3.9 20.3.10 21.3.3 21.3.4 21.3.5 22.0.1 22.0.2: Cross platform application development framework based on web technologies
+dev-util/electron 19.1.8 19.1.9 20.3.8 20.3.9 20.3.10 21.3.4 21.3.5 22.0.1 22.0.2 22.0.3: Cross platform application development framework based on web technologies
 media-libs/zint 2.11.1 2.12.0 9999: Barcode encoding library supporting over 50 symbologies
 net-im/element-desktop 1.11.17 1.11.18 9999: A glossy Matrix collaboration client for desktop
-net-im/element-web 1.11.17 1.11.18 9999: A glossy Matrix collaboration client for the web
+net-im/element-web 1.11.17 1.11.18 1.11.19 9999: A glossy Matrix collaboration client for the web
 net-misc/sb-hosts 3.11.51 3.11.52 9999: A hosts file from several well-curated sources
 sys-kernel/linux-image 4.9.334 4.9.337 4.14.300 4.14.302 4.14.303 4.19.267 4.19.268 4.19.269 4.19.270 5.4.225 5.4.226 5.4.227 5.4.228 5.4.229 5.10.155 5.10.156 5.10.162 5.10.163 5.10.164 5.15.80 5.15.87 5.15.88 5.15.89 6.0.19 6.1.5 6.1.5-r1 6.1.6 6.1.7: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
