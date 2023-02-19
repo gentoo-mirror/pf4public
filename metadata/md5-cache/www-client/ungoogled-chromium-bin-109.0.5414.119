@@ -11,5 +11,5 @@ REQUIRED_USE=x86? ( !widevine )
 RESTRICT=mirror
 SLOT=0
 SRC_URI=amd64? ( https://github.com/PF4Public/ungoogled-chromium-bin/releases/download/109.0.5414.119/x86-64.tar.bz2 -> ungoogled-chromium-bin-109.0.5414.119-x86-64.tar.bz2 ) x86? ( https://github.com/PF4Public/ungoogled-chromium-bin/releases/download/109.0.5414.119/i686.tar.bz2 -> ungoogled-chromium-bin-109.0.5414.119-i686.tar.bz2 )
-_eclasses_=toolchain-funcs	cf009a3ed4e5bef503e7a9f215791a78	multilib	5ca4e49abed8e3a2f7b56920eadee157	linux-info	4b552625ebd741dfd2ac08637fd2436e	chromium-2	1004ce9fd1ae9622a0b7eabcd8fc0d69	desktop	7eb20ad915a0a318176d51bc2508ff5c	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55	xdg-utils	ac0e315a3688929e34ac75b139e7349a
+_eclasses_=toolchain-funcs	6001248ef162a5fa2a21ce132a212f6b	multilib	5ca4e49abed8e3a2f7b56920eadee157	linux-info	4b552625ebd741dfd2ac08637fd2436e	chromium-2	1004ce9fd1ae9622a0b7eabcd8fc0d69	desktop	7eb20ad915a0a318176d51bc2508ff5c	readme.gentoo-r1	b776ad4b42f564c406a95c41ccb42c55	xdg-utils	ac0e315a3688929e34ac75b139e7349a
 _md5_=3ee20ecf13e2a3f3663560686e3eaa24
