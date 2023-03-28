@@ -34,7 +34,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/chro
 
 LICENSE="BSD"
 SLOT="0"
-KEYWORDS="amd64 ~arm64 ~ppc64 ~x86"
+# KEYWORDS="amd64 ~arm64 ~ppc64 ~x86"
 IUSE="+X cfi +clang convert-dict cups cpu_flags_arm_neon custom-cflags debug enable-driver gtk4 hangouts headless hevc kerberos +official optimize-thinlto optimize-webui pgo pic +proprietary-codecs pulseaudio qt5 screencast selinux suid +system-av1 +system-ffmpeg +system-harfbuzz +system-icu +system-jsoncpp +system-libevent +system-libusb system-libvpx +system-openh264 system-openjpeg +system-png +system-re2 +system-snappy thinlto vaapi wayland widevine"
 RESTRICT="
 	!system-ffmpeg? ( proprietary-codecs? ( bindist ) )
@@ -51,11 +51,10 @@ REQUIRED_USE="
 	!proprietary-codecs? ( !hevc )
 "
 
-#UGC_COMMIT_ID="b11333491348ad76b3a10dc8161c6d0cf90bfd86"
-# UGC_PR_COMMITS=(
-# 	f2fbbb954431dcb4f1a62779053692fa2b5c7971
-# 	08aaf6a0c81eb14b5eee59dd92281cd05043f3a7
-# )
+#UGC_COMMIT_ID="6d4e4813f98aa2217c8f5d1e1f64d6fa5c30866e"
+UGC_PR_COMMITS=(
+	65351b70c750167efb566047bbcb1150e00749c3
+)
 
 UGC_PV="${PV/_p/-}"
 UGC_PF="${PN}-${UGC_PV}"
@@ -448,7 +447,7 @@ src_prepare() {
 	eend $? || die
 
 	ebegin "Applying domain substitution"
-	"${UGC_WD}/utils/domain_substitution.py" -q apply -r "${UGC_WD}/domain_regex.list" -f "${UGC_WD}/domain_substitution.list" -c build/domsubcache.tar.gz .
+	"${UGC_WD}/utils/domain_substitution.py" -q apply -r "${UGC_WD}/domain_regex.list" -f "${UGC_WD}/domain_substitution.list" .
 	eend $? || die
 
 	local keeplibs=(
