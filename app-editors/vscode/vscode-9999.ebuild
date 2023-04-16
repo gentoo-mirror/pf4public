@@ -263,8 +263,9 @@ src_configure() {
 		ONLINE_OFFLINE="--offline"
 		yarn config set yarn-offline-mirror "${DISTDIR}" || die
 	fi
-	yarn install --frozen-lockfile ${ONLINE_OFFLINE} \
+	yarn install ${ONLINE_OFFLINE} \
 		--arch=${VSCODE_ARCH} --no-progress || die
+	#--frozen-lockfile
 	# --ignore-optional
 	# --ignore-engines
 	# --production=true
