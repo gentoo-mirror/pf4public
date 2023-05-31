@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
-PYTHON_COMPAT=( python3_{9..11} )
+PYTHON_COMPAT=( python3_{8..11} )
 PYTHON_REQ_USE="xml(+)"
 
 CHROMIUM_LANGS="af am ar bg bn ca cs da de el en-GB es es-419 et fa fi fil fr gu he
@@ -12,11 +12,11 @@ CHROMIUM_LANGS="af am ar bg bn ca cs da de el en-GB es es-419 et fa fi fil fr gu
 inherit check-reqs chromium-2 desktop flag-o-matic ninja-utils pax-utils python-any-r1 qmake-utils readme.gentoo-r1 toolchain-funcs xdg-utils
 
 CHROMIUM_VERSION_WARNING="true"
-CHROMIUM_VERSION="110.0.5481.179"
+CHROMIUM_VERSION="108.0.5359.125"
 CHROMIUM_P="chromium-${CHROMIUM_VERSION}"
-NODE_VERSION="18.12.1"
+NODE_VERSION="16.17.1"
 NODE_P="node-v${NODE_VERSION}"
-UGC_PVR="110.0.5481.177-1"
+UGC_PVR="${CHROMIUM_VERSION}-1"
 UGC_PF="ungoogled-chromium-${UGC_PVR}"
 UGC_WD="${WORKDIR}/${UGC_PF}"
 
@@ -29,28 +29,23 @@ UGC_WD="${WORKDIR}/${UGC_PF}"
 
 DESCRIPTION="Cross platform application development framework based on web technologies"
 HOMEPAGE="https://electronjs.org/"
-PATCHSET="4"
-PATCHSET_NAME="chromium-110-patchset-${PATCHSET}"
+PATCHSET="2"
+PATCHSET_NAME="chromium-108-patchset-${PATCHSET}"
 PATCHSET_URI_PPC64="https://quickbuild.io/~raptor-engineering-public"
-PATCHSET_NAME_PPC64="chromium_110.0.5481.77-1raptor0~deb11u1.debian"
+PATCHSET_NAME_PPC64="chromium_108.0.5359.71-2raptor0~deb11u1.debian"
+PATCHSET_NAME_PPC64_GENTOO="chromium-ppc64le-gentoo-patches-1"
 SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-official/${CHROMIUM_P}.tar.xz
 	mirror+https://github.com/stha09/chromium-patches/releases/download/${PATCHSET_NAME}/${PATCHSET_NAME}.tar.xz
 	mirror+https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}.tar.xz
 	https://github.com/electron/electron/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	ppc64? (
 		${PATCHSET_URI_PPC64}/+archive/ubuntu/chromium/+files/${PATCHSET_NAME_PPC64}.tar.xz
-		https://dev.gentoo.org/~sultan/distfiles/www-client/chromium/chromium-ppc64le-gentoo-patches-1.tar.xz
+		https://dev.gentoo.org/~sultan/distfiles/www-client/chromium/${PATCHSET_NAME_PPC64_GENTOO}.tar.xz
 	)
 	ungoogled? (
 		https://github.com/ungoogled-software/ungoogled-chromium/archive/${UGC_PVR}.tar.gz -> ${UGC_PF}.tar.gz
 	)
 
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
 	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
 	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
 	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
@@ -71,7 +66,6 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.5.5.tgz -> @babel-code-frame-7.5.5.tgz
 	https://registry.yarnpkg.com/@babel/highlight/-/highlight-7.5.0.tgz -> @babel-highlight-7.5.0.tgz
 	https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz -> @discoveryjs-json-ext-0.5.7.tgz
-	https://registry.yarnpkg.com/@electron/asar/-/asar-3.2.1.tgz -> @electron-asar-3.2.1.tgz
 	https://registry.yarnpkg.com/@electron/docs-parser/-/docs-parser-1.0.0.tgz -> @electron-docs-parser-1.0.0.tgz
 	https://registry.yarnpkg.com/@electron/fiddle-core/-/fiddle-core-1.0.4.tgz -> @electron-fiddle-core-1.0.4.tgz
 	https://registry.yarnpkg.com/@electron/get/-/get-2.0.2.tgz -> @electron-get-2.0.2.tgz
@@ -258,6 +252,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/array-unique/-/array-unique-0.3.2.tgz
 	https://registry.yarnpkg.com/array.prototype.flat/-/array.prototype.flat-1.2.3.tgz
 	https://registry.yarnpkg.com/arrify/-/arrify-1.0.1.tgz
+	https://registry.yarnpkg.com/asar/-/asar-3.1.0.tgz
 	https://registry.yarnpkg.com/assertion-error/-/assertion-error-1.1.0.tgz
 	https://registry.yarnpkg.com/astral-regex/-/astral-regex-1.0.0.tgz
 	https://registry.yarnpkg.com/astral-regex/-/astral-regex-2.0.0.tgz
@@ -380,6 +375,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-7.0.3.tgz
 	https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-8.0.0.tgz
 	https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-9.2.2.tgz
+	https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz
 	https://registry.yarnpkg.com/emojis-list/-/emojis-list-3.0.0.tgz
 	https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz
 	https://registry.yarnpkg.com/end-of-stream/-/end-of-stream-1.4.4.tgz
@@ -588,6 +584,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz
 	https://registry.yarnpkg.com/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz
 	https://registry.yarnpkg.com/json5/-/json5-1.0.1.tgz
+	https://registry.yarnpkg.com/json5/-/json5-2.1.3.tgz
 	https://registry.yarnpkg.com/json5/-/json5-2.2.0.tgz
 	https://registry.yarnpkg.com/jsonc-parser/-/jsonc-parser-2.3.1.tgz
 	https://registry.yarnpkg.com/jsonfile/-/jsonfile-4.0.0.tgz
@@ -613,7 +610,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/load-json-file/-/load-json-file-5.3.0.tgz
 	https://registry.yarnpkg.com/load-plugin/-/load-plugin-4.0.1.tgz
 	https://registry.yarnpkg.com/loader-runner/-/loader-runner-4.3.0.tgz
-	https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.4.2.tgz
+	https://registry.yarnpkg.com/loader-utils/-/loader-utils-1.2.3.tgz
 	https://registry.yarnpkg.com/loader-utils/-/loader-utils-2.0.0.tgz
 	https://registry.yarnpkg.com/locate-path/-/locate-path-2.0.0.tgz
 	https://registry.yarnpkg.com/locate-path/-/locate-path-3.0.0.tgz
@@ -692,7 +689,6 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/mimic-response/-/mimic-response-3.1.0.tgz
 	https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.8.tgz
 	https://registry.yarnpkg.com/minimist/-/minimist-1.2.6.tgz
-	https://registry.yarnpkg.com/minimist/-/minimist-1.2.7.tgz
 	https://registry.yarnpkg.com/minipass/-/minipass-2.9.0.tgz
 	https://registry.yarnpkg.com/minizlib/-/minizlib-1.3.3.tgz
 	https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.5.tgz
@@ -1061,7 +1057,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 
 LICENSE="BSD"
 SLOT="$(ver_cut 1)/$(ver_cut 2-)"
-KEYWORDS="amd64 ~arm64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
 IUSE="+X +clang cups cpu_flags_arm_neon custom-cflags debug dev-dependencies gtk4 hangouts hevc js-type-check kerberos optimize-thinlto optimize-webui pgo pic +proprietary-codecs pulseaudio screencast selinux suid +system-av1 +system-ffmpeg +system-harfbuzz +system-icu +system-jsoncpp +system-libevent +system-libusb system-libvpx +system-openh264 system-openjpeg +system-png +system-re2 +system-snappy thinlto ungoogled vaapi vdpau wayland"
 RESTRICT="
 	!system-ffmpeg? ( proprietary-codecs? ( bindist ) )
@@ -1133,7 +1129,7 @@ COMMON_SNAPSHOT_DEPEND="
 	)
 	x11-libs/libxkbcommon:=
 	wayland? (
-		dev-libs/libffi:=
+		dev-libs/wayland:=
 		screencast? ( media-video/pipewire:= )
 	)
 "
@@ -1156,7 +1152,7 @@ COMMON_DEPEND="
 	media-libs/flac:=
 	sys-libs/zlib:=[minizip]
 	X? ( ${COMMON_X_DEPEND} )
-	>=app-accessibility/at-spi2-core-2.46.0:2
+	app-accessibility/at-spi2-core
 	media-libs/mesa:=[X?,wayland?]
 	cups? ( >=net-print/cups-1.3.11:= )
 	virtual/udev
@@ -1169,6 +1165,7 @@ RDEPEND="${COMMON_DEPEND}
 		x11-libs/gtk+:3[X?,wayland?]
 		gui-libs/gtk:4[X?,wayland?]
 	)
+	x11-misc/xdg-utils
 	virtual/ttf-fonts
 	selinux? ( sec-policy/selinux-chromium )
 "
@@ -1275,9 +1272,9 @@ src_unpack() {
 	unpack "node-v${NODE_VERSION}.tar.xz"
 	unpack "${PATCHSET_NAME}.tar.xz"
 	use ungoogled && unpack "${UGC_PF}.tar.gz"
-	if use ppc64; then
+	if (use ppc64); then
 		unpack "${PATCHSET_NAME_PPC64}.tar.xz"
-		unpack "chromium-ppc64le-gentoo-patches-1.tar.xz"
+		unpack "${PATCHSET_NAME_PPC64_GENTOO}.tar.xz"
 	fi
 }
 
@@ -1289,12 +1286,14 @@ src_prepare() {
 		sed -i '/default_stack_frames/Q' ${WORKDIR}/patches/chromium-*-compiler.patch || die
 	fi
 
+	rm "${WORKDIR}/patches/chromium-108-LabToLCH-include.patch" || die
+
 	einfo "Disabling dugite"
 	sed -i '/dugite/d' "${WORKDIR}/${P}/package.json" || die
 
-	# pushd "${WORKDIR}/${NODE_P}" > /dev/null || die
-	# eapply "${FILESDIR}/openssl_fips-r2.patch" || die
-	# popd > /dev/null || die
+	pushd "${WORKDIR}/${NODE_P}" > /dev/null || die
+	eapply "${FILESDIR}/openssl_fips-r2.patch" || die
+	popd > /dev/null || die
 
 	pushd "${WORKDIR}/${P}" > /dev/null || die
 		# sed -i '/web_tests/Q' "patches/chromium/cherry-pick-1eb1e18ad41d.patch" || die
@@ -1332,18 +1331,15 @@ src_prepare() {
 		"${WORKDIR}/patches"
 		"${FILESDIR}/chromium-93-InkDropHost-crash.patch"
 		"${FILESDIR}/chromium-98-gtk4-build.patch"
+		"${FILESDIR}/chromium-107-system-zlib.patch"
 		"${FILESDIR}/chromium-108-EnumTable-crash.patch"
-		"${FILESDIR}/chromium-109-system-zlib.patch"
-		"${FILESDIR}/chromium-109-system-openh264.patch"
-		"${FILESDIR}/chromium-109-system-icu.patch"
+		"${FILESDIR}/chromium-108-revert-GlobalMediaControlsCastStartStop.patch"
 		"${FILESDIR}/chromium-use-oauth2-client-switches-as-default.patch"
 		"${FILESDIR}/chromium-shim_headers.patch"
 		"${FILESDIR}/chromium-cross-compile.patch"
 		"${FILESDIR}/perfetto-system-zlib.patch"
 		"${FILESDIR}/gtk-fix-prefers-color-scheme-query.diff"
 		"${FILESDIR}/restore-x86-r2.patch"
-		"${FILESDIR}/callee_saved_registers.diff"
-		"${FILESDIR}/is_standard_layout_trait.diff"
 	)
 
 	if use ppc64 ; then
@@ -1366,7 +1362,6 @@ src_prepare() {
 
 	# adjust python interpreter version
 	sed -i -e "s|\(^script_executable = \).*|\1\"${EPYTHON}\"|g" .gn || die
-	sed -i -e "s|vpython3|${EPYTHON}|g" testing/xvfb.py || die
 
 	cp "${FILESDIR}/jsoncpp.gn" build/linux/unbundle || die
 	cp "${FILESDIR}/libusb.gn" build/linux/unbundle || die
@@ -1391,9 +1386,9 @@ src_prepare() {
 		eapply "${FILESDIR}/reverse-roll-src-third_party-ffmpeg_duration.patch"
 	fi
 
-	use system-openjpeg && eapply "${FILESDIR}/chromium-system-openjpeg-r4.patch"
+	use system-openjpeg && eapply "${FILESDIR}/chromium-system-openjpeg-r3.patch"
 
-	use vaapi && eapply "${FILESDIR}/vaapi-av1.diff"
+	use vdpau && eapply "${FILESDIR}/vdpau-support-r4.patch"
 
 	if use ungoogled; then
 		# From here we adapt ungoogled-chromium's patches to our needs
@@ -1401,7 +1396,7 @@ src_prepare() {
 		local ugc_patch_series="${UGC_WD}/patches/series"
 		local ugc_substitution_list="${UGC_WD}/domain_substitution.list"
 
-		#UGC_SKIP_SUBSTITUTION="${UGC_SKIP_SUBSTITUTION} first_party_sets_handler_impl.h"
+		# UGC_SKIP_SUBSTITUTION="${UGC_SKIP_SUBSTITUTION} service_worker_global_scope.cc"
 
 		local ugc_unneeded=(
 			# GN bootstrap
@@ -1464,10 +1459,10 @@ src_prepare() {
 
 	declare -A patches=(
 		["electron/patches/chromium"]="."
-		["electron/patches/angle"]="third_party/angle"
 		["electron/patches/boringssl"]="third_party/boringssl/src"
 		["electron/patches/devtools_frontend"]="third_party/devtools-frontend/src"
 		["electron/patches/ffmpeg"]="third_party/ffmpeg"
+		["electron/patches/webrtc"]="third_party/webrtc"
 		["electron/patches/v8"]="v8"
 		["electron/patches/node"]="third_party/electron_node"
 		["electron/patches/perfetto"]="third_party/perfetto"
@@ -1496,6 +1491,24 @@ src_prepare() {
 			# fi
 			if	[ "$i" = "axselectedtextmarkerrange_should_not_be_backwards.patch" ]; then
 			 	einfo "Skipping ${i}: Mac targeted patch."
+			 	continue;
+			fi
+			if	[ "$i" = "cherry-pick-9aa4c45f21b1.patch" ]; then
+			 	einfo "Skipping ${i}: webrtc patch. Maybe fix it."
+			 	continue;
+			fi
+			if	[ "$i" = "cherry-pick-2b30a50d0e62.patch" ]; then
+				einfo "Substitute ${i}: seems to be fixing a CVE."
+				eapply "${FILESDIR}/cherry-pick-2b30a50d0e62.patch" || die
+			 	continue;
+			fi
+			if	[ "$i" = "cherry-pick-f58218891f8c.patch" ]; then
+				einfo "Substitute ${i}"
+				eapply "${FILESDIR}/cherry-pick-f58218891f8c.patch" || die
+			 	continue;
+			fi
+			if	[ "$i" = "cherry-pick-56bd20b295b4.patch" ]; then
+			 	einfo "Skipping ${i}: Win targeted patch."
 			 	continue;
 			fi
 			if [ "$i" = "sysroot.patch" ] ||
@@ -1547,8 +1560,11 @@ src_prepare() {
 		net/third_party/uri_template
 		third_party/abseil-cpp
 		third_party/angle
+		third_party/angle/src/common/third_party/base
+		third_party/angle/src/common/third_party/smhasher
 		third_party/angle/src/common/third_party/xxhash
 		third_party/angle/src/third_party/libXNVCtrl
+		third_party/angle/src/third_party/trace_event
 		third_party/angle/src/third_party/volk
 		third_party/apple_apsl
 		third_party/axe-core
@@ -1598,11 +1614,10 @@ src_prepare() {
 		third_party/devtools-frontend/src/front_end/third_party/i18n
 		third_party/devtools-frontend/src/front_end/third_party/intl-messageformat
 		third_party/devtools-frontend/src/front_end/third_party/lighthouse
-		third_party/devtools-frontend/src/front_end/third_party/lit
+		third_party/devtools-frontend/src/front_end/third_party/lit-html
 		third_party/devtools-frontend/src/front_end/third_party/lodash-isequal
 		third_party/devtools-frontend/src/front_end/third_party/marked
 		third_party/devtools-frontend/src/front_end/third_party/puppeteer
-		third_party/devtools-frontend/src/front_end/third_party/puppeteer/package/lib/esm/third_party/mitt
 		third_party/devtools-frontend/src/front_end/third_party/wasmparser
 		third_party/devtools-frontend/src/test/unittests/front_end/third_party/i18n
 		third_party/devtools-frontend/src/third_party
@@ -1649,6 +1664,7 @@ src_prepare() {
 
 		third_party/libgav1
 		third_party/libjingle
+		third_party/libjxl
 		third_party/libphonenumber
 		third_party/libsecret
 		third_party/libsrtp
@@ -1705,6 +1721,7 @@ src_prepare() {
 		third_party/pdfium/third_party/libopenjpeg
 	)
 	keeplibs+=(
+		third_party/pdfium/third_party/libpng16
 		third_party/pdfium/third_party/libtiff
 		third_party/pdfium/third_party/skia_shared
 		third_party/perfetto
@@ -1718,12 +1735,10 @@ src_prepare() {
 		third_party/protobuf/third_party/six
 		third_party/pthreadpool
 		third_party/pyjson5
-		third_party/pyyaml
 		third_party/qcms
 		third_party/rnnoise
 		third_party/s2cellid
 		third_party/securemessage
-		third_party/selenium-atoms
 		third_party/shell-encryption
 		third_party/simplejson
 		third_party/skia
@@ -1743,7 +1758,6 @@ src_prepare() {
 		third_party/swiftshader/third_party/subzero
 		third_party/swiftshader/third_party/SPIRV-Headers/include/spirv
 		third_party/swiftshader/third_party/SPIRV-Tools
-		third_party/tensorflow_models
 		third_party/tensorflow-text
 		third_party/tflite
 		third_party/tflite/src/third_party/eigen3
@@ -1753,7 +1767,6 @@ src_prepare() {
 		third_party/ukey2
 		third_party/utf
 		third_party/vulkan
-		third_party/wayland
 		third_party/web-animations-js
 		third_party/webdriver
 		third_party/webgpu-cts
@@ -1777,11 +1790,9 @@ src_prepare() {
 		v8/src/third_party/siphash
 		v8/src/third_party/valgrind
 		v8/src/third_party/utf8-decoder
-		v8/third_party/glibc
 		v8/third_party/inspector_protocol
 		v8/third_party/v8
 
-		# gyp -> gn leftovers
 		third_party/speech-dispatcher
 		third_party/usb_ids
 		third_party/xdg-utils
@@ -1800,13 +1811,15 @@ src_prepare() {
 			third_party/dav1d
 			third_party/libaom
 			third_party/libaom/source/libaom/third_party/fastfeat
-			third_party/libaom/source/libaom/third_party/SVT-AV1
 			third_party/libaom/source/libaom/third_party/vector
 			third_party/libaom/source/libaom/third_party/x86inc
 		)
 	fi
 	if ! use system-harfbuzz; then
 		keeplibs+=( third_party/harfbuzz-ng )
+	fi
+	if use wayland; then
+		keeplibs+=( third_party/wayland )
 	fi
 	if ! use system-openh264; then
 		keeplibs+=( third_party/openh264 )
@@ -2148,9 +2161,6 @@ src_configure() {
 		fi
 	fi
 
-	# Only enabled for clang, but gcc has endian macros too
-	myconf_gn+=" v8_use_libm_trig_functions=true"
-
 	# Bug 491582.
 	export TMPDIR="${WORKDIR}/temp"
 	mkdir -p -m 755 "${TMPDIR}" || die
@@ -2198,7 +2208,7 @@ src_configure() {
 	myconf_gn+=" ozone_platform_x11=$(usex X true false)"
 	myconf_gn+=" ozone_platform_wayland=$(usex wayland true false)"
 	myconf_gn+=" ozone_platform=$(usex wayland \"wayland\" \"x11\")"
-	use wayland && myconf_gn+=" use_system_libffi=true"
+	use wayland && myconf_gn+=" use_system_libwayland=true"
 
 	# Results in undefined references in chrome linking, may require CFI to work
 	if use arm64; then
