@@ -112,6 +112,7 @@ www-client/ungoogled-chromium:system-re2 - Use the system-wide dev-libs/re2 inst
 www-client/ungoogled-chromium:system-snappy - Use the system-wide app-arch/snappy instead of the bundled one
 www-client/ungoogled-chromium:system-woff2 - Use the system media-libs/woff2 instead of the bundled one
 www-client/ungoogled-chromium:thinlto - Build with ThinLTO support. LTO (Link Time Optimization) achieves better runtime performance through whole-program analysis and cross-module optimization (highly recommended).
+www-client/ungoogled-chromium:uazo-bromite - Apply also select uazo/Bromite patches. Highly experimental! Those are separate work of uazo and Bromite. Please consider Bromite licensing terms when deciding if you're allowed to distribute binaries built with these patches.
 www-client/ungoogled-chromium:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
 www-client/ungoogled-chromium-bin:convert-dict - Install also the convert_dict utility. The script will be installed into /opt/chromium-browser/update-dicts.sh More info here: https://github.com/ungoogled-software/ungoogled-chromium/issues/188#issuecomment-444752907
 www-client/ungoogled-chromium-bin:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
