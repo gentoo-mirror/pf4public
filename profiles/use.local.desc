@@ -16,6 +16,7 @@ app-editors/vscode:insiders - Allow insiders API !WARNING! Enabling this might b
 app-editors/vscode:liveshare - Allow liveshare API
 app-editors/vscode:openvsx - Use Eclipse Open VSX instead of Visual Studio Marketplace
 app-editors/vscode:substitute-urls - Even though telemetry is disabled by default in this ebuild, one might want to replace telemetry reporting urls with 0.0.0.0
+app-editors/vscode:temp-fix - Enable this if vscode does not build for you by default, this could help
 app-misc/font-manager:gnome-search-provider - Install GNOME shell search provider
 app-misc/font-manager:google-fonts - Google Fonts integration
 app-misc/font-manager:manager - Build font-manager
