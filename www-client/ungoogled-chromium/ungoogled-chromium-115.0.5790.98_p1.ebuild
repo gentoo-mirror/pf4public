@@ -101,7 +101,7 @@ if [ ! -z "${CHROMIUM_COMMITS[*]}" ]; then
 	done
 fi
 
-SRC_URI+="uazo-bromite? ( https://github.com/uazo/bromite/archive/${UAZO_BROMITE_COMMIT_ID}.tar.gz -> bromite-${UAZO_BROMITE_COMMIT_ID}.tar.gz )
+SRC_URI+="uazo-bromite? ( https://github.com/uazo/cromite/archive/${UAZO_BROMITE_COMMIT_ID}.tar.gz -> cromite-${UAZO_BROMITE_COMMIT_ID}.tar.gz )
 "
 
 COMMON_X_DEPEND="
@@ -405,7 +405,7 @@ src_prepare() {
 	default
 
 	if use uazo-bromite ; then
-		BR_PA_PATH="${WORKDIR}/bromite-${UAZO_BROMITE_COMMIT_ID}/build/patches"
+		BR_PA_PATH="${WORKDIR}/cromite-${UAZO_BROMITE_COMMIT_ID}/build/patches"
 		BROMITE_PATCHES=(
 			"${BR_PA_PATH}/Battery-API-return-nothing.patch"
 			"${BR_PA_PATH}/Multiple-fingerprinting-mitigations.patch"
