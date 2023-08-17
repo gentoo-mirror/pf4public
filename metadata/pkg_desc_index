@@ -12,5 +12,5 @@ net-misc/sb-hosts 3.13.20 3.13.21 9999: A hosts file from several well-curated s
 sys-kernel/linux-image 4.14.315 4.14.316 4.14.319 4.14.320 4.14.321 4.14.322 4.14.323 4.19.289 4.19.290 4.19.291 4.19.292 5.4.250 5.4.251 5.4.252 5.4.253 5.4.254 5.10.187 5.10.188 5.10.189 5.10.190 5.10.191 5.15.122 5.15.123 5.15.124 5.15.125 5.15.126 5.15.127 6.1.41 6.1.42 6.1.43 6.1.44 6.1.45 6.1.46 6.4.6 6.4.7 6.4.8 6.4.9 6.4.10 6.4.11: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
 www-client/ungoogled-chromium 116.0.5845.96_p1: Modifications to Chromium for removing Google integration and enhancing privacy
-www-client/ungoogled-chromium-bin 114.0.5735.198 115.0.5790.110 115.0.5790.170: Modifications to Chromium for removing Google integration and enhancing privacy
+www-client/ungoogled-chromium-bin 115.0.5790.170 116.0.5845.96: Modifications to Chromium for removing Google integration and enhancing privacy
 x11-misc/caffeine-ng 3.5.1 4.0.2 9999: Stop the desktop from becoming idle in full-screen mode. (Fork of Caffeine)
