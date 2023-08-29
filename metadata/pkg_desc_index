@@ -7,7 +7,7 @@ dev-python/pulsectl 20.5.1: High-level interface and ctypes-based bindings for P
 dev-util/electron 19.1.8 19.1.9 19.1.9-r1 20.3.12-r1 21.4.3 21.4.4 22.3.21 22.3.22 23.3.12 23.3.13 24.8.0 24.8.1 25.6.0 25.7.0 26.0.0 26.1.0: Cross platform application development framework based on web technologies
 media-libs/zint 2.11.1 2.12.0 9999: Barcode encoding library supporting over 50 symbologies
 net-im/element-desktop 1.11.38 1.11.39 9999: A glossy Matrix collaboration client for desktop
-net-im/element-web 1.11.38 1.11.39 9999: A glossy Matrix collaboration client for the web
+net-im/element-web 1.11.38 1.11.39 1.11.40 9999: A glossy Matrix collaboration client for the web
 net-misc/sb-hosts 3.13.25 3.13.26 9999: A hosts file from several well-curated sources
 sys-kernel/linux-image 4.14.315 4.14.323 4.19.289 4.19.291 4.19.292 5.4.250 5.4.253 5.4.254 5.10.187 5.10.190 5.10.191 5.10.192 5.15.122 5.15.126 5.15.127 5.15.128 6.1.41 6.1.45 6.1.46 6.1.47 6.1.48 6.4.10 6.4.11 6.4.12: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
