@@ -78,6 +78,45 @@ net-misc/sb-hosts:fakenews - Add fake news sites
 net-misc/sb-hosts:gambling - Add common online betting sites
 net-misc/sb-hosts:porn - Add porn sites
 net-misc/sb-hosts:social - Add social media sites
+www-client/cromite:cfi - Build with CFI (Control Flow Integrity) enabled. It requires "-stdlib=libc++", see #40 for more details.
+www-client/cromite:clang - Use Clang compiler instead of GCC
+www-client/cromite:convert-dict - Patch and build the convert_dict utility. The script will be installed into /usr/lib64/chromium-browser/update-dicts.sh. More info here: https://github.com/ungoogled-software/ungoogled-chromium/issues/188#issuecomment-444752907
+www-client/cromite:debug - Enable DCHECK feature with severity configurable at runtime. Mostly intended for debugging and development, NOT RECOMMENDED for general use.
+www-client/cromite:enable-driver - Build chromedriver
+www-client/cromite:gtk4 - Build with GTK4 headers.
+www-client/cromite:hangouts - Enable support for Google Hangouts features such as screen sharing
+www-client/cromite:headless - Build Ozone only with headless backend, NOT RECOMMENDED for general uses
+www-client/cromite:hevc - Enable HEVC decoding support. Should work with system-ffmpeg, but might require additional patching for the built-in one.
+www-client/cromite:nvidia - Use libXNVCtrl library from x11-drivers/nvidia-drivers instead of the bundled one
+www-client/cromite:official - Enable Official build instead of Developer build.
+www-client/cromite:optimize-thinlto - Whether to enable ThinLTO optimizations. Turning ThinLTO optimizations on can substantially increase link time and binary size, but they generally also make binaries a fair bit faster.
+www-client/cromite:optimize-webui - Optimize parts of Chromium's UI written with web technologies (HTML/CSS/JS) for runtime performance purposes. This does more work at compile time for speed benefits at runtime.
+www-client/cromite:pax-kernel - Allow building on a PaX-enabled kernel
+www-client/cromite:pgo - Enable PGO. Requires bundled binary profile data in sources tree. Often requires masked/testing llvm.
+www-client/cromite:pic - Disable optimized assembly code that is not PIC friendly
+www-client/cromite:proprietary-codecs - Enable proprietary codecs like H.264, MP3
+www-client/cromite:screencast - Enable support for remote desktop and screen cast using media-video/pipewire
+www-client/cromite:suid - Build the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels
+www-client/cromite:system-abseil-cpp - Use the system dev-cpp/abseil-cpp instead of the bundled one
+www-client/cromite:system-av1 - Use the system media-libs/libaom and media-libs/dav1d instead of the bundled ones
+www-client/cromite:system-brotli - Use the system app-arch/brotli instead of the bundled one
+www-client/cromite:system-crc32c - Use the system dev-libs/crc32c instead of the bundled one
+www-client/cromite:system-double-conversion - Use the system dev-libs/double-conversion instead of the bundled one
+www-client/cromite:system-ffmpeg - Use the system media-video/ffmpeg instead of the bundled one
+www-client/cromite:system-harfbuzz - Use the system media-libs/harfbuzz instead of the bundled one
+www-client/cromite:system-icu - Use the system dev-libs/icu instead of the bundled one
+www-client/cromite:system-jsoncpp - Use the system dev-libs/jsoncpp instead of the bundled one
+www-client/cromite:system-libevent - Use the system dev-libs/libevent instead of the bundled one
+www-client/cromite:system-libusb - Use the system dev-libs/libusb instead of the bundled one
+www-client/cromite:system-libvpx - Use the system media-libs/libvpx instead of the bundled one
+www-client/cromite:system-openh264 - Use the system media-libs/openh264 instead of the bundled one. If disabled, it will restrict USE=bindist.
+www-client/cromite:system-openjpeg - Use the system-wide media-libs/openjpeg instead of the bundled one. OpenJPEG use are exclusively for Chromium's PDF viewer.
+www-client/cromite:system-png - Use system libpng instead of the bundled one
+www-client/cromite:system-re2 - Use the system-wide dev-libs/re2 instead of the bundled one
+www-client/cromite:system-snappy - Use the system-wide app-arch/snappy instead of the bundled one
+www-client/cromite:system-woff2 - Use the system media-libs/woff2 instead of the bundled one
+www-client/cromite:thinlto - Build with ThinLTO support. LTO (Link Time Optimization) achieves better runtime performance through whole-program analysis and cross-module optimization (highly recommended).
+www-client/cromite:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
 www-client/opera:gtk - Install support libraries and runtime dependencies to support GTK+/GNOME desktop integration
 www-client/ungoogled-chromium:cfi - Build with CFI (Control Flow Integrity) enabled. It requires "-stdlib=libc++", see #40 for more details.
 www-client/ungoogled-chromium:clang - Use Clang compiler instead of GCC
