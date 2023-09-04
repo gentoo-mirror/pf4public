@@ -368,17 +368,17 @@ src_prepare() {
 	rm ${WORKDIR}/patches/chromium-116-profile_view_utils-include.patch
 	rm ${WORKDIR}/patches/chromium-116-url_load_stats-include.patch
 
+		# "${FILESDIR}/chromium-qt6.patch"
+		# "${FILESDIR}/chromium-114-remove-evdev-dep.patch"
 	local PATCHES=(
 		"${WORKDIR}/patches"
 		"${FILESDIR}/chromium-cross-compile.patch"
 		"${FILESDIR}/chromium-use-oauth2-client-switches-as-default.patch"
-		"${FILESDIR}/chromium-qt6.patch"
 		"${FILESDIR}/chromium-98-gtk4-build.patch"
 		"${FILESDIR}/chromium-108-EnumTable-crash.patch"
 		"${FILESDIR}/chromium-109-system-openh264.patch"
 		"${FILESDIR}/chromium-109-system-zlib.patch"
 		"${FILESDIR}/chromium-111-InkDropHost-crash.patch"
-		"${FILESDIR}/chromium-114-remove-evdev-dep.patch"
 		"${FILESDIR}/chromium-115-binutils-2.41.patch"
 		"${FILESDIR}/perfetto-system-zlib.patch"
 		"${FILESDIR}/gtk-fix-prefers-color-scheme-query.diff"
