@@ -30,6 +30,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/chro
 	ppc64? (
 		https://quickbuild.io/~raptor-engineering-public/+archive/ubuntu/chromium/+files/chromium_${PATCHSET_PPC64}.debian.tar.xz
 		https://dev.gentoo.org/~sultan/distfiles/www-client/chromium/chromium-ppc64le-gentoo-patches-1.tar.xz
+		https://raw.githubusercontent.com/darkbasic/gentoo-files/master/chromium-115-0001-Add-PPC64-support-for-boringssl.patch.gz
 	)
 "
 
@@ -62,7 +63,7 @@ UGC_COMMIT_ID="1aa47a55db504aed13bfbb713f9b5ec5b61541c3"
 # 	5794e9d12bf82620d5f24505798fecb45ca5a22d
 # )
 
-UAZO_BROMITE_COMMIT_ID="d5133f33d342b2f052592296975b499112e0945f"
+UAZO_BROMITE_COMMIT_ID="4b7078789cedc3b282a2c529f67cceecec24c6f9"
 
 CHROMIUM_COMMITS=(
 	5a8dfcaf84b5af5aeb738702651e98bfc43d6d45
@@ -397,11 +398,12 @@ src_prepare() {
 	if use ppc64 ; then
 		local p
 		for p in $(grep -v "^#" "${WORKDIR}"/debian/patches/series | grep "^ppc64le" || die); do
-			if [[ ! $p =~ "fix-breakpad-compile.patch" ]]; then
+			if [[ ! ($p =~ "fix-breakpad-compile.patch" || $p =~ "Add-PPC64-support-for-boringssl.patch") ]]; then
 				eapply "${WORKDIR}/debian/patches/${p}"
 			fi
 		done
 		PATCHES+=( "${WORKDIR}/ppc64le" )
+		PATCHES+=( "${WORKDIR}/chromium-115-0001-Add-PPC64-support-for-boringssl.patch" )
 	fi
 
 	default
