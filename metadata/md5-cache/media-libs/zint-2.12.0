@@ -1,6 +1,6 @@
 BDEPEND=>=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
 DEFINED_PHASES=compile configure install postinst postrm prepare test
-DEPEND=qt5? ( x11-themes/hicolor-icon-theme dev-qt/qthelp:5 dev-qt/linguist:5 dev-qt/qdbusviewer:5 dev-qt/designer:5 dev-qt/assistant:5 dev-qt/qtgui:5 dev-qt/qtsvg:5 ) qt6? ( x11-themes/hicolor-icon-theme dev-qt/qtbase:6[gui] ) png? ( media-libs/libpng:0= ) sys-libs/zlib:0=
+DEPEND=qt5? ( x11-themes/hicolor-icon-theme dev-qt/qthelp:5 dev-qt/linguist dev-qt/qdbusviewer dev-qt/designer:5 dev-qt/assistant dev-qt/qtgui:5 dev-qt/qtsvg:5 ) qt6? ( x11-themes/hicolor-icon-theme dev-qt/qtbase:6[gui] ) png? ( media-libs/libpng:0= ) sys-libs/zlib:0=
 DESCRIPTION=Barcode encoding library supporting over 50 symbologies
 EAPI=8
 HOMEPAGE=http://zint.org.uk
@@ -8,8 +8,8 @@ INHERIT=cmake desktop
 IUSE=debug doc +png qt5 qt6 static-libs
 KEYWORDS=amd64 x86
 LICENSE=GPL-2
-RDEPEND=qt5? ( x11-themes/hicolor-icon-theme dev-qt/qthelp:5 dev-qt/linguist:5 dev-qt/qdbusviewer:5 dev-qt/designer:5 dev-qt/assistant:5 dev-qt/qtgui:5 dev-qt/qtsvg:5 ) qt6? ( x11-themes/hicolor-icon-theme dev-qt/qtbase:6[gui] ) png? ( media-libs/libpng:0= )
+RDEPEND=qt5? ( x11-themes/hicolor-icon-theme dev-qt/qthelp:5 dev-qt/linguist dev-qt/qdbusviewer dev-qt/designer:5 dev-qt/assistant dev-qt/qtgui:5 dev-qt/qtsvg:5 ) qt6? ( x11-themes/hicolor-icon-theme dev-qt/qtbase:6[gui] ) png? ( media-libs/libpng:0= )
 SLOT=0
 SRC_URI=mirror://sourceforge/zint/zint-2.12.0-src.tar.gz
 _eclasses_=toolchain-funcs	862d337d98edb576796827be2c6b11ca	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	be27a904c614cb93ae037762dc69bcc2	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	f3010c780f65d1bb5aea15a9af1adc9c	xdg-utils	baea6080dd821f5562d715887954c9d3	cmake	fc2f89084f590ac95c004ea95b0d2f80	desktop	021728fdc1b03b36357dbc89489e0f0d
-_md5_=90e11437a517b281f7e0bd8b8b2a89a0
+_md5_=3499b40d17d6ef89795b58feef350ec0
