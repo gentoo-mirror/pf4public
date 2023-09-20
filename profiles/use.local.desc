@@ -84,14 +84,15 @@ www-client/cromite:clang - Use Clang compiler instead of GCC
 www-client/cromite:convert-dict - Patch and build the convert_dict utility. The script will be installed into /usr/lib64/chromium-browser/update-dicts.sh. More info here: https://github.com/ungoogled-software/ungoogled-chromium/issues/188#issuecomment-444752907
 www-client/cromite:debug - Enable DCHECK feature with severity configurable at runtime. Mostly intended for debugging and development, NOT RECOMMENDED for general use.
 www-client/cromite:enable-driver - Build chromedriver
-www-client/cromite:gtk4 - Build with GTK4 headers.
+www-client/cromite:gtk4 - Build with GTK4 headers
 www-client/cromite:hangouts - Enable support for Google Hangouts features such as screen sharing
 www-client/cromite:headless - Build Ozone only with headless backend, NOT RECOMMENDED for general uses
 www-client/cromite:hevc - Enable HEVC decoding support. Should work with system-ffmpeg, but might require additional patching for the built-in one.
 www-client/cromite:nvidia - Use libXNVCtrl library from x11-drivers/nvidia-drivers instead of the bundled one
-www-client/cromite:official - Enable Official build instead of Developer build.
+www-client/cromite:official - Enable Official build instead of Developer build
 www-client/cromite:optimize-thinlto - Whether to enable ThinLTO optimizations. Turning ThinLTO optimizations on can substantially increase link time and binary size, but they generally also make binaries a fair bit faster.
 www-client/cromite:optimize-webui - Optimize parts of Chromium's UI written with web technologies (HTML/CSS/JS) for runtime performance purposes. This does more work at compile time for speed benefits at runtime.
+www-client/cromite:override-data-dir - Change default user data directory to "~/.config/cromite". No data moved automatically.
 www-client/cromite:pax-kernel - Allow building on a PaX-enabled kernel
 www-client/cromite:pgo - Enable PGO. Requires bundled binary profile data in sources tree. Often requires masked/testing llvm.
 www-client/cromite:pic - Disable optimized assembly code that is not PIC friendly
@@ -125,14 +126,15 @@ www-client/ungoogled-chromium:clang - Use Clang compiler instead of GCC
 www-client/ungoogled-chromium:convert-dict - Patch and build the convert_dict utility. The script will be installed into /usr/lib64/chromium-browser/update-dicts.sh. More info here: https://github.com/ungoogled-software/ungoogled-chromium/issues/188#issuecomment-444752907
 www-client/ungoogled-chromium:debug - Enable DCHECK feature with severity configurable at runtime. Mostly intended for debugging and development, NOT RECOMMENDED for general use.
 www-client/ungoogled-chromium:enable-driver - Build chromedriver
-www-client/ungoogled-chromium:gtk4 - Build with GTK4 headers.
+www-client/ungoogled-chromium:gtk4 - Build with GTK4 headers
 www-client/ungoogled-chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
 www-client/ungoogled-chromium:headless - Build Ozone only with headless backend, NOT RECOMMENDED for general uses
 www-client/ungoogled-chromium:hevc - Enable HEVC decoding support. Should work with system-ffmpeg, but might require additional patching for the built-in one.
 www-client/ungoogled-chromium:nvidia - Use libXNVCtrl library from x11-drivers/nvidia-drivers instead of the bundled one
-www-client/ungoogled-chromium:official - Enable Official build instead of Developer build.
+www-client/ungoogled-chromium:official - Enable Official build instead of Developer build
 www-client/ungoogled-chromium:optimize-thinlto - Whether to enable ThinLTO optimizations. Turning ThinLTO optimizations on can substantially increase link time and binary size, but they generally also make binaries a fair bit faster.
 www-client/ungoogled-chromium:optimize-webui - Optimize parts of Chromium's UI written with web technologies (HTML/CSS/JS) for runtime performance purposes. This does more work at compile time for speed benefits at runtime.
+www-client/ungoogled-chromium:override-data-dir - Change default user data directory to "~/.config/ungoogled-chromium". No data moved automatically.
 www-client/ungoogled-chromium:pax-kernel - Allow building on a PaX-enabled kernel
 www-client/ungoogled-chromium:pgo - Enable PGO. Requires bundled binary profile data in sources tree. Often requires masked/testing llvm.
 www-client/ungoogled-chromium:pic - Disable optimized assembly code that is not PIC friendly
