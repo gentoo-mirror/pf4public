@@ -12,6 +12,6 @@ net-misc/sb-hosts 3.14.7 3.14.8 9999: A hosts file from several well-curated sou
 sys-kernel/linux-image 4.19.289 4.19.292 4.19.293 4.19.294 5.4.250 5.4.254 5.4.255 5.4.256 5.10.187 5.10.191 5.10.192 5.10.193 5.10.194 5.15.122 5.15.127 5.15.128 5.15.129 5.15.130 5.15.131 6.1.53 6.4.16 6.5.3: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/cromite 117.0.5938.88 117.0.5938.92: Cromite a Bromite fork with ad blocking and privacy enhancements; take back your browser!
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
-www-client/ungoogled-chromium 117.0.5938.88_p1 117.0.5938.92_p1: Modifications to Chromium for removing Google integration and enhancing privacy
+www-client/ungoogled-chromium 117.0.5938.92_p1: Modifications to Chromium for removing Google integration and enhancing privacy
 www-client/ungoogled-chromium-bin 116.0.5845.187 117.0.5938.88: Modifications to Chromium for removing Google integration and enhancing privacy
 x11-misc/caffeine-ng 3.5.1 4.0.2 9999: Stop the desktop from becoming idle in full-screen mode. (Fork of Caffeine)
