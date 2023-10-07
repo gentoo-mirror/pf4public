@@ -117,6 +117,7 @@ www-client/cromite:system-png - Use system libpng instead of the bundled one
 www-client/cromite:system-re2 - Use the system-wide dev-libs/re2 instead of the bundled one
 www-client/cromite:system-snappy - Use the system-wide app-arch/snappy instead of the bundled one
 www-client/cromite:system-woff2 - Use the system media-libs/woff2 instead of the bundled one
+www-client/cromite:system-zstd - Use the system app-arch/zstd instead of the bundled one
 www-client/cromite:thinlto - Build with ThinLTO support. LTO (Link Time Optimization) achieves better runtime performance through whole-program analysis and cross-module optimization (highly recommended).
 www-client/cromite:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
 www-client/opera:gtk - Install support libraries and runtime dependencies to support GTK+/GNOME desktop integration

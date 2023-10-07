@@ -10,7 +10,7 @@ net-im/element-desktop 1.11.44 1.11.45 9999: A glossy Matrix collaboration clien
 net-im/element-web 1.11.44 1.11.45 9999: A glossy Matrix collaboration client for the web
 net-misc/sb-hosts 3.14.11 3.14.12 9999: A hosts file from several well-curated sources
 sys-kernel/linux-image 5.4.250 5.4.254 5.4.255 5.4.256 5.4.257 5.10.187 5.10.191 5.10.194 5.10.195 5.10.196 5.10.197 5.15.122 5.15.127 5.15.131 5.15.132 5.15.133 5.15.134 6.1.53-r1 6.1.54 6.1.55 6.1.56 6.5.3 6.5.3-r1 6.5.4 6.5.5 6.5.6: linux-image ebuild is used to build linux kernel image using savedconfig
-www-client/cromite 117.0.5938.149: Cromite a Bromite fork with ad blocking and privacy enhancements; take back your browser!
+www-client/cromite 117.0.5938.149 118.0.5993.54: Cromite a Bromite fork with ad blocking and privacy enhancements; take back your browser!
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
 www-client/ungoogled-chromium 117.0.5938.149_p1 118.0.5993.54_p1: Modifications to Chromium for removing Google integration and enhancing privacy
 www-client/ungoogled-chromium-bin 116.0.5845.187 117.0.5938.132 117.0.5938.149: Modifications to Chromium for removing Google integration and enhancing privacy
