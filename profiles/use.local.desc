@@ -159,6 +159,7 @@ www-client/ungoogled-chromium:system-png - Use system libpng instead of the bund
 www-client/ungoogled-chromium:system-re2 - Use the system-wide dev-libs/re2 instead of the bundled one
 www-client/ungoogled-chromium:system-snappy - Use the system-wide app-arch/snappy instead of the bundled one
 www-client/ungoogled-chromium:system-woff2 - Use the system media-libs/woff2 instead of the bundled one
+www-client/ungoogled-chromium:system-zstd - Use the system app-arch/zstd instead of the bundled one
 www-client/ungoogled-chromium:thinlto - Build with ThinLTO support. LTO (Link Time Optimization) achieves better runtime performance through whole-program analysis and cross-module optimization (highly recommended).
 www-client/ungoogled-chromium:uazo-bromite - Apply also select uazo/Bromite patches. Highly experimental! Those are separate work of uazo and Bromite. Please consider Bromite licensing terms when deciding if you're allowed to distribute binaries built with these patches.
 www-client/ungoogled-chromium:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
