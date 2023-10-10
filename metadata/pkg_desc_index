@@ -6,8 +6,8 @@ dev-python/ewmh 0.1.6: An implementation of Extended Window Manager Hints, based
 dev-python/pulsectl 20.5.1: High-level interface and ctypes-based bindings for PulseAudio
 dev-util/electron 19.1.8 19.1.9 19.1.9-r1 20.3.12-r1 21.4.4 22.3.26 22.3.27 23.3.12 23.3.13 24.8.6 24.8.7 25.8.4 25.9.0 26.2.4 26.3.0: Cross platform application development framework based on web technologies
 media-libs/zint 2.11.1 2.12.0 9999: Barcode encoding library supporting over 50 symbologies
-net-im/element-desktop 1.11.44 1.11.45 1.11.46 9999: A glossy Matrix collaboration client for desktop
-net-im/element-web 1.11.44 1.11.45 1.11.46 9999: A glossy Matrix collaboration client for the web
+net-im/element-desktop 1.11.45 1.11.46 9999: A glossy Matrix collaboration client for desktop
+net-im/element-web 1.11.45 1.11.46 9999: A glossy Matrix collaboration client for the web
 net-misc/sb-hosts 3.14.12 3.14.13 9999: A hosts file from several well-curated sources
 sys-kernel/linux-image 5.4.250 5.4.254 5.4.255 5.4.256 5.4.257 5.10.187 5.10.191 5.10.194 5.10.195 5.10.196 5.10.197 5.15.122 5.15.127 5.15.131 5.15.132 5.15.133 5.15.134 6.1.53-r1 6.1.54 6.1.55 6.1.56 6.5.3 6.5.3-r1 6.5.4 6.5.5 6.5.6: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/cromite 117.0.5938.149 118.0.5993.54: Cromite a Bromite fork with ad blocking and privacy enhancements; take back your browser!
