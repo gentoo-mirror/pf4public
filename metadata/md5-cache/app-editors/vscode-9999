@@ -1,16 +1,16 @@
 BDEPEND=|| ( dev-lang/python:3.12 dev-lang/python:3.11 dev-lang/python:3.10 ) !temp-fix? ( net-libs/nodejs ) sys-apps/yarn >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
-DEPEND=>=app-crypt/libsecret-0.18.8:= >=x11-libs/libX11-1.6.9:= >=x11-libs/libxkbfile-1.1.0:= virtual/krb5 sys-apps/ripgrep electron-19? ( dev-util/electron:19 ) electron-20? ( dev-util/electron:20 ) electron-21? ( dev-util/electron:21 ) electron-22? ( dev-util/electron:22 ) electron-23? ( dev-util/electron:23 ) electron-24? ( dev-util/electron:24 ) electron-26? ( dev-util/electron:26 ) !electron-19? ( !electron-20? ( !electron-21? ( !electron-22? ( !electron-23? ( !electron-24? ( !electron-26? ( dev-util/electron:25 ) ) ) ) ) ) )
+DEPEND=>=app-crypt/libsecret-0.18.8:= >=x11-libs/libX11-1.6.9:= >=x11-libs/libxkbfile-1.1.0:= virtual/krb5 sys-apps/ripgrep electron-19? ( dev-util/electron:19 ) electron-20? ( dev-util/electron:20 ) electron-21? ( dev-util/electron:21 ) electron-22? ( dev-util/electron:22 ) electron-23? ( dev-util/electron:23 ) electron-24? ( dev-util/electron:24 ) electron-26? ( dev-util/electron:26 ) electron-27? ( dev-util/electron:27 ) !electron-19? ( !electron-20? ( !electron-21? ( !electron-22? ( !electron-23? ( !electron-24? ( !electron-26? ( !electron-27? ( dev-util/electron:25 ) ) ) ) ) ) ) )
 DESCRIPTION=Visual Studio Code - Open Source
 EAPI=8
 HOMEPAGE=https://github.com/microsoft/vscode
 INHERIT=desktop flag-o-matic multilib ninja-utils pax-utils portability python-any-r1 toolchain-funcs xdg-utils git-r3
-IUSE=api-proposals badge-providers electron-19 electron-20 electron-21 electron-22 electron-23 electron-24 electron-26 openvsx reh reh-web substitute-urls +temp-fix +build-online
+IUSE=api-proposals badge-providers electron-19 electron-20 electron-21 electron-22 electron-23 electron-24 electron-26 electron-27 openvsx reh reh-web substitute-urls +temp-fix +build-online
 LICENSE=MIT
 PROPERTIES=live
-RDEPEND=>=app-crypt/libsecret-0.18.8:= >=x11-libs/libX11-1.6.9:= >=x11-libs/libxkbfile-1.1.0:= virtual/krb5 sys-apps/ripgrep electron-19? ( dev-util/electron:19 ) electron-20? ( dev-util/electron:20 ) electron-21? ( dev-util/electron:21 ) electron-22? ( dev-util/electron:22 ) electron-23? ( dev-util/electron:23 ) electron-24? ( dev-util/electron:24 ) electron-26? ( dev-util/electron:26 ) !electron-19? ( !electron-20? ( !electron-21? ( !electron-22? ( !electron-23? ( !electron-24? ( !electron-26? ( dev-util/electron:25 ) ) ) ) ) ) )
+RDEPEND=>=app-crypt/libsecret-0.18.8:= >=x11-libs/libX11-1.6.9:= >=x11-libs/libxkbfile-1.1.0:= virtual/krb5 sys-apps/ripgrep electron-19? ( dev-util/electron:19 ) electron-20? ( dev-util/electron:20 ) electron-21? ( dev-util/electron:21 ) electron-22? ( dev-util/electron:22 ) electron-23? ( dev-util/electron:23 ) electron-24? ( dev-util/electron:24 ) electron-26? ( dev-util/electron:26 ) electron-27? ( dev-util/electron:27 ) !electron-19? ( !electron-20? ( !electron-21? ( !electron-22? ( !electron-23? ( !electron-24? ( !electron-26? ( !electron-27? ( dev-util/electron:25 ) ) ) ) ) ) ) )
 RESTRICT=mirror build-online? ( network-sandbox )
 SLOT=0
 SRC_URI=https://registry.yarnpkg.com/@vscode/ripgrep/-/ripgrep-1.15.0.tgz -> @vscode-ripgrep-1.15.0.tgz
 _eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	toolchain-funcs	fbbbc99d10168de2926e06da7169b8dc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e5cc383ea8420f92fe3737be790021dc	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	pax-utils	91d47e5d20627c717aa878b9167c62a8	portability	a74d533f258f1f435be71312558c12f9	python-utils-r1	12aa0037eb004139215ff04894d52b28	python-any-r1	f5169813d1619761b459800587005fd2	xdg-utils	baea6080dd821f5562d715887954c9d3	git-r3	2358a7b20091609e24bd3a83b3ac5991
-_md5_=2feae1b5904b336ec18df6f49cfcc5b3
+_md5_=28e2f6a638c56d9b687e7e6fbb437594
