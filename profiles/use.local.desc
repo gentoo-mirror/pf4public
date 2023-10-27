@@ -112,6 +112,7 @@ www-client/cromite:system-harfbuzz - Use the system media-libs/harfbuzz instead 
 www-client/cromite:system-icu - Use the system dev-libs/icu instead of the bundled one
 www-client/cromite:system-jsoncpp - Use the system dev-libs/jsoncpp instead of the bundled one
 www-client/cromite:system-libevent - Use the system dev-libs/libevent instead of the bundled one
+www-client/cromite:system-libjxl - Use the system media-libs/libjxl instead of the bundled one
 www-client/cromite:system-libusb - Use the system dev-libs/libusb instead of the bundled one
 www-client/cromite:system-libvpx - Use the system media-libs/libvpx instead of the bundled one
 www-client/cromite:system-openh264 - Use the system media-libs/openh264 instead of the bundled one. If disabled, it will restrict USE=bindist.
