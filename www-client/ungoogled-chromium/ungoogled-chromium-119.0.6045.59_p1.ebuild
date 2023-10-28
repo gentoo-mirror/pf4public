@@ -62,7 +62,7 @@ UGC_COMMIT_ID="b71d4afb9aaa4ac26286967c44750a4cff2c6843"
 # 	5794e9d12bf82620d5f24505798fecb45ca5a22d
 # )
 
-UAZO_BROMITE_COMMIT_ID="b90df7de3d79cafc1d8daab413ae25e88728c00d"
+UAZO_BROMITE_COMMIT_ID="c5b954b78e7695b613a140dfaeb715980cd36fe3"
 
 # CHROMIUM_COMMITS=(
 # 	5a8dfcaf84b5af5aeb738702651e98bfc43d6d45
@@ -246,7 +246,7 @@ BDEPEND="
 		qt6? ( dev-qt/qtbase:6 )
 	)
 	dev-lang/perl
-	>=dev-util/gn-0.2122
+	>=dev-util/gn-0.2114
 	>=dev-util/gperf-3.0.3
 	>=dev-util/ninja-1.7.2
 	dev-vcs/git
