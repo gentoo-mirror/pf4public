@@ -1,5 +1,5 @@
 BDEPEND=sys-apps/yarn net-libs/nodejs >=dev-vcs/git-1.8.2.1[curl]
-DEFINED_PHASES=compile configure install postinst unpack
+DEFINED_PHASES=compile configure install postinst prepare unpack
 DESCRIPTION=A glossy Matrix collaboration client for the web
 EAPI=8
 HOMEPAGE=https://element.io/
@@ -10,4 +10,4 @@ PROPERTIES=live
 RESTRICT=mirror build-online? ( network-sandbox )
 SLOT=0
 _eclasses_=git-r3	5133e393e8717a3a093660f990801dc1
-_md5_=1f3ee743290152ef34f7d6868e0a7931
+_md5_=815e59f3bed525b2414e0a554a998f5e
