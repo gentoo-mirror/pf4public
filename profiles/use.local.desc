@@ -82,6 +82,15 @@ net-misc/sb-hosts:fakenews - Add fake news sites
 net-misc/sb-hosts:gambling - Add common online betting sites
 net-misc/sb-hosts:porn - Add porn sites
 net-misc/sb-hosts:social - Add social media sites
+sci-misc/jupyterlab-desktop:build-online - Disable network-sandbox and open Pandora's box!
+sci-misc/jupyterlab-desktop:electron-19 - Build against electron-19 instead of the default one. Use at your own risk!
+sci-misc/jupyterlab-desktop:electron-20 - Build against electron-20 instead of the default one. Use at your own risk!
+sci-misc/jupyterlab-desktop:electron-21 - Build against electron-21 instead of the default one. Use at your own risk!
+sci-misc/jupyterlab-desktop:electron-22 - Build against electron-22 instead of the default one. Use at your own risk!
+sci-misc/jupyterlab-desktop:electron-23 - Build against electron-23 instead of the default one. Use at your own risk!
+sci-misc/jupyterlab-desktop:electron-24 - Build against electron-24 instead of the default one. Use at your own risk!
+sci-misc/jupyterlab-desktop:electron-25 - Build against electron-25 instead of the default one. Use at your own risk!
+sci-misc/jupyterlab-desktop:electron-26 - Build against electron-26 instead of the default one. Use at your own risk!
 www-client/cromite:cfi - Build with CFI (Control Flow Integrity) enabled. It requires "-stdlib=libc++", see #40 for more details.
 www-client/cromite:clang - Use Clang compiler instead of GCC
 www-client/cromite:convert-dict - Patch and build the convert_dict utility. The script will be installed into /usr/lib64/chromium-browser/update-dicts.sh. More info here: https://github.com/ungoogled-software/ungoogled-chromium/issues/188#issuecomment-444752907
