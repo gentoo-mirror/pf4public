@@ -12,5 +12,5 @@ RDEPEND=~net-im/element-web-9999 native-modules? ( dev-db/sqlcipher ) electron-1
 REQUIRED_USE=native-modules? ( build-online )
 RESTRICT=mirror build-online? ( network-sandbox )
 SLOT=0
-_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	baa4d385108ac87993edac956a916a36	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	python-utils-r1	e989dbdcbb647bd8655857c1f95be244	python-any-r1	f5169813d1619761b459800587005fd2	xdg-utils	baea6080dd821f5562d715887954c9d3	git-r3	5133e393e8717a3a093660f990801dc1
+_eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	toolchain-funcs	eed10cf5e5a06916e654d31f5a1925cc	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	b1206d933fc5a96cc864180a3cdbf18c	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	python-utils-r1	e989dbdcbb647bd8655857c1f95be244	python-any-r1	f5169813d1619761b459800587005fd2	xdg-utils	baea6080dd821f5562d715887954c9d3	git-r3	5133e393e8717a3a093660f990801dc1
 _md5_=7583715a5653b02d658e78f46fb52bd3
