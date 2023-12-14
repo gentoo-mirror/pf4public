@@ -225,6 +225,10 @@ src_configure() {
 		VSCODE_ARCH="x64"
 	elif [[ $myarch = x86 ]]; then
 		VSCODE_ARCH="ia32"
+	elif [[ $myarch = arm64 ]]; then
+		VSCODE_ARCH="arm64"
+	elif [[ $myarch = arm ]]; then
+		VSCODE_ARCH="armhf"
 	elif [[ $myarch = ppc64 ]]; then
 		VSCODE_ARCH="ppc64"
 	else
@@ -316,7 +320,7 @@ src_compile() {
 	PATH="/usr/$(get_libdir)/electron-${ELECTRON_SLOT}/node_modules/npm/bin:$PATH"
 	PATH="/usr/$(get_libdir)/electron-${ELECTRON_SLOT}:$PATH"
 	export PATH
-	export NODE_OPTIONS="--max-old-space-size=9216 --heapsnapshot-near-heap-limit=5"
+	export NODE_OPTIONS="--max-old-space-size=12192 --heapsnapshot-near-heap-limit=5"
 
 	if use temp-fix; then
 	node node_modules/gulp/bin/gulp.js vscode-linux-${VSCODE_ARCH}-min || die
