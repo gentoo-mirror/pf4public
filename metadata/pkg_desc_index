@@ -13,6 +13,6 @@ sci-misc/jupyterlab-desktop 4.0.7_p1: JupyterLab desktop application, based on E
 sys-kernel/linux-image 5.10.203 5.10.204 5.10.205 5.10.206 5.15.142 5.15.143 5.15.144 5.15.145 5.15.146 6.1.67 6.1.68 6.1.69 6.1.70 6.1.71 6.6.6 6.6.7 6.6.8 6.6.9 6.6.10: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/cromite 119.0.6045.199: Cromite a Bromite fork with ad blocking and privacy enhancements; take back your browser!
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
-www-client/ungoogled-chromium 119.0.6045.199_p1 120.0.6099.62_p1 120.0.6099.224_p1: Modifications to Chromium for removing Google integration and enhancing privacy
+www-client/ungoogled-chromium 119.0.6045.199_p1 120.0.6099.62_p1 120.0.6099.224_p1 121.0.6167.85_p1: Modifications to Chromium for removing Google integration and enhancing privacy
 www-client/ungoogled-chromium-bin 118.0.5993.117 119.0.6045.159 119.0.6045.199: Modifications to Chromium for removing Google integration and enhancing privacy
 x11-misc/caffeine-ng 3.5.1 4.0.2 9999: Stop the desktop from becoming idle in full-screen mode. (Fork of Caffeine)
