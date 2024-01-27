@@ -9,7 +9,7 @@ media-libs/zint 2.11.1 2.12.0 9999: Barcode encoding library supporting over 50 
 net-im/element-desktop 1.11.54 1.11.55 9999: A glossy Matrix collaboration client for desktop
 net-im/element-web 1.11.54 1.11.55 9999: A glossy Matrix collaboration client for the web
 net-misc/sb-hosts 3.14.46 3.14.47 9999: A hosts file from several well-curated sources
-sci-misc/jupyterlab-desktop 4.0.7_p1: JupyterLab desktop application, based on Electron
+sci-misc/jupyterlab-desktop 4.0.7_p1 4.0.11_p1: JupyterLab desktop application, based on Electron
 sys-kernel/linux-image 5.10.203 5.10.204 5.10.205 5.10.206 5.15.142 5.15.143 5.15.144 5.15.145 5.15.146 6.1.67 6.1.68 6.1.69 6.1.70 6.1.71 6.6.6 6.6.7 6.6.8 6.6.9 6.6.10: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/cromite 119.0.6045.199: Cromite a Bromite fork with ad blocking and privacy enhancements; take back your browser!
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
