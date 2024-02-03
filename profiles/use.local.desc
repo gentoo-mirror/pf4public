@@ -103,6 +103,7 @@ www-client/cromite:gtk4 - Build with GTK4 headers
 www-client/cromite:hangouts - Enable support for Google Hangouts features such as screen sharing
 www-client/cromite:headless - Build Ozone only with headless backend, NOT RECOMMENDED for general uses
 www-client/cromite:hevc - Enable HEVC decoding support. Should work with system-ffmpeg, but might require additional patching for the built-in one.
+www-client/cromite:libcxx - Use bundled C++ Standard Library (libc++)
 www-client/cromite:nvidia - Use libXNVCtrl library from x11-drivers/nvidia-drivers instead of the bundled one
 www-client/cromite:official - Enable Official build instead of Developer build
 www-client/cromite:optimize-thinlto - Whether to enable ThinLTO optimizations. Turning ThinLTO optimizations on can substantially increase link time and binary size, but they generally also make binaries a fair bit faster.
