@@ -148,6 +148,7 @@ www-client/ungoogled-chromium:gtk4 - Build with GTK4 headers
 www-client/ungoogled-chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
 www-client/ungoogled-chromium:headless - Build Ozone only with headless backend, NOT RECOMMENDED for general uses
 www-client/ungoogled-chromium:hevc - Enable HEVC decoding support. Should work with system-ffmpeg, but might require additional patching for the built-in one.
+www-client/ungoogled-chromium:libcxx - Use bundled C++ Standard Library (libc++)
 www-client/ungoogled-chromium:nvidia - Use libXNVCtrl library from x11-drivers/nvidia-drivers instead of the bundled one
 www-client/ungoogled-chromium:official - Enable Official build instead of Developer build
 www-client/ungoogled-chromium:optimize-thinlto - Whether to enable ThinLTO optimizations. Turning ThinLTO optimizations on can substantially increase link time and binary size, but they generally also make binaries a fair bit faster.
