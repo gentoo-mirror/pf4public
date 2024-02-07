@@ -4,13 +4,13 @@ app-eselect/eselect-electron 0.3: Utility to select the default Electron slot
 app-misc/font-manager 0.8.7 0.8.8 9999: A simple font management application for Gtk+ Desktop Environments
 dev-python/ewmh 0.1.6: An implementation of Extended Window Manager Hints, based on Xlib
 dev-python/pulsectl 20.5.1: High-level interface and ctypes-based bindings for PulseAudio
-dev-util/electron 19.1.8 19.1.9 19.1.9-r1 20.3.12-r1 21.4.4 23.3.12 23.3.13 24.8.7 24.8.8 25.9.7 25.9.8 26.6.8 26.6.9 27.3.0 27.3.1 27.3.2 28.2.0 28.2.1 28.2.1-r1 28.2.2: Cross platform application development framework based on web technologies
+dev-util/electron 19.1.8 19.1.9 19.1.9-r1 20.3.12-r1 21.4.4 23.3.12 23.3.13 24.8.7 24.8.8 25.9.7 25.9.8 26.6.8 26.6.9 27.3.1 27.3.2 28.2.1-r1 28.2.2: Cross platform application development framework based on web technologies
 media-libs/zint 2.11.1 2.12.0 9999: Barcode encoding library supporting over 50 symbologies
 net-im/element-desktop 1.11.55 1.11.57 9999: A glossy Matrix collaboration client for desktop
 net-im/element-web 1.11.54 1.11.55 1.11.57 9999: A glossy Matrix collaboration client for the web
 net-misc/sb-hosts 3.14.49 3.14.50 9999: A hosts file from several well-curated sources
 sci-misc/jupyterlab-desktop 4.0.7_p1 4.0.11_p1 4.0.12_p1: JupyterLab desktop application, based on Electron
-sys-kernel/linux-image 5.10.207 5.10.208 5.10.209 5.15.146 5.15.147 5.15.148 6.1.73 6.1.74 6.1.75 6.1.76 6.6.13 6.6.14 6.6.15 6.7.1-r1 6.7.2 6.7.2-r1 6.7.3: linux-image ebuild is used to build linux kernel image using savedconfig
+sys-kernel/linux-image 5.10.208 5.10.209 5.15.147 5.15.148 6.1.74 6.1.75 6.1.76 6.1.77 6.6.13 6.6.14 6.6.15 6.6.16 6.7.2-r1 6.7.3 6.7.4: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/cromite 119.0.6045.199 121.0.6167.85 121.0.6167.139: Cromite a Bromite fork with ad blocking and privacy enhancements; take back your browser!
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
 www-client/ungoogled-chromium 119.0.6045.199_p1 120.0.6099.62_p1 120.0.6099.224_p1 121.0.6167.85_p1 121.0.6167.139_p1: Modifications to Chromium for removing Google integration and enhancing privacy
