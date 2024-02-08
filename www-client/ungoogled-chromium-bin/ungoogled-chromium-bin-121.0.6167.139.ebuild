@@ -51,7 +51,7 @@ CDEPEND="
 	media-libs/libjpeg-turbo
 	media-libs/libpng
 	|| (
-		media-sound/pulseaudio
+		media-libs/libpulse
 		>=media-sound/apulse-0.1.9
 	)
 	sys-apps/dbus
@@ -73,8 +73,7 @@ RDEPEND="${CDEPEND}
 	virtual/opengl
 	virtual/ttf-fonts
 	!www-client/chromium
-	!www-client/chromium-bin
-	!www-client/ungoogled-chromium"
+	!www-client/chromium-bin"
 
 DISABLE_AUTOFORMATTING="yes"
 DOC_CONTENTS="
@@ -119,10 +118,6 @@ src_install() {
 		doexe ./usr/$(get_libdir)/chromium-browser/convert_dict
 	fi
 
-	if  has_version ">=media-sound/apulse-0.1.9" ; then
-	   sed -i 's/exec -a "chromium-browser"/exec -a "chromium-browser" apulse/' ./usr/$(get_libdir)/chromium-browser/chromium-launcher.sh
-	fi
-
 	doexe ./usr/$(get_libdir)/chromium-browser/chromium-launcher.sh
 
 	# It is important that we name the target "chromium-browser",
@@ -146,6 +141,14 @@ src_install() {
 	doins ./usr/$(get_libdir)/chromium-browser/icudtl.dat
 
 	doins -r ./usr/$(get_libdir)/chromium-browser/locales
+
+	# Install vk_swiftshader_icd.json; bug #827861
+	doins ./usr/$(get_libdir)/chromium-browser/vk_swiftshader_icd.json
+
+	if [[ -d out/Release/swiftshader ]]; then
+		insinto "${CHROMIUM_HOME}/swiftshader"
+		doins ./usr/$(get_libdir)/chromium-browser/swiftshader/*.so
+	fi
 
 	use widevine && dosym "../../usr/$(get_libdir)/chromium-browser/WidevineCdm" "${CHROMIUM_HOME}/WidevineCdm"
 
