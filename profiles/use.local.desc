@@ -37,6 +37,7 @@ dev-util/electron:gtk4 - Build with GTK4 headers
 dev-util/electron:hangouts - Enable support for Google Hangouts features such as screen sharing
 dev-util/electron:hevc - Enable HEVC decoding support. Should work with system-ffmpeg, but might require additional patching for the built-in one.
 dev-util/electron:js-type-check - Enable JavaScript type-checking for Chrome's web technology-based UI. Requires Java.
+dev-util/electron:libcxx - Use bundled C++ Standard Library (libc++)
 dev-util/electron:nvidia - Use libXNVCtrl library from x11-drivers/nvidia-drivers instead of the bundled one
 dev-util/electron:optimize-thinlto - Whether to enable ThinLTO optimizations. Turning ThinLTO optimizations on can substantially increase link time and binary size, but they generally also make binaries a fair bit faster.
 dev-util/electron:optimize-webui - Optimize parts of Chromium's UI written with web technologies (HTML/CSS/JS) for runtime performance purposes. This does more work at compile time for speed benefits at runtime.
