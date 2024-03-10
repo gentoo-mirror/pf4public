@@ -16,6 +16,7 @@ app-editors/vscode:electron-25 - Build against electron-25 instead of the defaul
 app-editors/vscode:electron-26 - Build against electron-26 instead of the default one. Use at your own risk!
 app-editors/vscode:electron-27 - Build against electron-27 instead of the default one. Use at your own risk!
 app-editors/vscode:electron-28 - Build against electron-28 instead of the default one. Use at your own risk!
+app-editors/vscode:electron-29 - Build against electron-29 instead of the default one. Use at your own risk!
 app-editors/vscode:openvsx - Use Eclipse Open VSX instead of Visual Studio Marketplace
 app-editors/vscode:reh - Build Remote Extension Host
 app-editors/vscode:reh-web - Build Remote Extension Host for Web
