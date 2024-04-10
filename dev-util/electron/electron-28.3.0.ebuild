@@ -14,11 +14,11 @@ inherit check-reqs chromium-2 desktop flag-o-matic llvm ninja-utils pax-utils
 inherit python-any-r1 readme.gentoo-r1 toolchain-funcs xdg-utils
 
 CHROMIUM_VERSION_WARNING="true"
-CHROMIUM_VERSION="118.0.5993.120"
+CHROMIUM_VERSION="120.0.6099.224"
 CHROMIUM_P="chromium-${CHROMIUM_VERSION}"
-NODE_VERSION="18.17.1"
+NODE_VERSION="18.18.2"
 NODE_P="node-v${NODE_VERSION}"
-UGC_PVR="118.0.5993.117-1"
+UGC_PVR="${CHROMIUM_VERSION}-1"
 UGC_PF="ungoogled-chromium-${UGC_PVR}"
 UGC_WD="${WORKDIR}/${UGC_PF}"
 
@@ -31,7 +31,7 @@ UGC_WD="${WORKDIR}/${UGC_PF}"
 
 DESCRIPTION="Cross platform application development framework based on web technologies"
 HOMEPAGE="https://electronjs.org/"
-PATCHSET_PPC64="118.0.5993.70-1raptor0~deb11u1"
+PATCHSET_PPC64="120.0.6099.199-1raptor0~deb12u1"
 SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-official/${CHROMIUM_P}.tar.xz
 	mirror+https://gitlab.com/Matt.Jolly/chromium-patches/-/archive/${CHROMIUM_VERSION%%\.*}/chromium-patches-${CHROMIUM_VERSION%%\.*}.tar.bz2
 	mirror+https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}.tar.xz
@@ -44,30 +44,18 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 		https://github.com/ungoogled-software/ungoogled-chromium/archive/${UGC_PVR}.tar.gz -> ${UGC_PF}.tar.gz
 	)
 
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
-	https://codeload.github.com/nodejs/nan/tar.gz/16fa32231e2ccd89d2804b3f765319128b20c4ac
+	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
+	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
+	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
+	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
+	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
+	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
+	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
+	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
+	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
+	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
+	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
+	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
 	https://registry.yarnpkg.com/@azure/abort-controller/-/abort-controller-1.0.4.tgz -> @azure-abort-controller-1.0.4.tgz
 	https://registry.yarnpkg.com/@azure/core-asynciterator-polyfill/-/core-asynciterator-polyfill-1.0.2.tgz -> @azure-core-asynciterator-polyfill-1.0.2.tgz
 	https://registry.yarnpkg.com/@azure/core-auth/-/core-auth-1.3.2.tgz -> @azure-core-auth-1.3.2.tgz
@@ -356,9 +344,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-6.0.0.tgz
 	https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz
 	https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz
-	https://registry.yarnpkg.com/debug/-/debug-3.2.6.tgz
 	https://registry.yarnpkg.com/debug/-/debug-3.2.7.tgz
-	https://registry.yarnpkg.com/debug/-/debug-4.1.1.tgz
 	https://registry.yarnpkg.com/debug/-/debug-4.3.2.tgz
 	https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz
 	https://registry.yarnpkg.com/decode-named-character-reference/-/decode-named-character-reference-1.0.2.tgz
@@ -489,7 +475,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz
 	https://registry.yarnpkg.com/function.prototype.name/-/function.prototype.name-1.1.5.tgz
 	https://registry.yarnpkg.com/functions-have-names/-/functions-have-names-1.2.3.tgz
-	https://registry.yarnpkg.com/get-func-name/-/get-func-name-2.0.0.tgz
+	https://registry.yarnpkg.com/get-func-name/-/get-func-name-2.0.2.tgz
 	https://registry.yarnpkg.com/get-intrinsic/-/get-intrinsic-1.2.1.tgz
 	https://registry.yarnpkg.com/get-own-enumerable-property-symbols/-/get-own-enumerable-property-symbols-3.0.0.tgz
 	https://registry.yarnpkg.com/get-stdin/-/get-stdin-8.0.0.tgz
@@ -894,8 +880,8 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.7.0.tgz
 	https://registry.yarnpkg.com/schema-utils/-/schema-utils-3.1.1.tgz
 	https://registry.yarnpkg.com/semver-compare/-/semver-compare-1.0.0.tgz
-	https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz
-	https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz
+	https://registry.yarnpkg.com/semver/-/semver-5.7.2.tgz
+	https://registry.yarnpkg.com/semver/-/semver-6.3.1.tgz
 	https://registry.yarnpkg.com/semver/-/semver-7.5.2.tgz
 	https://registry.yarnpkg.com/send/-/send-0.18.0.tgz
 	https://registry.yarnpkg.com/serialize-error/-/serialize-error-7.0.1.tgz
@@ -1071,8 +1057,9 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 
 LICENSE="BSD"
 SLOT="$(ver_cut 1)/$(ver_cut 2-)"
-KEYWORDS="amd64 ~arm64 ~ppc64 ~x86"
-IUSE="+X bluetooth +clang cups cpu_flags_arm_neon custom-cflags debug dev-dependencies gtk4 hangouts hevc kerberos nvidia optimize-thinlto optimize-webui pax-kernel pgo +proprietary-codecs pulseaudio screencast selinux system-abseil-cpp system-av1 system-brotli system-crc32c system-double-conversion system-ffmpeg +system-harfbuzz +system-icu +system-jsoncpp +system-libevent +system-libusb system-libvpx +system-openh264 system-openjpeg +system-png system-re2 +system-snappy system-woff2 +system-zstd thinlto ungoogled vaapi wayland"
+KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
+IUSE_SYSTEM_LIBS="abseil-cpp av1 brotli crc32c double-conversion ffmpeg +harfbuzz +icu +jsoncpp +libevent +libusb libvpx +openh264 openjpeg +png re2 +snappy woff2 +zstd"
+IUSE="+X bluetooth +clang cups cpu_flags_arm_neon custom-cflags debug dev-dependencies gtk4 hangouts hevc kerberos nvidia optimize-thinlto optimize-webui pax-kernel pgo +proprietary-codecs pulseaudio screencast selinux thinlto ungoogled vaapi wayland"
 RESTRICT="
 	!system-ffmpeg? ( proprietary-codecs? ( bindist ) )
 	!system-openh264? ( bindist )
@@ -1105,6 +1092,11 @@ if [ ! -z "${CHROMIUM_COMMITS[*]}" ]; then
 		fi
 	done
 fi
+
+for i in ${IUSE_SYSTEM_LIBS}; do
+	[[ $i =~ ^(\+)?(.*)$ ]]
+	IUSE+=" ${BASH_REMATCH[1]}system-${BASH_REMATCH[2]}"
+done
 
 COMMON_X_DEPEND="
 	x11-libs/libXcomposite:=
@@ -1223,14 +1215,14 @@ BDEPEND="
 		dev-python/setuptools[${PYTHON_USEDEP}]
 	')
 	>=app-arch/gzip-1.7
-	dev-lang/perl
 	>=dev-build/gn-0.2114
+	dev-lang/perl
+	app-alternatives/ninja
 	>=dev-util/gperf-3.0.3
-	>=dev-build/ninja-1.7.2
 	dev-vcs/git
 	>=net-libs/nodejs-7.6.0[inspector,npm]
 	>=sys-devel/bison-2.4.3
-	sys-devel/flex
+	app-alternatives/lex
 	virtual/pkgconfig
 	clang? (
 		pgo? ( >=sys-devel/clang-17 >=sys-devel/lld-17	)
@@ -1377,11 +1369,11 @@ src_prepare() {
 		"${FILESDIR}/chromium-109-system-openh264.patch"
 		"${FILESDIR}/chromium-109-system-zlib.patch"
 		"${FILESDIR}/chromium-111-InkDropHost-crash.patch"
+		"${FILESDIR}/chromium-120-libstdc++.patch"
 		"${FILESDIR}/chromium-120-libxml.patch"
 		"${FILESDIR}/perfetto-system-zlib.patch"
 		"${FILESDIR}/gtk-fix-prefers-color-scheme-query.diff"
 		"${FILESDIR}/restore-x86-r2.patch"
-		"${FILESDIR}/without-tflite.patch"
 	)
 
 	if [ ! -z "${CHROMIUM_COMMITS[*]}" ]; then
@@ -1434,7 +1426,7 @@ src_prepare() {
 	cp "${FILESDIR}/libusb.gn" build/linux/unbundle || die
 	sed -i '/^REPLACEMENTS.*$/{s++REPLACEMENTS = {"libusb":"third_party/libusb/BUILD.gn",+;h};${x;/./{x;q0};x;q1}' \
 		build/linux/unbundle/replace_gn_files.py || die
-	sed -i '/^.*deps.*third_party\/jsoncpp.*$/{s++public_deps = [ "//third_party/jsoncpp" ]+;h};${x;/./{x;q0};x;q1}' \
+	sed -i '/^.*deps.*third_party\/jsoncpp.*$/{s++public_deps \+= [ "//third_party/jsoncpp" ]+;h};${x;/./{x;q0};x;q1}' \
 		third_party/webrtc/rtc_base/BUILD.gn || die
 
 	use bluetooth || eapply "${FILESDIR}/disable-bluez.patch"
@@ -1450,8 +1442,6 @@ src_prepare() {
 		sed -i '/^#define ABSL_OPTION_USE_STD_OPTIONAL.*$/{s++#define ABSL_OPTION_USE_STD_OPTIONAL 0+;h};${x;/./{x;q0};x;q1}' \
 			third_party/abseil-cpp/absl/base/options.h || die
 	fi
-
-	use system-brotli && eapply "${FILESDIR}/chromium-system-brotli.patch"
 
 	use system-ffmpeg && eapply "${FILESDIR}/chromium-99-opus.patch"
 
@@ -1476,7 +1466,7 @@ src_prepare() {
 		local ugc_patch_series="${UGC_WD}/patches/series"
 		local ugc_substitution_list="${UGC_WD}/domain_substitution.list"
 
-		#UGC_SKIP_SUBSTITUTION="${UGC_SKIP_SUBSTITUTION} first_party_sets_handler_impl.h"
+		UGC_SKIP_SUBSTITUTION="${UGC_SKIP_SUBSTITUTION} flag-metadata.json"
 
 		local ugc_unneeded=(
 			# GN bootstrap
@@ -1618,6 +1608,7 @@ src_prepare() {
 	)
 	keeplibs+=(
 		third_party/angle/src/third_party/volk
+		third_party/anonymous_tokens
 		third_party/apple_apsl
 		third_party/axe-core
 		third_party/blink
@@ -1671,6 +1662,7 @@ src_prepare() {
 		third_party/devtools-frontend/src/front_end/third_party/axe-core
 		third_party/devtools-frontend/src/front_end/third_party/chromium
 		third_party/devtools-frontend/src/front_end/third_party/codemirror
+		third_party/devtools-frontend/src/front_end/third_party/csp_evaluator
 		third_party/devtools-frontend/src/front_end/third_party/diff
 		third_party/devtools-frontend/src/front_end/third_party/i18n
 		third_party/devtools-frontend/src/front_end/third_party/intl-messageformat
@@ -1770,7 +1762,7 @@ src_prepare() {
 		third_party/omnibox_proto
 		third_party/one_euro_filter
 		third_party/openscreen
-		third_party/openscreen/src/third_party/mozilla
+		third_party/openscreen/src/third_party/
 		third_party/openscreen/src/third_party/tinycbor/src/src
 		third_party/ots
 		third_party/pdfium
@@ -1826,6 +1818,7 @@ src_prepare() {
 		third_party/tflite
 		third_party/tflite/src/third_party/eigen3
 		third_party/tflite/src/third_party/fft2d
+		third_party/tflite/src/third_party/xla/third_party/tsl
 		third_party/ruy
 		third_party/six
 		third_party/ukey2
@@ -2318,13 +2311,16 @@ src_configure() {
 		myconf_gn+=" icu_use_data_file=false"
 	fi
 
+	# Don't need nocompile checks and GN crashes with our config
+	myconf_gn+=" enable_nocompile_tests=false enable_nocompile_tests_new=false"
+
 	# Enable ozone wayland support
 	myconf_gn+=" use_ozone=true ozone_auto_platforms=false"
 	myconf_gn+=" ozone_platform_headless=true"
 	myconf_gn+=" use_system_libdrm=true"
 	myconf_gn+=" use_system_minigbm=true"
 	myconf_gn+=" use_xkbcommon=true"
-	myconf_gn+=" ozone_platform_x11=true"
+	myconf_gn+=" ozone_platform_x11=$(usex X true false)"
 	myconf_gn+=" ozone_platform_wayland=$(usex wayland true false)"
 	myconf_gn+=" ozone_platform=$(usex wayland \"wayland\" \"x11\")"
 	use wayland && myconf_gn+=" use_system_libffi=true"
@@ -2367,7 +2363,7 @@ src_configure() {
 		einfo "  ${flags} = \"${!flags}\""
 	done
 
-	einfo "Configuring Electron..."
+	einfo "Configuring Electron ..."
 	set -- gn gen --args="${myconf_gn} ${EXTRA_GN}" out/Release
 	echo "$@"
 	"$@" || die
@@ -2392,7 +2388,7 @@ src_compile() {
 	# Don't inherit PYTHONPATH from environment, bug #789021, #812689
 	local -x PYTHONPATH=
 
-	eninja -C out/Release third_party/electron_node:headers
+	eninja -C out/Release electron:node_headers
 
 	# Build mksnapshot and pax-mark it.
 	if use pax-kernel; then
@@ -2464,6 +2460,9 @@ src_install() {
 	insinto "${CHROMIUM_HOME}/node_modules"
 	doins -r "${WORKDIR}/${NODE_P}/deps/npm"
 	fperms -R 755 "${CHROMIUM_HOME}/node_modules/npm/bin/"
+
+	exeinto "${CHROMIUM_HOME}/node_modules/npm/bin/"
+	doexe "${FILESDIR}/node-gyp"
 
 	insinto "/usr/include/electron-${PV%%.*}/"
 	doins -r out/Release/gen/node_headers/include/node
