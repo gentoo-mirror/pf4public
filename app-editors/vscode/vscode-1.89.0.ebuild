@@ -1964,7 +1964,7 @@ SRC_URI="!build-online? (
 
 REPO="https://github.com/microsoft/vscode"
 #CODE_COMMIT_ID="ae245c9b1f06e79cec4829f8cd1555206b0ec8f2"
-IUSE="api-proposals badge-providers electron-19 electron-20 electron-21 electron-22 electron-23 electron-24 electron-26 electron-25 electron-29 openvsx reh reh-web substitute-urls temp-fix"
+IUSE="api-proposals badge-providers electron-19 electron-20 electron-21 electron-22 electron-23 electron-24 electron-26 electron-25 electron-29 openvsx reh reh-web substitute-urls +temp-fix"
 
 if [[ ${PV} = *9999* ]]; then
 	inherit git-r3
@@ -2128,7 +2128,7 @@ src_prepare() {
 	sed -i '/test\/integration\/browser/d' build/npm/dirs.js || die
 	sed -i '/test\/smoke/d' build/npm/dirs.js || die
 	sed -i '/test\/monaco/d' build/npm/dirs.js || die
-	sed -i '/vscode-selfhost-test-provider/d'  build/npm/dirs.js || die
+	sed -i '/vscode-selfhost-test-provider/d' build/npm/dirs.js || die
 
 	einfo "Editing build/gulpfile.extensions.js"
 	sed -i '/bundle-marketplace-extensions-build/d' build/gulpfile.extensions.js || die
