@@ -65,12 +65,15 @@ REQUIRED_USE="
 # 	5794e9d12bf82620d5f24505798fecb45ca5a22d
 # )
 
-CROMITE_COMMIT_ID="00b3446da5fbcdab403f66604024bbbfcc428f81"
+CROMITE_COMMIT_ID="fd2ad9c7d92192b845996683a8f59712be3a2e72"
 
 declare -A CHROMIUM_COMMITS=(
 	["23646607e16c63231ae9f49ce5355c270145cf30"]="."
 	["39735a1167272326da5ff85e0096b52ca7f47d6c"]="."
 	["37ef38092ab783d0126922e8d463024341c481b9"]="."
+	["0bed9a54baa5058e711a1f051a766f67e1842ec5"]="."
+	["54c4f460f35e0a4003aa4dd01007188ff00295cc"]="."
+	["bbd4b7752f0a9e5f486fa55c9f2b80071ef99d01"]="third_party/vulkan-deps/vulkan-utility-libraries/src"
 	["c1af894e0f5c4f732a983e7c93227854e203570e"]="net/third_party/quiche/src"
 )
 
@@ -107,6 +110,9 @@ if [ ! -z "${CHROMIUM_COMMITS[*]}" ]; then
 		"
 		elif [[ ${CHROMIUM_COMMITS[$i]} =~ quiche ]]; then
 		SRC_URI+="https://github.com/google/quiche/commit/${i/-}.patch?full_index=true -> quiche-${i/-}.patch
+		"
+		elif [[ ${CHROMIUM_COMMITS[$i]} =~ vulkan-utility-libraries ]]; then
+		SRC_URI+="https://github.com/KhronosGroup/Vulkan-Utility-Libraries/commit/${i/-}.patch?full_index=true -> quiche-${i/-}.patch
 		"
 		else
 		SRC_URI+="https://github.com/chromium/chromium/commit/${i/-}.patch?full_index=true -> chromium-${i/-}.patch
@@ -458,6 +464,8 @@ src_prepare() {
 				patch_prefix="angle"
 			elif [[ ${CHROMIUM_COMMITS[$i]} =~ quiche ]]; then
 				patch_prefix="quiche"
+			elif [[ ${CHROMIUM_COMMITS[$i]} =~ vulkan-utility-libraries ]]; then
+				patch_prefix="vulkan-utility-libraries"
 			else
 				patch_prefix="chromium"
 			fi
