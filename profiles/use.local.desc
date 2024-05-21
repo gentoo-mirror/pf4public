@@ -17,6 +17,7 @@ app-editors/vscode:electron-26 - Build against electron-26 instead of the defaul
 app-editors/vscode:electron-27 - Build against electron-27 instead of the default one. Use at your own risk!
 app-editors/vscode:electron-28 - Build against electron-28 instead of the default one. Use at your own risk!
 app-editors/vscode:electron-29 - Build against electron-29 instead of the default one. Use at your own risk!
+app-editors/vscode:electron-30 - Build against electron-30 instead of the default one. Use at your own risk!
 app-editors/vscode:openvsx - Use Eclipse Open VSX instead of Visual Studio Marketplace
 app-editors/vscode:reh - Build Remote Extension Host
 app-editors/vscode:reh-web - Build Remote Extension Host for Web
@@ -81,6 +82,7 @@ net-im/element-desktop:electron-26 - Build against electron-26 instead of the de
 net-im/element-desktop:electron-27 - Build against electron-27 instead of the default one. Use at your own risk!
 net-im/element-desktop:electron-28 - Build against electron-28 instead of the default one. Use at your own risk!
 net-im/element-desktop:electron-29 - Build against electron-29 instead of the default one. Use at your own risk!
+net-im/element-desktop:electron-30 - Build against electron-30 instead of the default one. Use at your own risk!
 net-im/element-desktop:native-modules - Build native modules (for searching in encrypted rooms and secure storage)
 net-im/element-web:build-online - Disable network-sandbox and open Pandora's box!
 net-misc/sb-hosts:fakenews - Add fake news sites
