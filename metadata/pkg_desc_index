@@ -1,5 +1,5 @@
 app-admin/gb-chroot 0.14 0.15 9999: gb-chroot is a collection of scripts for building Gentoo's binpkgs
-app-editors/vscode 1.89.1 1.90.1 1.90.2 9999: Visual Studio Code - Open Source
+app-editors/vscode 1.90.2 1.91.0 9999: Visual Studio Code - Open Source
 app-eselect/eselect-electron 0.3: Utility to select the default Electron slot
 app-misc/font-manager 0.8.7 0.8.8 0.8.9 9999: A simple font management application for Gtk+ Desktop Environments
 dev-python/ewmh 0.1.6: An implementation of Extended Window Manager Hints, based on Xlib
@@ -8,7 +8,7 @@ dev-util/electron 19.1.8 19.1.9 19.1.9-r1 20.3.12-r1 21.4.4 23.3.12 23.3.13 24.8
 media-libs/zint 2.11.1 2.12.0 9999: Barcode encoding library supporting over 50 symbologies
 net-im/element-desktop 1.11.68 1.11.69 9999: A glossy Matrix collaboration client for desktop
 net-im/element-web 1.11.68 1.11.69 9999: A glossy Matrix collaboration client for the web
-net-misc/sb-hosts 3.14.81 3.14.82 9999: A hosts file from several well-curated sources
+net-misc/sb-hosts 3.14.82 3.14.84 9999: A hosts file from several well-curated sources
 sci-misc/jupyterlab-desktop 4.1.8_p1 4.2.1_p1: JupyterLab desktop application, based on Electron
 sys-kernel/linux-image 5.10.212 5.10.216 5.10.217 5.10.218 5.10.219 5.10.220 5.15.151 5.15.158 5.15.159 5.15.160 5.15.161 6.1.81 6.1.90 6.1.94 6.1.95 6.1.96 6.6.21 6.6.30 6.6.34 6.6.35 6.6.36 6.9.4 6.9.5 6.9.6 6.9.7: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/cromite 121.0.6167.160 121.0.6167.184 122.0.6261.57 122.0.6261.69 122.0.6261.94 122.0.6261.111 123.0.6312.105 123.0.6312.122 124.0.6367.118 124.0.6367.155 124.0.6367.201 124.0.6367.207 125.0.6422.60 125.0.6422.76 125.0.6422.112 125.0.6422.141 126.0.6478.36 126.0.6478.55 126.0.6478.61 126.0.6478.114 126.0.6478.126: Cromite a Bromite fork with ad blocking and privacy enhancements; take back your browser!
