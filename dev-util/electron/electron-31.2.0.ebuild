@@ -13,12 +13,12 @@ CHROMIUM_LANGS="af am ar bg bn ca cs da de el en-GB es es-419 et fa fi fil fr gu
 inherit check-reqs chromium-2 desktop flag-o-matic llvm ninja-utils pax-utils
 inherit python-any-r1 readme.gentoo-r1 toolchain-funcs xdg-utils
 
-CHROMIUM_VERSION_WARNING="true"
-CHROMIUM_VERSION="124.0.6367.207"
+CHROMIUM_VERSION_WARNING="false"
+CHROMIUM_VERSION="126.0.6478.127"
 CHROMIUM_P="chromium-${CHROMIUM_VERSION}"
 NODE_VERSION="20.15.0"
 NODE_P="node-v${NODE_VERSION}"
-UGC_PVR="${CHROMIUM_VERSION}-1"
+UGC_PVR="126.0.6478.114-1"
 UGC_PF="ungoogled-chromium-${UGC_PVR}"
 UGC_WD="${WORKDIR}/${UGC_PF}"
 
@@ -31,10 +31,12 @@ UGC_WD="${WORKDIR}/${UGC_PF}"
 
 DESCRIPTION="Cross platform application development framework based on web technologies"
 HOMEPAGE="https://electronjs.org/"
-PATCHSET_PPC64="124.0.6367.78-1raptor0~deb12u1"
+PATCHSET_PPC64="126.0.6478.126-1raptor0~deb12u1"
+PATCHSET_DEBIAN="126.0.6478.126-1"
 PATCH_V="${CHROMIUM_VERSION%%\.*}"
 SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-official/${CHROMIUM_P}.tar.xz
 	mirror+https://gitlab.com/Matt.Jolly/chromium-patches/-/archive/${PATCH_V}/chromium-patches-${PATCH_V}.tar.bz2
+	mirror+https://salsa.debian.org/chromium-team/chromium/-/archive/debian/${PATCHSET_DEBIAN}/chromium-debian-${PATCHSET_DEBIAN}.tar.bz2
 	mirror+https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}.tar.xz
 	https://github.com/electron/electron/archive/v${PV}.tar.gz -> ${P}.tar.gz
 	ppc64? (
@@ -45,13 +47,6 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 		https://github.com/ungoogled-software/ungoogled-chromium/archive/${UGC_PVR}.tar.gz -> ${UGC_PF}.tar.gz
 	)
 
-	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
-	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
-	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
-	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
-	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
-	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
-	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
 	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
 	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
 	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
@@ -78,7 +73,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/@electron/get/-/get-2.0.2.tgz -> @electron-get-2.0.2.tgz
 	https://registry.yarnpkg.com/@electron/github-app-auth/-/github-app-auth-2.0.0.tgz -> @electron-github-app-auth-2.0.0.tgz
 	https://registry.yarnpkg.com/@electron/lint-roller/-/lint-roller-1.12.1.tgz -> @electron-lint-roller-1.12.1.tgz
-	https://registry.yarnpkg.com/@electron/typescript-definitions/-/typescript-definitions-8.15.6.tgz -> @electron-typescript-definitions-8.15.6.tgz
+	https://registry.yarnpkg.com/@electron/typescript-definitions/-/typescript-definitions-8.15.2.tgz -> @electron-typescript-definitions-8.15.2.tgz
 	https://registry.yarnpkg.com/@eslint-community/eslint-utils/-/eslint-utils-4.4.0.tgz -> @eslint-community-eslint-utils-4.4.0.tgz
 	https://registry.yarnpkg.com/@eslint-community/regexpp/-/regexpp-4.5.1.tgz -> @eslint-community-regexpp-4.5.1.tgz
 	https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-2.0.3.tgz -> @eslint-eslintrc-2.0.3.tgz
@@ -273,7 +268,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/before-after-hook/-/before-after-hook-2.2.3.tgz
 	https://registry.yarnpkg.com/big.js/-/big.js-5.2.2.tgz
 	https://registry.yarnpkg.com/binary-extensions/-/binary-extensions-2.1.0.tgz
-	https://registry.yarnpkg.com/body-parser/-/body-parser-1.20.1.tgz
+	https://registry.yarnpkg.com/body-parser/-/body-parser-1.20.2.tgz
 	https://registry.yarnpkg.com/boolean/-/boolean-3.2.0.tgz
 	https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.11.tgz
 	https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-2.0.1.tgz
@@ -335,15 +330,14 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz
 	https://registry.yarnpkg.com/concat-stream/-/concat-stream-2.0.0.tgz
 	https://registry.yarnpkg.com/content-disposition/-/content-disposition-0.5.4.tgz
-	https://registry.yarnpkg.com/content-type/-/content-type-1.0.4.tgz
+	https://registry.yarnpkg.com/content-type/-/content-type-1.0.5.tgz
 	https://registry.yarnpkg.com/cookie-signature/-/cookie-signature-1.0.6.tgz
-	https://registry.yarnpkg.com/cookie/-/cookie-0.5.0.tgz
+	https://registry.yarnpkg.com/cookie/-/cookie-0.6.0.tgz
 	https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz
 	https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-6.0.0.tgz
 	https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz
 	https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz
 	https://registry.yarnpkg.com/debug/-/debug-3.2.7.tgz
-	https://registry.yarnpkg.com/debug/-/debug-4.3.2.tgz
 	https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz
 	https://registry.yarnpkg.com/decode-named-character-reference/-/decode-named-character-reference-1.0.2.tgz
 	https://registry.yarnpkg.com/decompress-response/-/decompress-response-6.0.0.tgz
@@ -435,7 +429,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/events-to-array/-/events-to-array-1.1.2.tgz
 	https://registry.yarnpkg.com/events/-/events-3.3.0.tgz
 	https://registry.yarnpkg.com/execa/-/execa-4.0.3.tgz
-	https://registry.yarnpkg.com/express/-/express-4.18.2.tgz
+	https://registry.yarnpkg.com/express/-/express-4.19.2.tgz
 	https://registry.yarnpkg.com/extend/-/extend-3.0.2.tgz
 	https://registry.yarnpkg.com/extract-zip/-/extract-zip-2.0.1.tgz
 	https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz
@@ -687,8 +681,8 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/minimist/-/minimist-1.2.6.tgz
 	https://registry.yarnpkg.com/minimist/-/minimist-1.2.8.tgz
 	https://registry.yarnpkg.com/minipass/-/minipass-3.3.6.tgz
-	https://registry.yarnpkg.com/minipass/-/minipass-4.0.1.tgz
 	https://registry.yarnpkg.com/minipass/-/minipass-4.2.8.tgz
+	https://registry.yarnpkg.com/minipass/-/minipass-5.0.0.tgz
 	https://registry.yarnpkg.com/minipass/-/minipass-6.0.2.tgz
 	https://registry.yarnpkg.com/minizlib/-/minizlib-2.1.2.tgz
 	https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.5.tgz
@@ -781,7 +775,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/ramda/-/ramda-0.27.0.tgz
 	https://registry.yarnpkg.com/randombytes/-/randombytes-2.1.0.tgz
 	https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.1.tgz
-	https://registry.yarnpkg.com/raw-body/-/raw-body-2.5.1.tgz
+	https://registry.yarnpkg.com/raw-body/-/raw-body-2.5.2.tgz
 	https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz
 	https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-7.0.1.tgz
 	https://registry.yarnpkg.com/read-pkg/-/read-pkg-5.2.0.tgz
@@ -939,7 +933,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 	https://registry.yarnpkg.com/tap-xunit/-/tap-xunit-2.4.1.tgz
 	https://registry.yarnpkg.com/tapable/-/tapable-1.1.3.tgz
 	https://registry.yarnpkg.com/tapable/-/tapable-2.2.1.tgz
-	https://registry.yarnpkg.com/tar/-/tar-6.1.13.tgz
+	https://registry.yarnpkg.com/tar/-/tar-6.2.1.tgz
 	https://registry.yarnpkg.com/temp/-/temp-0.8.3.tgz
 	https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-5.3.3.tgz
 	https://registry.yarnpkg.com/terser/-/terser-5.14.2.tgz
@@ -1073,16 +1067,14 @@ REQUIRED_USE="
 "
 
 declare -A CHROMIUM_COMMITS=(
-	["2f934a47e9709cac9ce04d312b7aa496948bced6"]="third_party/angle"
-	["c1af894e0f5c4f732a983e7c93227854e203570e"]="net/third_party/quiche/src"
-	["df291ec5472fa14e828633378b8c97a8c7a2e7de"]="."
-	["59843523390481e52d3a397687a09a7582c44114"]="."
-	["072b9f3bc340020325cf3dd7bff1991cd22de171"]="."
-	["8be4d17beb71c29118c3337268f3e7b3930a657f"]="."
-	["b3330cb62d7be253a5b99e40b88e2290c329ac08"]="."
-	["15e24abc1646ad9984923234a041cd0c3b8b1607"]="."
-	["23646607e16c63231ae9f49ce5355c270145cf30"]="."
-	["37ef38092ab783d0126922e8d463024341c481b9"]="."
+	["587c2cf8b11d3c32fa26887063eda3171a3d353e"]="third_party/ruy/src"
+	["d3bc5ffc929b0895ae9e16774069a04ae6fe3c58"]="net/third_party/quiche/src"
+	["43e186fe732cc810f14b673393aca88af7093dc1"]="."
+	["f3b236db61a52b30ad3b23fba732b6e8826910e9"]="."
+	["fb3678b0d1084b49c5ca795200131a7c0ac01ffe"]="."
+	["d852bf71654ae63d5e8e6624652584a9adf1df6f"]="."
+	["42fc562599d784a8a646703ce3b7c158ce1a8466"]="."
+	["f3fce92b27296068b4c304321b53bd1c7c4beb61"]="."
 )
 
 if [ ! -z "${CHROMIUM_COMMITS[*]}" ]; then
@@ -1181,7 +1173,16 @@ COMMON_SNAPSHOT_DEPEND="
 	x11-libs/libxkbcommon:=
 	wayland? (
 		dev-libs/libffi:=
-		screencast? ( media-video/pipewire:= )
+		screencast? (
+			media-video/pipewire:=
+			|| (
+				sys-apps/xdg-desktop-portal-gnome
+				sys-apps/xdg-desktop-portal-gtk
+				kde-plasma/xdg-desktop-portal-kde
+				gui-libs/xdg-desktop-portal-lxqt
+				gui-libs/xdg-desktop-portal-wlr
+			)
+		)
 	)
 "
 
@@ -1243,7 +1244,7 @@ BDEPEND="
 	sys-devel/flex
 	virtual/pkgconfig
 	clang? (
-		pgo? ( >=sys-devel/clang-18 >=sys-devel/lld-18	)
+		pgo? ( >sys-devel/clang-19.0.0_pre20240518 >sys-devel/lld-19.0.0_pre20240518	)
 		!pgo? ( sys-devel/clang sys-devel/lld )
 	)
 	sys-apps/yarn
@@ -1315,6 +1316,7 @@ src_unpack() {
 	unpack "${P}.tar.gz"
 	unpack "node-v${NODE_VERSION}.tar.xz"
 	unpack "chromium-patches-${PATCH_V}.tar.bz2"
+	unpack "chromium-debian-${PATCHSET_DEBIAN}.tar.bz2"
 	use ungoogled && unpack "${UGC_PF}.tar.gz"
 	if use ppc64; then
 		unpack "chromium_${PATCHSET_PPC64}.debian.tar.xz"
@@ -1386,40 +1388,42 @@ src_prepare() {
 
 	local PATCHES=(
 		"${WORKDIR}/chromium-patches-${PATCH_V}"
-		"${FILESDIR}/chromium-cross-compile.patch"
-		"${FILESDIR}/chromium-use-oauth2-client-switches-as-default.patch"
 		"${FILESDIR}/chromium-109-system-openh264.patch"
 		"${FILESDIR}/chromium-109-system-zlib.patch"
 		"${FILESDIR}/chromium-111-InkDropHost-crash.patch"
-		"${FILESDIR}/chromium-117-system-zstd.patch"
-		"${FILESDIR}/chromium-124-libwebp-shim-sharpyuv.patch"
-		"${FILESDIR}/chromium-125-ninja-1-12.patch"
+		"${FILESDIR}/chromium-125-system-zstd.patch"
+		"${FILESDIR}/chromium-126-oauth2-client-switches.patch"
+		"${FILESDIR}/chromium-cross-compile.patch"
+		"${FILESDIR}/chromium-125-cloud_authenticator.patch"
 		"${FILESDIR}/chromium-123-qrcode.patch"
-		"${FILESDIR}/chromium-123-cloud_authenticator.patch"
 		"${FILESDIR}/chromium-123-stats-collector.patch"
 		"${FILESDIR}/chromium-122-cfi-no-split-lto-unit.patch"
 		"${FILESDIR}/perfetto-system-zlib.patch"
 		"${FILESDIR}/gtk-fix-prefers-color-scheme-query.diff"
 		"${FILESDIR}/restore-x86-r2.patch"
+		"${FILESDIR}/chromium-126-observers-fix.patch"
+		"${FILESDIR}/clang-19-fix.patch"
 	)
 
+	PATCHES_DEB="${WORKDIR}/chromium-debian-${PATCHSET_DEBIAN}/debian/patches"
 	if ! use libcxx ; then
 		PATCHES+=(
 			"${FILESDIR}/chromium-124-libstdc++.patch"
-			"${FILESDIR}/bad-font-gc0000.patch"
-			"${FILESDIR}/bad-font-gc000.patch"
-			"${FILESDIR}/bad-font-gc00.patch"
-			"${FILESDIR}/bad-font-gc0.patch"
-			"${FILESDIR}/bad-font-gc1.patch"
-			"${FILESDIR}/bad-font-gc11.patch"
-			"${FILESDIR}/bad-font-gc2.patch"
-			"${FILESDIR}/bad-font-gc3.patch"
+			"${PATCHES_DEB}/fixes/bad-font-gc00000.patch"
+			"${PATCHES_DEB}/fixes/bad-font-gc0000.patch"
+			"${PATCHES_DEB}/fixes/bad-font-gc000.patch"
+			"${PATCHES_DEB}/fixes/bad-font-gc00.patch"
+			"${PATCHES_DEB}/fixes/bad-font-gc0.patch"
+			"${PATCHES_DEB}/fixes/bad-font-gc1.patch"
+			"${PATCHES_DEB}/fixes/bad-font-gc11.patch"
+			"${PATCHES_DEB}/fixes/bad-font-gc2.patch"
+			"${PATCHES_DEB}/fixes/bad-font-gc3.patch"
 		)
 	fi
 
-	if use clang ; then
-		PATCHES+=( "${FILESDIR}/chromium-120-autofill-clang.patch" )
-	fi
+	# if use clang ; then
+	# 	PATCHES+=( "${FILESDIR}/chromium-120-autofill-clang.patch" )
+	# fi
 
 	if [ ! -z "${CHROMIUM_COMMITS[*]}" ]; then
 		for i in "${!CHROMIUM_COMMITS[@]}"; do
@@ -1480,7 +1484,7 @@ src_prepare() {
 	sed -i '/^.*deps.*third_party\/jsoncpp.*$/{s++public_deps \+= [ "//third_party/jsoncpp" ]+;h};${x;/./{x;q0};x;q1}' \
 		third_party/webrtc/rtc_base/BUILD.gn || die
 
-	use bluetooth || eapply "${FILESDIR}/disable-bluez.patch"
+	use bluetooth || eapply "${FILESDIR}/disable-bluez-r1.patch"
 
 	if use hevc; then
 		sed -i '/^bool IsHevcProfileSupported(const VideoType& type) {$/{s++bool IsHevcProfileSupported(const VideoType\& type) { return true;+;h};${x;/./{x;q0};x;q1}' \
@@ -1520,6 +1524,10 @@ src_prepare() {
 		local ugc_pruning_list="${UGC_WD}/pruning.list"
 		local ugc_patch_series="${UGC_WD}/patches/series"
 		local ugc_substitution_list="${UGC_WD}/domain_substitution.list"
+
+		#! conflicting patches
+		sed -i '/print_view_manager_base.cc/,+37d' \
+			"${UGC_WD}/patches/core/ungoogled-chromium/fix-building-without-safebrowsing.patch" || die
 
 		UGC_SKIP_SUBSTITUTION="${UGC_SKIP_SUBSTITUTION} flag-metadata.json histograms.xml chrome_file_system_access_permission_context.cc"
 
@@ -1619,7 +1627,6 @@ src_prepare() {
 				--exclude="*/uv/test/*" --exclude="*.rst" \
 				--exclude="*/cctest/*" --exclude="*/unittests/*" \
 				--exclude="*/test/data/*" --exclude="*/.eslintrc*" \
-				--exclude="test/mjsunit/*" \
 				-p1 < "${S}/${patch_folder}/$i" || die
 			# eend $? || die
 			popd > /dev/null || die
@@ -1633,7 +1640,6 @@ src_prepare() {
 		base/third_party/double_conversion
 	)
 	keeplibs+=(
-		base/third_party/dynamic_annotations
 		base/third_party/icu
 		base/third_party/nspr
 		base/third_party/superfasthash
@@ -1729,6 +1735,8 @@ src_prepare() {
 		third_party/devtools-frontend/src/front_end/third_party/puppeteer
 		third_party/devtools-frontend/src/front_end/third_party/puppeteer/package/lib/esm/third_party/mitt
 		third_party/devtools-frontend/src/front_end/third_party/puppeteer/package/lib/esm/third_party/rxjs
+		third_party/devtools-frontend/src/front_end/third_party/puppeteer/third_party/mitt
+		third_party/devtools-frontend/src/front_end/third_party/puppeteer/third_party/rxjs
 		third_party/devtools-frontend/src/front_end/third_party/vscode.web-custom-data
 		third_party/devtools-frontend/src/front_end/third_party/wasmparser
 		third_party/devtools-frontend/src/third_party
@@ -1765,6 +1773,7 @@ src_prepare() {
 	keeplibs+=(
 		third_party/jstemplate
 		third_party/khronos
+		third_party/lens_server_proto
 		third_party/leveldatabase
 		third_party/libaddressinput
 		third_party/libavif
@@ -1850,6 +1859,8 @@ src_prepare() {
 		third_party/s2cellid
 		third_party/securemessage
 		third_party/selenium-atoms
+		third_party/sentencepiece
+		third_party/sentencepiece/src/third_party/darts_clone
 		third_party/shell-encryption
 		third_party/simplejson
 		third_party/skia
@@ -1875,6 +1886,7 @@ src_prepare() {
 		third_party/tflite/src/third_party/eigen3
 		third_party/tflite/src/third_party/fft2d
 		third_party/tflite/src/third_party/xla/third_party/tsl
+		third_party/tflite/src/third_party/xla/xla/tsl/util
 		third_party/ruy
 		third_party/six
 		third_party/ukey2
@@ -2291,7 +2303,18 @@ src_configure() {
 
 		if tc-is-gcc; then
 			# https://bugs.gentoo.org/904455
-			append-cxxflags "$(test-flags-CXX -fno-tree-vectorize)"
+			local -x CPP="$(tc-getCXX) -E"
+			local gcc_version="$(gcc-version)"
+			local need_gcc_fix=false
+			# Drop this complexity as gcc versions age out of ::gentoo
+			if ver_test "${gcc_version}" -lt 12.3; then
+				need_gcc_fix=true
+			elif ver_test "${gcc_version}" -ge 13 && ver_test "${gcc_version}" -lt 13.2; then
+				need_gcc_fix=true
+			fi
+			[[ ${need_gcc_fix} = true ]] && append-cxxflags "$(test-flags-CXX -fno-tree-vectorize)"
+			# https://bugs.gentoo.org/912381
+			filter-lto
 		fi
 	fi
 
