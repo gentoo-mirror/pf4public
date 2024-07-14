@@ -24,6 +24,7 @@ app-editors/vscode:reh - Build Remote Extension Host
 app-editors/vscode:reh-web - Build Remote Extension Host for Web
 app-editors/vscode:substitute-urls - Even though telemetry is disabled by default in this ebuild, one might want to replace telemetry reporting urls with 0.0.0.0
 app-editors/vscode:temp-fix - Enable this if vscode does not build for you by default, this could help
+app-misc/font-manager:adwaita - Use Adwaita stylesheet
 app-misc/font-manager:gnome-search-provider - Install GNOME shell search provider
 app-misc/font-manager:google-fonts - Google Fonts integration
 app-misc/font-manager:manager - Build font-manager
