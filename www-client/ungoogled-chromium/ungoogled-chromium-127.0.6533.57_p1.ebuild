@@ -403,11 +403,13 @@ pkg_setup() {
 
 src_unpack() {
 	# Here be dragons!
-	local XCLD="--exclude=chromium-${PV/_*}/third_party/rust \
-		--exclude=chromium-${PV/_*}/third_party/rust-src \
-		--exclude=chromium-${PV/_*}/third_party/rust-toolchain \
+	local XCLD="--exclude=chromium-${PV/_*}/third_party/instrumented_libs  \
 		--exclude=chromium-${PV/_*}/third_party/llvm \
 		--exclude=chromium-${PV/_*}/third_party/llvm-build \
+		--exclude=chromium-${PV/_*}/third_party/node \
+		--exclude=chromium-${PV/_*}/third_party/rust \
+		--exclude=chromium-${PV/_*}/third_party/rust-src \
+		--exclude=chromium-${PV/_*}/third_party/rust-toolchain \
 		--exclude=chromium-${PV/_*}/build/linux/debian_bullseye_i386-sysroot \
 		--exclude=chromium-${PV/_*}/build/linux/debian_bullseye_amd64-sysroot \
 	"
@@ -465,8 +467,6 @@ src_prepare() {
 		"${FILESDIR}/perfetto-system-zlib.patch"
 		"${FILESDIR}/gtk-fix-prefers-color-scheme-query.diff"
 		"${FILESDIR}/restore-x86-r2.patch"
-		"${FILESDIR}/chromium-126-observers-fix.patch"
-		"${FILESDIR}/clang-19-fix.patch"
 	)
 
 	PATCHES_DEB="${WORKDIR}/chromium-debian-${PATCHSET_DEBIAN}/debian/patches"
@@ -598,7 +598,6 @@ src_prepare() {
 	fi
 
 	mkdir -p third_party/node/linux/node-linux-x64/bin || die
-	rm third_party/node/linux/node-linux-x64/bin/node || die
 	ln -s "${EPREFIX}"/usr/bin/node third_party/node/linux/node-linux-x64/bin/node || die
 
 	# adjust python interpreter version
