@@ -69,6 +69,7 @@ CROMITE_COMMIT_ID="9dd1210c242c21dc5093aeff920348e132a8908a"
 
 declare -A CHROMIUM_COMMITS=(
 	["587c2cf8b11d3c32fa26887063eda3171a3d353e"]="third_party/ruy/src"
+	["48e39d6afd40de031c860bf920239fa850bc5d7c"]="."
 )
 
 UGC_PV="${PV/_p/-}"
@@ -469,6 +470,10 @@ src_prepare() {
 		"${FILESDIR}/chromium-122-cfi-no-split-lto-unit.patch"
 		"${FILESDIR}/perfetto-system-zlib.patch"
 		"${FILESDIR}/gtk-fix-prefers-color-scheme-query.diff"
+		"${FILESDIR}/chromium-127-cargo_crate.patch"
+		"${FILESDIR}/chromium-127-crabby.patch"
+		"${FILESDIR}/chromium-127-fontations.patch"
+		"${FILESDIR}/chromium-127-ui_lens.patch"
 		"${FILESDIR}/restore-x86-r2.patch"
 	)
 
