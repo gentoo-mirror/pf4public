@@ -39,7 +39,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/chro
 
 LICENSE="GPL-3"
 SLOT="0"
-# KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
+KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
 IUSE_SYSTEM_LIBS="abseil-cpp av1 brotli crc32c double-conversion ffmpeg +harfbuzz +icu jsoncpp +libevent libjxl +libusb libvpx +openh264 openjpeg +png re2 snappy woff2 +zstd"
 IUSE="+X bluetooth cfi +clang convert-dict cups cpu_flags_arm_neon custom-cflags debug enable-driver gtk4 hangouts headless hevc kerberos libcxx nvidia +official optimize-thinlto optimize-webui override-data-dir pax-kernel pgo +proprietary-codecs pulseaudio qt5 qt6 screencast selinux thinlto vaapi wayland widevine"
 RESTRICT="
@@ -66,6 +66,7 @@ declare -A CHROMIUM_COMMITS=(
 	["48e39d6afd40de031c860bf920239fa850bc5d7c"]="."
 	["0ed5f7a0d2b8dd43ba63da30bd2e7d23424f6e69"]="."
 	["5b37e76c6f3ac85117eb4f25afdcaa4559042ae3"]="."
+	["-e3f9c565e5061ac2a11f79ef4999a0bd76bb470a"]="."
 )
 
 if [ ! -z "${CROMITE_PR_COMMITS[*]}" ]; then
@@ -451,10 +452,17 @@ src_prepare() {
 		"${FILESDIR}/00LIN-Build-fixes.patch"
 	)
 
+	ewarn
+	ewarn "Following features are disabled:"
+	ewarn " - Fontations Rust font stack"
+	ewarn " - Crabby Avif parser/decoder implementation in Rust"
+	ewarn
+
 	PATCHES_DEB="${WORKDIR}/chromium-debian-${PATCHSET_DEBIAN}/debian/patches"
 	if ! use libcxx ; then
 		PATCHES+=(
 			"${FILESDIR}/chromium-124-libstdc++.patch"
+			"${FILESDIR}/font-gc.patch"
 		)
 			# "${PATCHES_DEB}/fixes/bad-font-gc00000.patch"
 			# "${PATCHES_DEB}/fixes/bad-font-gc0000.patch"
@@ -465,8 +473,8 @@ src_prepare() {
 			# "${PATCHES_DEB}/fixes/bad-font-gc11.patch"
 			# "${PATCHES_DEB}/fixes/bad-font-gc2.patch"
 			# "${PATCHES_DEB}/fixes/bad-font-gc3.patch"
-		sed -i "s|std::string filename_|WTF::String filename_|" \
-			"third_party/blink/renderer/platform/fonts/font_face_creation_params.h"
+		# sed -i "s|std::string filename_|WTF::String filename_|" \
+		# 	"third_party/blink/renderer/platform/fonts/font_face_creation_params.h"
 	fi
 
 	if [ ! -z "${CHROMIUM_COMMITS[*]}" ]; then
