@@ -25,7 +25,7 @@ HOMEPAGE="https://github.com/ungoogled-software/ungoogled-chromium"
 PATCHSET_PPC64="127.0.6533.88-1raptor0~deb12u2"
 # PATCHSET_DEBIAN="126.0.6478.126-1"
 # PATCH_V="${PV%%\.*}"
-PATCH_V="127"
+PATCH_V="127-1"
 SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/chromium-${PV/_*}.tar.xz
 	https://gitlab.com/Matt.Jolly/chromium-patches/-/archive/${PATCH_V}/chromium-patches-${PATCH_V}.tar.bz2
 	ppc64? (
@@ -464,8 +464,9 @@ src_prepare() {
 		"/\"GlobalMediaControlsCastStartStop\"/,+4{s/ENABLED/DISABLED/;}" \
 		"chrome/browser/media/router/media_router_feature.cc" || die
 
+		#! temporary
+		# "${WORKDIR}/chromium-patches-${PATCH_V}"
 	local PATCHES=(
-		"${WORKDIR}/chromium-patches-${PATCH_V}"
 		"${FILESDIR}/chromium-cross-compile.patch"
 		"${FILESDIR}/chromium-109-system-openh264.patch"
 		"${FILESDIR}/chromium-109-system-zlib.patch"
