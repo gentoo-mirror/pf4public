@@ -530,7 +530,17 @@ src_prepare() {
 		)
 	fi
 
-	default
+	# The "if" below should not be executed unless testing
+	if [ ! -z "${NODIE}" ]; then
+		if [[ $(declare -p PATCHES 2>/dev/null) == "declare -a"* ]]; then
+			[[ -n ${PATCHES[@]} ]] && nonfatal eapply "${PATCHES[@]}"
+		else
+			[[ -n ${PATCHES} ]] && nonfatal eapply ${PATCHES}
+		fi
+		eapply_user
+	else
+		default
+	fi
 
 	if use cromite ; then
 		BR_PA_PATH="${WORKDIR}/cromite-${CROMITE_COMMIT_ID}/build/patches"
