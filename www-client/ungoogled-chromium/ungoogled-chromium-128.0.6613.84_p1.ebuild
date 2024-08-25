@@ -576,11 +576,9 @@ src_prepare() {
 
 	# Testing all patches when NODIE is defined
 	if [ ! -z "${NODIE}" ]; then
-		if [[ $(declare -p PATCHES 2>/dev/null) == "declare -a"* ]]; then
-			[[ -n ${PATCHES[@]} ]] && eapply_wrapper "${PATCHES[@]}"
-		else
-			[[ -n ${PATCHES} ]] && eapply_wrapper ${PATCHES}
-		fi
+		for i in "${PATCHES[@]}"; do
+			eapply_wrapper "$i"
+		done
 		if ! nonfatal eapply_user ; then
 			SRC_PREPARE_PATCHES_FAILED+=1
 		fi
