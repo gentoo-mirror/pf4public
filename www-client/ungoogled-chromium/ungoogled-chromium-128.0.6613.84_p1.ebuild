@@ -437,11 +437,11 @@ src_unpack() {
 	fi
 }
 
-SRC_PREPARE_PATCHES_FAILED=0
-
 src_prepare() {
 	# Calling this here supports resumption via FEATURES=keepwork
 	python_setup
+
+	SRC_PREPARE_PATCHES_FAILED=0
 
 	cp -f "${FILESDIR}/compiler.patch" "${T}"
 	if ! use custom-cflags; then #See #25 #92
@@ -1869,10 +1869,10 @@ pkg_postinst() {
 
 eapply_wrapper () {
 	if [ ! -z "${NODIE}" ]; then
-		if ! nonfatal eapply_user "$@" ; then
+		if ! nonfatal eapply "$@" ; then
 			SRC_PREPARE_PATCHES_FAILED+=1
 		fi
 	else
-		eapply_user "$@"
+		eapply "$@"
 	fi
 }
