@@ -1,16 +1,16 @@
 BDEPEND=|| ( dev-lang/python:3.13 dev-lang/python:3.12 dev-lang/python:3.11 ) || ( ( dev-lang/python:3.13 dev-python/setuptools[python_targets_python3_13(-)] ) ( dev-lang/python:3.12 dev-python/setuptools[python_targets_python3_12(-)] ) ( dev-lang/python:3.11 dev-python/setuptools[python_targets_python3_11(-)] ) ) !temp-fix? ( net-libs/nodejs ) sys-apps/yarn >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile configure install postinst postrm prepare setup unpack
-DEPEND=>=app-crypt/libsecret-0.18.8:= >=x11-libs/libX11-1.6.9:= >=x11-libs/libxkbfile-1.1.0:= virtual/krb5 sys-apps/ripgrep electron-27? ( dev-util/electron:27 ) electron-28? ( dev-util/electron:28 ) electron-29? ( dev-util/electron:29 ) electron-31? ( dev-util/electron:31 ) !electron-27? ( !electron-28? ( !electron-29? ( !electron-31? ( dev-util/electron:30 ) ) ) )
+DEPEND=>=app-crypt/libsecret-0.18.8:= >=x11-libs/libX11-1.6.9:= >=x11-libs/libxkbfile-1.1.0:= virtual/krb5 sys-apps/ripgrep electron-27? ( dev-util/electron:27 ) electron-28? ( dev-util/electron:28 ) electron-29? ( dev-util/electron:29 ) electron-31? ( dev-util/electron:31 ) electron-32? ( dev-util/electron:32 ) !electron-27? ( !electron-28? ( !electron-29? ( !electron-31? ( !electron-32? ( dev-util/electron:30 ) ) ) ) )
 DESCRIPTION=Visual Studio Code - Open Source
 EAPI=8
 HOMEPAGE=https://github.com/microsoft/vscode
 INHERIT=desktop flag-o-matic multilib ninja-utils pax-utils portability python-any-r1 toolchain-funcs xdg-utils git-r3
-IUSE=api-proposals badge-providers electron-27 electron-28 electron-29 electron-31 openvsx reh reh-web substitute-urls temp-fix +build-online
+IUSE=api-proposals badge-providers electron-27 electron-28 electron-29 electron-31 electron-32 openvsx reh reh-web substitute-urls temp-fix +build-online
 LICENSE=MIT
 PROPERTIES=live
-RDEPEND=>=app-crypt/libsecret-0.18.8:= >=x11-libs/libX11-1.6.9:= >=x11-libs/libxkbfile-1.1.0:= virtual/krb5 sys-apps/ripgrep electron-27? ( dev-util/electron:27 ) electron-28? ( dev-util/electron:28 ) electron-29? ( dev-util/electron:29 ) electron-31? ( dev-util/electron:31 ) !electron-27? ( !electron-28? ( !electron-29? ( !electron-31? ( dev-util/electron:30 ) ) ) )
+RDEPEND=>=app-crypt/libsecret-0.18.8:= >=x11-libs/libX11-1.6.9:= >=x11-libs/libxkbfile-1.1.0:= virtual/krb5 sys-apps/ripgrep electron-27? ( dev-util/electron:27 ) electron-28? ( dev-util/electron:28 ) electron-29? ( dev-util/electron:29 ) electron-31? ( dev-util/electron:31 ) electron-32? ( dev-util/electron:32 ) !electron-27? ( !electron-28? ( !electron-29? ( !electron-31? ( !electron-32? ( dev-util/electron:30 ) ) ) ) )
 RESTRICT=mirror build-online? ( network-sandbox )
 SLOT=0
 SRC_URI=https://registry.yarnpkg.com/@vscode/ripgrep/-/ripgrep-1.15.9.tgz -> @vscode-ripgrep-1.15.9.tgz
 _eclasses_=desktop	021728fdc1b03b36357dbc89489e0f0d	toolchain-funcs	333970c740aa7b1a92e4fcdc52f612bd	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	e503ea5acc20410237ba33ec3f7c857d	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	pax-utils	91d47e5d20627c717aa878b9167c62a8	portability	225656ad6c6594fe3b0187bdd50707fb	python-utils-r1	6881b056477c23167d9a6b33e146374e	python-any-r1	5af215c3da6aef17a2d5e02968df1d5a	xdg-utils	baea6080dd821f5562d715887954c9d3	git-r3	875eb471682d3e1f18da124be97dcc81
-_md5_=4f245182585af80b5ab1c880ae051224
+_md5_=f89df3433fe94abecfbd74d70e0392ea
