@@ -6,8 +6,8 @@ dev-python/ewmh 0.1.6: An implementation of Extended Window Manager Hints, based
 dev-python/pulsectl 20.5.1: High-level interface and ctypes-based bindings for PulseAudio
 dev-util/electron 19.1.8 19.1.9 19.1.9-r1 20.3.12-r1 21.4.4 23.3.12 23.3.13 24.8.7 24.8.8 25.9.7 25.9.8 26.6.9 26.6.10 27.3.10 27.3.11 28.3.2 28.3.3 29.4.5 29.4.6 30.3.1 30.4.0 31.3.1 31.4.0 32.0.1: Cross platform application development framework based on web technologies
 media-libs/zint 2.11.1 2.12.0 9999: Barcode encoding library supporting over 50 symbologies
-net-im/element-desktop 1.11.74 1.11.75 1.11.76 9999: A glossy Matrix collaboration client for desktop
-net-im/element-web 1.11.74 1.11.75 1.11.76 9999: A glossy Matrix collaboration client for the web
+net-im/element-desktop 1.11.75 1.11.76 9999: A glossy Matrix collaboration client for desktop
+net-im/element-web 1.11.75 1.11.76 9999: A glossy Matrix collaboration client for the web
 net-misc/sb-hosts 3.14.99 3.14.100 9999: A hosts file from several well-curated sources
 sci-misc/jupyterlab-desktop 4.1.8_p1 4.2.1_p1: JupyterLab desktop application, based on Electron
 sys-kernel/linux-image 5.10.216 5.10.221 5.10.222 5.10.223 5.15.158 5.15.162 5.15.163 5.15.164 6.1.90 6.1.97 6.1.101 6.1.102 6.1.103 6.1.104 6.1.105 6.6.30 6.6.38 6.6.42 6.6.43 6.6.44 6.6.45 6.6.46 6.10.1 6.10.2 6.10.3 6.10.4 6.10.5: linux-image ebuild is used to build linux kernel image using savedconfig
