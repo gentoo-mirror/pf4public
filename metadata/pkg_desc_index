@@ -10,7 +10,7 @@ net-im/element-desktop 1.11.75 1.11.76 9999: A glossy Matrix collaboration clien
 net-im/element-web 1.11.75 1.11.76 9999: A glossy Matrix collaboration client for the web
 net-misc/sb-hosts 3.14.99 3.14.100 9999: A hosts file from several well-curated sources
 sci-misc/jupyterlab-desktop 4.1.8_p1 4.2.1_p1: JupyterLab desktop application, based on Electron
-sys-kernel/linux-image 5.10.216 5.10.221 5.10.222 5.10.223 5.15.158 5.15.162 5.15.163 5.15.164 6.1.90 6.1.97 6.1.101 6.1.102 6.1.103 6.1.104 6.1.105 6.6.30 6.6.38 6.6.42 6.6.43 6.6.44 6.6.45 6.6.46 6.10.1 6.10.2 6.10.3 6.10.4 6.10.5: linux-image ebuild is used to build linux kernel image using savedconfig
+sys-kernel/linux-image 5.10.224 5.15.165 6.1.106 6.6.47 6.10.6: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/cromite 127.0.6533.119 128.0.6613.84: Cromite a Bromite fork with ad blocking and privacy enhancements; take back your browser!
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
 www-client/ungoogled-chromium 127.0.6533.119_p1 127.0.6533.119_p2 128.0.6613.84_p1: Modifications to Chromium for removing Google integration and enhancing privacy
