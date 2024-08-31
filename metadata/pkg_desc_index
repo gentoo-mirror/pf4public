@@ -8,7 +8,7 @@ dev-util/electron 19.1.8 19.1.9 19.1.9-r1 20.3.12-r1 21.4.4 23.3.12 23.3.13 24.8
 media-libs/zint 2.11.1 2.12.0 9999: Barcode encoding library supporting over 50 symbologies
 net-im/element-desktop 1.11.75 1.11.76 9999: A glossy Matrix collaboration client for desktop
 net-im/element-web 1.11.75 1.11.76 9999: A glossy Matrix collaboration client for the web
-net-misc/sb-hosts 3.14.100 3.14.101 9999: A hosts file from several well-curated sources
+net-misc/sb-hosts 3.14.101 3.14.102 9999: A hosts file from several well-curated sources
 sci-misc/jupyterlab-desktop 4.2.1_p1 4.2.5_p1: JupyterLab desktop application, based on Electron
 sys-kernel/linux-image 5.10.224 5.15.165 6.1.106 6.1.107 6.6.47 6.6.48 6.10.6 6.10.7: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/cromite 128.0.6613.113: Cromite a Bromite fork with ad blocking and privacy enhancements; take back your browser!
