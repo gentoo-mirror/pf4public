@@ -14,5 +14,5 @@ sys-kernel/linux-image 5.10.224 5.10.225 5.10.226 5.15.165 5.15.166 5.15.167 6.1
 www-client/cromite 128.0.6613.113 128.0.6613.119 128.0.6613.137 129.0.6668.42 129.0.6668.58 129.0.6668.70: Cromite a Bromite fork with ad blocking and privacy enhancements; take back your browser!
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
 www-client/ungoogled-chromium 128.0.6613.113_p1 128.0.6613.119_p1 128.0.6613.137_p1 129.0.6668.42_p1 129.0.6668.58_p1 129.0.6668.70_p1: Modifications to Chromium for removing Google integration and enhancing privacy
-www-client/ungoogled-chromium-bin 128.0.6613.137 129.0.6668.58: Modifications to Chromium for removing Google integration and enhancing privacy
+www-client/ungoogled-chromium-bin 128.0.6613.137 129.0.6668.58 129.0.6668.70: Modifications to Chromium for removing Google integration and enhancing privacy
 x11-misc/caffeine-ng 3.5.1 4.0.2 9999: Stop the desktop from becoming idle in full-screen mode. (Fork of Caffeine)
