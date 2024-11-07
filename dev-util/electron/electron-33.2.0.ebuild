@@ -14,7 +14,7 @@ CHROMIUM_LANGS="af am ar as az be bg bn bs ca cs cy da de el en-GB es es-419 et 
 inherit check-reqs chromium-2 desktop flag-o-matic llvm ninja-utils pax-utils
 inherit python-any-r1 readme.gentoo-r1 toolchain-funcs xdg-utils
 
-CHROMIUM_VERSION_WARNING="false"
+CHROMIUM_VERSION_WARNING="true"
 CHROMIUM_VERSION="130.0.6723.91"
 CHROMIUM_P="chromium-${CHROMIUM_VERSION}"
 NODE_VERSION="20.18.0"
@@ -41,6 +41,7 @@ SRC_URI="mirror+https://commondatastorage.googleapis.com/chromium-browser-offici
 		https://deps.gentoo.zip/chromium-ppc64le-gentoo-patches-1.tar.xz
 	)
 
+	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
 	https://codeload.github.com/nodejs/nan/tar.gz/e14bdcd1f72d62bca1d541b66da43130384ec213
 	https://registry.yarnpkg.com/@azure/abort-controller/-/abort-controller-1.0.4.tgz -> @azure-abort-controller-1.0.4.tgz
 	https://registry.yarnpkg.com/@azure/abort-controller/-/abort-controller-2.1.2.tgz -> @azure-abort-controller-2.1.2.tgz
@@ -1720,10 +1721,10 @@ src_prepare() {
 		ebegin "Applying domain substitution"
 		"${UGC_WD}/utils/domain_substitution.py" -q apply -r "${UGC_WD}/domain_regex.list" -f "${UGC_WD}/domain_substitution.list" .
 		eend $? || die
-	fi
 
-	if use ungoogled; then
 		sed -i '/packed_resources_integrity_header/d' chrome/test/BUILD.gn || die
+	else
+		eapply "${FILESDIR}/more-locales.patch"
 	fi
 
 	declare -A patches=(
