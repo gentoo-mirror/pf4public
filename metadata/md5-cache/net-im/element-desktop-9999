@@ -1,4 +1,4 @@
-BDEPEND=|| ( dev-lang/python:3.13 dev-lang/python:3.12 dev-lang/python:3.11 ) || ( ( dev-lang/python:3.13 dev-python/setuptools[python_targets_python3_13(-)] ) ( dev-lang/python:3.12 dev-python/setuptools[python_targets_python3_12(-)] ) ( dev-lang/python:3.11 dev-python/setuptools[python_targets_python3_11(-)] ) ) native-modules? ( virtual/rust ) net-libs/nodejs sys-apps/yarn >=dev-vcs/git-1.8.2.1[curl]
+BDEPEND=|| ( dev-lang/python:3.13 dev-lang/python:3.12 dev-lang/python:3.11 ) || ( ( dev-lang/python:3.13 dev-python/setuptools[python_targets_python3_13(-)] ) ( dev-lang/python:3.12 dev-python/setuptools[python_targets_python3_12(-)] ) ( dev-lang/python:3.11 dev-python/setuptools[python_targets_python3_11(-)] ) ) native-modules? ( dev-lang/rust ) net-libs/nodejs sys-apps/yarn >=dev-vcs/git-1.8.2.1[curl]
 DEFINED_PHASES=compile install postinst postrm setup unpack
 DEPEND=~net-im/element-web-9999 native-modules? ( dev-db/sqlcipher ) electron-27? ( dev-util/electron:27 ) electron-28? ( dev-util/electron:28 ) electron-30? ( dev-util/electron:30 ) electron-31? ( dev-util/electron:31 ) electron-32? ( dev-util/electron:32 ) !electron-27? ( !electron-28? ( !electron-30? ( !electron-31? ( !electron-32? ( dev-util/electron:29 ) ) ) ) )
 DESCRIPTION=A glossy Matrix collaboration client for desktop
@@ -13,4 +13,4 @@ REQUIRED_USE=native-modules? ( build-online )
 RESTRICT=mirror build-online? ( network-sandbox )
 SLOT=0
 _eclasses_=desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed	toolchain-funcs	d3d42b22a610ce81c267b644bcec9b87	multilib	b2a329026f2e404e9e371097dda47f96	flag-o-matic	f14aba975c94ccaa9f357a27e3b17ffe	multiprocessing	1e32df7deee68372153dca65f4a7c21f	python-utils-r1	2fee95c11e5f883024588d4837db6802	python-any-r1	f7b9a2fa38c69a9c2a7ad8fc9283ccf7	xdg-utils	42869b3c8d86a70ef3cf75165a395e09	git-r3	875eb471682d3e1f18da124be97dcc81
-_md5_=47067dcd49400be4f47f25831de3adee
+_md5_=48611d6e570539c50e7c41a367e6ed9a
