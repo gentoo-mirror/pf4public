@@ -1644,7 +1644,7 @@ if [[ ${PV} = *9999* ]]; then
 	IUSE="+build-online"
 else
 	IUSE="build-online"
-	KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
+	KEYWORDS="amd64 ~arm64 ~ppc64 ~x86"
 	DOWNLOAD="${REPO}/archive/"
 	if [ -z "$ELEMENT_COMMIT_ID" ]
 	then
@@ -1701,7 +1701,7 @@ src_configure() {
 	yarn config set nodedir /usr/include/node || die
 
 	# Removing sentry dependency
-	sed -i '/sentry/d' "${WORKDIR}/${P}/package.json" || die
+	sed -i '/sentry\/webpack-plugin/d' "${WORKDIR}/${P}/package.json" || die
 	sed -i '/sentry\/webpack-plugin/d' "${WORKDIR}/${P}/webpack.config.js" || die
 	sed -i '/process.env.SENTRY_DSN \&\&/,/}),/s/^/\/\//' "${WORKDIR}/${P}/webpack.config.js" || die
 
