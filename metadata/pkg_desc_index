@@ -10,7 +10,7 @@ net-im/element-desktop 1.11.85 1.11.86 9999: A glossy Matrix collaboration clien
 net-im/element-web 1.11.85 1.11.86 9999: A glossy Matrix collaboration client for the web
 net-misc/sb-hosts 3.14.132 3.14.133 9999: A hosts file from several well-curated sources
 sci-misc/jupyterlab-desktop 4.2.1_p1 4.2.5_p1: JupyterLab desktop application, based on Electron
-sys-kernel/linux-image 5.10.226 5.10.227 5.10.228 5.10.229 5.15.167 5.15.168 5.15.169 5.15.170 5.15.171 5.15.172 6.1.111 6.1.112 6.1.113 6.1.114 6.1.115 6.1.116 6.1.117 6.6.52 6.6.57 6.6.58 6.6.58-r1 6.6.59 6.6.60 6.6.61 6.11.4 6.11.5 6.11.5-r1 6.11.6 6.11.7 6.11.8: linux-image ebuild is used to build linux kernel image using savedconfig
+sys-kernel/linux-image 5.10.226 5.10.227 5.10.228 5.10.229 5.10.230 5.15.167 5.15.169 5.15.171 5.15.172 5.15.173 6.1.111 6.1.114 6.1.116 6.1.117 6.1.118 6.6.52 6.6.58-r1 6.6.60 6.6.61 6.6.62 6.11.7 6.11.8 6.11.9 6.12.0: linux-image ebuild is used to build linux kernel image using savedconfig
 www-client/cromite 128.0.6613.113 128.0.6613.119 128.0.6613.137 129.0.6668.42 129.0.6668.58 129.0.6668.70 129.0.6668.89 129.0.6668.100 130.0.6723.58 130.0.6723.116: Cromite a Bromite fork with ad blocking and privacy enhancements; take back your browser!
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
 www-client/ungoogled-chromium 128.0.6613.113_p1 128.0.6613.119_p1 128.0.6613.137_p1 129.0.6668.42_p1 129.0.6668.58_p1 129.0.6668.70_p1 129.0.6668.89_p1 129.0.6668.100_p1 130.0.6723.58_p1 130.0.6723.116_p1 131.0.6778.85_p1: Modifications to Chromium for removing Google integration and enhancing privacy
