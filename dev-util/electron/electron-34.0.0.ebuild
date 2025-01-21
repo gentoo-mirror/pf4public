@@ -1739,7 +1739,7 @@ src_prepare() {
 				--exclude="*/uv/test/*" --exclude="*.rst" \
 				--exclude="*/cctest/*" --exclude="*/unittests/*" \
 				--exclude="*/test/data/*" --exclude="*/.eslintrc*" \
-				--exclude="*/buildtools/third_party/libc++/*" \
+				--exclude="*/libc++/*" \
 				-p1 < "${S}/${patch_folder}/$i" || die
 			# eend $? || die
 			popd > /dev/null || die
@@ -2149,10 +2149,6 @@ src_prepare() {
 		for lib in "${not_found_libs[@]}"; do
 			eerror "  ${lib}"
 		done
-	fi
-
-	if use cromite ; then
-		keeplibs+=( third_party/ungoogled )
 	fi
 
 	ebegin "Removing bundled libraries"
