@@ -93,6 +93,7 @@ net-im/element-desktop:electron-31 - Build against electron-31 instead of the de
 net-im/element-desktop:electron-32 - Build against electron-32 instead of the default one. Use at your own risk!
 net-im/element-desktop:electron-33 - Build against electron-33 instead of the default one. Use at your own risk!
 net-im/element-desktop:electron-34 - Build against electron-34 instead of the default one. Use at your own risk!
+net-im/element-desktop:electron-35 - Build against electron-35 instead of the default one. Use at your own risk!
 net-im/element-desktop:native-modules - Build native modules (for searching in encrypted rooms and secure storage)
 net-im/element-web:build-online - Disable network-sandbox and open Pandora's box!
 net-misc/sb-hosts:fakenews - Add fake news sites
