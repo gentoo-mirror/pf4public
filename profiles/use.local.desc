@@ -37,6 +37,24 @@ app-misc/font-manager:nemo - Build Nemo extension
 app-misc/font-manager:reproducible - Make the build reproducible
 app-misc/font-manager:thunar - Build Thunar extension
 app-misc/font-manager:viewer - Build font-viewer
+dev-util/cypress:build-online - Disable network-sandbox and open Pandora's box!
+dev-util/cypress:electron-19 - Build against electron-19 instead of the default one. Use at your own risk!
+dev-util/cypress:electron-20 - Build against electron-20 instead of the default one. Use at your own risk!
+dev-util/cypress:electron-21 - Build against electron-21 instead of the default one. Use at your own risk!
+dev-util/cypress:electron-22 - Build against electron-22 instead of the default one. Use at your own risk!
+dev-util/cypress:electron-23 - Build against electron-23 instead of the default one. Use at your own risk!
+dev-util/cypress:electron-24 - Build against electron-24 instead of the default one. Use at your own risk!
+dev-util/cypress:electron-25 - Build against electron-25 instead of the default one. Use at your own risk!
+dev-util/cypress:electron-26 - Build against electron-26 instead of the default one. Use at your own risk!
+dev-util/cypress:electron-27 - Build against electron-27 instead of the default one. Use at your own risk!
+dev-util/cypress:electron-28 - Build against electron-28 instead of the default one. Use at your own risk!
+dev-util/cypress:electron-29 - Build against electron-29 instead of the default one. Use at your own risk!
+dev-util/cypress:electron-30 - Build against electron-30 instead of the default one. Use at your own risk!
+dev-util/cypress:electron-31 - Build against electron-31 instead of the default one. Use at your own risk!
+dev-util/cypress:electron-32 - Build against electron-32 instead of the default one. Use at your own risk!
+dev-util/cypress:electron-33 - Build against electron-33 instead of the default one. Use at your own risk!
+dev-util/cypress:electron-34 - Build against electron-34 instead of the default one. Use at your own risk!
+dev-util/cypress:electron-35 - Build against electron-35 instead of the default one. Use at your own risk!
 dev-util/electron:bluetooth - Enable Bluetooth. Disabling bluetooth does break WebAuthn. Could also break something else. Improved patch is welcome.
 dev-util/electron:clang - Use Clang compiler instead of GCC
 dev-util/electron:debug - Enable DCHECK feature with severity configurable at runtime. Mostly intended for debugging and development, NOT RECOMMENDED for general use.
