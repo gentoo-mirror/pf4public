@@ -462,6 +462,7 @@ src_prepare() {
 		"${FILESDIR}/chromium-131-unbundle-icu-target.patch"
 		"${FILESDIR}/chromium-135-oauth2-client-switches.patch"
 		"${FILESDIR}/chromium-135-map_droppable-glibc.patch"
+		"${FILESDIR}/chromium-135-webrtc-pipewire.patch"
 		"${FILESDIR}/chromium-125-cloud_authenticator.patch"
 		"${FILESDIR}/chromium-123-qrcode.patch"
 		"${FILESDIR}/perfetto-system-zlib.patch"
@@ -1757,7 +1758,7 @@ src_compile() {
 
 	pax-mark m out/Release/chrome
 
-	use enable-driver && mv out/Release/chromedriver{.unstripped,}
+	use enable-driver && mv out/Release/chromedriver
 
 	rm -f out/Release/locales/*.pak.info || die
 
