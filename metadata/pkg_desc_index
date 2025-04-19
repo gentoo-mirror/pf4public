@@ -1,5 +1,8 @@
+acct-group/vmware 0: Group for VMware
 app-admin/gb-chroot 0.14 0.15 9999: gb-chroot is a collection of scripts for building Gentoo's binpkgs
 app-editors/vscode 1.92.2 1.93.0 1.93.1 9999: Visual Studio Code - Open Source
+app-emulation/vmware-modules 17.6.3-r1: VMware kernel modules
+app-emulation/vmware-workstation 17.6.3.24583834-r2: Emulate a complete PC without the performance overhead of most emulators
 app-eselect/eselect-electron 0.3: Utility to select the default Electron slot
 app-misc/font-manager 0.8.7 0.8.8 0.8.9 0.9.0 9999: A simple font management application for Gtk+ Desktop Environments
 dev-python/ewmh 0.1.6: An implementation of Extended Window Manager Hints, based on Xlib

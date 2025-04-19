@@ -28,6 +28,19 @@ app-editors/vscode:reh - Build Remote Extension Host
 app-editors/vscode:reh-web - Build Remote Extension Host for Web
 app-editors/vscode:substitute-urls - Even though telemetry is disabled by default in this ebuild, one might want to replace telemetry reporting urls with 0.0.0.0
 app-editors/vscode:temp-fix - Enable this if vscode does not build for you by default, this could help
+app-emulation/vmware-workstation:macos-guests - Support macOS guests.
+app-emulation/vmware-workstation:modules - Install app-emulation/vmware-modules in order to run VMs locally.
+app-emulation/vmware-workstation:ovftool - Install OVF tool.
+app-emulation/vmware-workstation:vix - Install VIX. The VIX API allows you to write programs and scripts that automate virtual machine operations, and run programs or manipulate files within guest operating systems.
+app-emulation/vmware-workstation:vmware-tools-darwin - Install VMware Tools for OS X (El Capitan and later) guests.
+app-emulation/vmware-workstation:vmware-tools-darwinPre15 - Install VMware Tools for OS X (up to Yosemite) guests.
+app-emulation/vmware-workstation:vmware-tools-linux - Install VMware Tools for Linux guests.
+app-emulation/vmware-workstation:vmware-tools-linuxPreGlibc25 - Install VMware Tools for Linux (glibc older than 2.5) guests.
+app-emulation/vmware-workstation:vmware-tools-netware - Install VMware Tools for Netware guests.
+app-emulation/vmware-workstation:vmware-tools-solaris - Install VMware Tools for Solaris guests.
+app-emulation/vmware-workstation:vmware-tools-winPre2k - Install VMware Tools for Windows (before 2000) guests.
+app-emulation/vmware-workstation:vmware-tools-winPreVista - Install VMware Tools for Windows (after 2000, before Vista) guests.
+app-emulation/vmware-workstation:vmware-tools-windows - Install VMware Tools for Windows (Vista and later) guests.
 app-misc/font-manager:adwaita - Use Adwaita stylesheet
 app-misc/font-manager:gnome-search-provider - Install GNOME shell search provider
 app-misc/font-manager:google-fonts - Google Fonts integration
