@@ -23,6 +23,7 @@ app-editors/vscode:electron-32 - Build against electron-32 instead of the defaul
 app-editors/vscode:electron-33 - Build against electron-33 instead of the default one. Use at your own risk!
 app-editors/vscode:electron-34 - Build against electron-34 instead of the default one. Use at your own risk!
 app-editors/vscode:electron-35 - Build against electron-35 instead of the default one. Use at your own risk!
+app-editors/vscode:electron-36 - Build against electron-36 instead of the default one. Use at your own risk!
 app-editors/vscode:openvsx - Use Eclipse Open VSX instead of Visual Studio Marketplace
 app-editors/vscode:reh - Build Remote Extension Host
 app-editors/vscode:reh-web - Build Remote Extension Host for Web
@@ -107,6 +108,7 @@ net-im/element-desktop:electron-32 - Build against electron-32 instead of the de
 net-im/element-desktop:electron-33 - Build against electron-33 instead of the default one. Use at your own risk!
 net-im/element-desktop:electron-34 - Build against electron-34 instead of the default one. Use at your own risk!
 net-im/element-desktop:electron-35 - Build against electron-35 instead of the default one. Use at your own risk!
+net-im/element-desktop:electron-36 - Build against electron-36 instead of the default one. Use at your own risk!
 net-im/element-desktop:native-modules - Build native modules (for searching in encrypted rooms and secure storage)
 net-im/element-web:build-online - Disable network-sandbox and open Pandora's box!
 net-misc/sb-hosts:fakenews - Add fake news sites
@@ -130,6 +132,7 @@ sci-misc/jupyterlab-desktop:electron-32 - Build against electron-32 instead of t
 sci-misc/jupyterlab-desktop:electron-33 - Build against electron-33 instead of the default one. Use at your own risk!
 sci-misc/jupyterlab-desktop:electron-34 - Build against electron-34 instead of the default one. Use at your own risk!
 sci-misc/jupyterlab-desktop:electron-35 - Build against electron-35 instead of the default one. Use at your own risk!
+sci-misc/jupyterlab-desktop:electron-36 - Build against electron-36 instead of the default one. Use at your own risk!
 www-client/cromite:cfi - Build with CFI (Control Flow Integrity) enabled. It requires "-stdlib=libc++", see #40 for more details.
 www-client/cromite:clang - Use Clang compiler instead of GCC
 www-client/cromite:convert-dict - Patch and build the convert_dict utility. The script will be installed into /usr/lib64/chromium-browser/update-dicts.sh. More info here: https://github.com/ungoogled-software/ungoogled-chromium/issues/188#issuecomment-444752907
