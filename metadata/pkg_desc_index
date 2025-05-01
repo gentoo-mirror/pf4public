@@ -5,10 +5,7 @@ app-emulation/vmware-modules 17.6.3-r1: VMware kernel modules
 app-emulation/vmware-workstation 17.6.3.24583834-r2: Emulate a complete PC without the performance overhead of most emulators
 app-eselect/eselect-electron 0.3: Utility to select the default Electron slot
 app-misc/font-manager 0.8.7 0.8.8 0.8.9 0.9.0 9999: A simple font management application for Gtk+ Desktop Environments
-dev-python/ewmh 0.1.6: An implementation of Extended Window Manager Hints, based on Xlib
-dev-python/pulsectl 20.5.1: High-level interface and ctypes-based bindings for PulseAudio
 dev-util/electron 19.1.8 19.1.9 19.1.9-r1 20.3.12-r1 21.4.4 23.3.12 23.3.13 24.8.7 24.8.8 25.9.7 25.9.8 26.6.9 26.6.10 27.3.10 27.3.11 28.3.2 28.3.3 29.4.5 29.4.6 30.5.0 30.5.1 31.7.6 31.7.7 32.3.2 32.3.3 33.4.10 33.4.11 34.5.2 34.5.3 34.5.4 35.2.0 35.2.1: Cross platform application development framework based on web technologies
-media-libs/zint 2.11.1 2.12.0 2.13.0 9999: Barcode encoding library supporting over 50 symbologies
 net-im/element-desktop 1.11.96 1.11.97 1.11.98 1.11.99 9999: A glossy Matrix collaboration client for desktop
 net-im/element-web 1.11.98 1.11.99 9999: A glossy Matrix collaboration client for the web
 net-misc/sb-hosts 3.15.34 3.15.35 9999: A hosts file from several well-curated sources
@@ -18,4 +15,3 @@ www-client/cromite 135.0.7049.114 136.0.7103.48 136.0.7103.59: Cromite a Bromite
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
 www-client/ungoogled-chromium 135.0.7049.114_p1 136.0.7103.48_p1 136.0.7103.59_p1: Modifications to Chromium for removing Google integration and enhancing privacy
 www-client/ungoogled-chromium-bin 134.0.6998.165 135.0.7049.95 135.0.7049.114: Modifications to Chromium for removing Google integration and enhancing privacy
-x11-misc/caffeine-ng 3.5.1 4.0.2 9999: Stop the desktop from becoming idle in full-screen mode. (Fork of Caffeine)
