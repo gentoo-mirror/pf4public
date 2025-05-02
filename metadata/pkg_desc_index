@@ -14,4 +14,4 @@ sys-kernel/linux-image 5.10.233 5.10.234 5.10.235 5.10.236 5.15.177 5.15.178 5.1
 www-client/cromite 135.0.7049.114 136.0.7103.48 136.0.7103.59: Cromite a Bromite fork with ad blocking and privacy enhancements; take back your browser!
 www-client/opera 12.16_p1860-r1: A fast and secure web browser and Internet suite
 www-client/ungoogled-chromium 135.0.7049.114_p1 136.0.7103.59_p1: Modifications to Chromium for removing Google integration and enhancing privacy
-www-client/ungoogled-chromium-bin 134.0.6998.165 135.0.7049.95 135.0.7049.114: Modifications to Chromium for removing Google integration and enhancing privacy
+www-client/ungoogled-chromium-bin 135.0.7049.114 136.0.7103.59: Modifications to Chromium for removing Google integration and enhancing privacy
