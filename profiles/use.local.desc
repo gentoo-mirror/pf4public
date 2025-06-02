@@ -141,7 +141,6 @@ www-client/cromite:enable-driver - Build chromedriver
 www-client/cromite:gtk4 - Build with GTK4 headers
 www-client/cromite:hangouts - Enable support for Google Hangouts features such as screen sharing
 www-client/cromite:headless - Build Ozone only with headless backend, NOT RECOMMENDED for general uses
-www-client/cromite:hevc - Enable HEVC decoding support. Should work with system-ffmpeg, but might require additional patching for the built-in one.
 www-client/cromite:libcxx - Use bundled C++ Standard Library (libc++)
 www-client/cromite:nvidia - Use libXNVCtrl library from x11-drivers/nvidia-drivers instead of the bundled one
 www-client/cromite:official - Enable Official build instead of Developer build
@@ -150,7 +149,6 @@ www-client/cromite:optimize-webui - Optimize parts of Chromium's UI written with
 www-client/cromite:override-data-dir - Change default user data directory to "~/.config/cromite". No data moved automatically.
 www-client/cromite:pax-kernel - Allow building on a PaX-enabled kernel
 www-client/cromite:pgo - Enable PGO. Requires bundled binary profile data in sources tree. Often requires masked/testing llvm.
-www-client/cromite:pic - Disable optimized assembly code that is not PIC friendly
 www-client/cromite:proprietary-codecs - Enable proprietary codecs like H.264, MP3
 www-client/cromite:screencast - Enable support for remote desktop and screen cast using media-video/pipewire
 www-client/cromite:suid - Build the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels
@@ -163,7 +161,6 @@ www-client/cromite:system-ffmpeg - Use the system media-video/ffmpeg instead of 
 www-client/cromite:system-harfbuzz - Use the system media-libs/harfbuzz instead of the bundled one
 www-client/cromite:system-icu - Use the system dev-libs/icu instead of the bundled one
 www-client/cromite:system-jsoncpp - Use the system dev-libs/jsoncpp instead of the bundled one
-www-client/cromite:system-libevent - Use the system dev-libs/libevent instead of the bundled one
 www-client/cromite:system-libjxl - Use the system media-libs/libjxl instead of the bundled one
 www-client/cromite:system-libusb - Use the system dev-libs/libusb instead of the bundled one
 www-client/cromite:system-libvpx - Use the system media-libs/libvpx instead of the bundled one
@@ -187,7 +184,6 @@ www-client/ungoogled-chromium:enable-driver - Build chromedriver
 www-client/ungoogled-chromium:gtk4 - Build with GTK4 headers
 www-client/ungoogled-chromium:hangouts - Enable support for Google Hangouts features such as screen sharing
 www-client/ungoogled-chromium:headless - Build Ozone only with headless backend, NOT RECOMMENDED for general uses
-www-client/ungoogled-chromium:hevc - Enable HEVC decoding support. Should work with system-ffmpeg, but might require additional patching for the built-in one.
 www-client/ungoogled-chromium:libcxx - Use bundled C++ Standard Library (libc++)
 www-client/ungoogled-chromium:nvidia - Use libXNVCtrl library from x11-drivers/nvidia-drivers instead of the bundled one
 www-client/ungoogled-chromium:official - Enable Official build instead of Developer build
@@ -196,7 +192,6 @@ www-client/ungoogled-chromium:optimize-webui - Optimize parts of Chromium's UI w
 www-client/ungoogled-chromium:override-data-dir - Change default user data directory to "~/.config/ungoogled-chromium". No data moved automatically.
 www-client/ungoogled-chromium:pax-kernel - Allow building on a PaX-enabled kernel
 www-client/ungoogled-chromium:pgo - Enable PGO. Requires bundled binary profile data in sources tree. Often requires masked/testing llvm.
-www-client/ungoogled-chromium:pic - Disable optimized assembly code that is not PIC friendly
 www-client/ungoogled-chromium:proprietary-codecs - Enable proprietary codecs like H.264, MP3
 www-client/ungoogled-chromium:screencast - Enable support for remote desktop and screen cast using media-video/pipewire
 www-client/ungoogled-chromium:suid - Build the SUID sandbox, which is only needed on CONFIG_USER_NS=n kernels
@@ -209,7 +204,6 @@ www-client/ungoogled-chromium:system-ffmpeg - Use the system media-video/ffmpeg 
 www-client/ungoogled-chromium:system-harfbuzz - Use the system media-libs/harfbuzz instead of the bundled one
 www-client/ungoogled-chromium:system-icu - Use the system dev-libs/icu instead of the bundled one
 www-client/ungoogled-chromium:system-jsoncpp - Use the system dev-libs/jsoncpp instead of the bundled one
-www-client/ungoogled-chromium:system-libevent - Use the system dev-libs/libevent instead of the bundled one
 www-client/ungoogled-chromium:system-libusb - Use the system dev-libs/libusb instead of the bundled one
 www-client/ungoogled-chromium:system-libvpx - Use the system media-libs/libvpx instead of the bundled one
 www-client/ungoogled-chromium:system-openh264 - Use the system media-libs/openh264 instead of the bundled one. If disabled, it will restrict USE=bindist.
@@ -220,7 +214,6 @@ www-client/ungoogled-chromium:system-snappy - Use the system-wide app-arch/snapp
 www-client/ungoogled-chromium:system-woff2 - Use the system media-libs/woff2 instead of the bundled one
 www-client/ungoogled-chromium:system-zstd - Use the system app-arch/zstd instead of the bundled one
 www-client/ungoogled-chromium:thinlto - Build with ThinLTO support. LTO (Link Time Optimization) achieves better runtime performance through whole-program analysis and cross-module optimization (highly recommended).
-www-client/ungoogled-chromium:uazo-bromite - Apply also select uazo/Bromite patches. Highly experimental! Those are separate work of uazo and Bromite. Please consider Bromite licensing terms when deciding if you're allowed to distribute binaries built with these patches.
 www-client/ungoogled-chromium:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
 www-client/ungoogled-chromium-bin:convert-dict - Install also the convert_dict utility. The script will be installed into /opt/chromium-browser/update-dicts.sh More info here: https://github.com/ungoogled-software/ungoogled-chromium/issues/188#issuecomment-444752907
 www-client/ungoogled-chromium-bin:widevine - Unsupported closed-source DRM capability (required by Netflix VOD)
