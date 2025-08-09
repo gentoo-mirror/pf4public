@@ -37,7 +37,7 @@ SRC_URI="https://commondatastorage.googleapis.com/chromium-browser-official/chro
 
 LICENSE="BSD cromite? ( GPL-3 )"
 SLOT="0"
-KEYWORDS="~amd64 ~arm64 ~ppc64 ~x86"
+KEYWORDS="amd64 ~arm64 ~ppc64 ~x86"
 IUSE_SYSTEM_LIBS="abseil-cpp av1 brotli crc32c double-conversion ffmpeg +harfbuzz +icu jsoncpp +libusb libvpx +openh264 openjpeg +png re2 snappy woff2 +zstd"
 IUSE="+X bluetooth cfi +clang convert-dict cups cpu_flags_arm_neon custom-cflags debug enable-driver gtk4 hangouts headless kerberos libcxx nvidia +official optimize-thinlto optimize-webui override-data-dir pax-kernel pgo +proprietary-codecs pulseaudio qt6 screencast selinux thinlto cromite vaapi wayland widevine cpu_flags_ppc_vsx3"
 RESTRICT="
@@ -63,7 +63,7 @@ REQUIRED_USE="
 # 	5794e9d12bf82620d5f24505798fecb45ca5a22d
 # )
 
-CROMITE_COMMIT_ID="0e9691d965ad06a8e3ed50c86fe9cd160e0047e6"
+CROMITE_COMMIT_ID="613a6f32485e0244077fd1f33d59c9547235b54e"
 
 declare -A CHROMIUM_COMMITS=(
 	["e56b8ce0bafe9df578625be6973be95358b91785"]="third_party/perfetto"
