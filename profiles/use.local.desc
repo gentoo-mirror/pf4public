@@ -90,7 +90,7 @@ dev-util/electron:system-snappy - Use the system-wide app-arch/snappy instead of
 dev-util/electron:system-woff2 - Use the system media-libs/woff2 instead of the bundled one
 dev-util/electron:system-zstd - Use the system app-arch/zstd instead of the bundled one
 dev-util/electron:thinlto - Build with ThinLTO support. LTO (Link Time Optimization) achieves better runtime performance through whole-program analysis and cross-module optimization (highly recommended).
-dev-util/electron:ungoogled - Apply ungoogled-chromium modifications to chromium sources (electron sources are untouched be it better or worse). Not yet thoroughly tested! Might break electron apps or electron itself!
+dev-util/electron:ungoogled - Apply ungoogled-chromium modifications to chromium sources (electron sources are not modified be it better or worse). Might break electron apps or electron itself!
 net-im/element-desktop:build-online - Disable network-sandbox and open Pandora's box!
 net-im/element-desktop:electron-19 - Build against electron-19 instead of the default one. Use at your own risk!
 net-im/element-desktop:electron-20 - Build against electron-20 instead of the default one. Use at your own risk!
