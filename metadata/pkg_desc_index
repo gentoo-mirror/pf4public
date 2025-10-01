@@ -5,7 +5,7 @@ app-emulation/vmware-modules 17.6.3-r1: VMware kernel modules
 app-emulation/vmware-workstation 17.6.3.24583834-r2 17.6.4.24832109: Emulate a complete PC without the performance overhead of most emulators
 app-eselect/eselect-electron 0.3: Utility to select the default Electron slot
 app-misc/font-manager 0.8.9 0.9.0 0.9.4 9999: A simple font management application for Gtk+ Desktop Environments
-dev-util/electron 19.1.8 19.1.9 19.1.9-r1 20.3.12-r1 21.4.4 23.3.12 23.3.13 24.8.7 24.8.8 25.9.7 25.9.8 26.6.9 26.6.10 27.3.10 27.3.11 28.3.2 28.3.3 29.4.5 29.4.6 30.5.0 30.5.1 31.7.6 31.7.7 32.3.2 32.3.3 33.4.10 33.4.11 34.5.7 34.5.8 35.7.4 35.7.5 36.8.0 36.8.1 36.9.0 36.9.1 36.9.2 37.3.1 37.4.0 37.5.0 37.5.1 37.6.0 38.2.0: Cross platform application development framework based on web technologies
+dev-util/electron 19.1.8 19.1.9 19.1.9-r1 20.3.12-r1 21.4.4 23.3.12 23.3.13 24.8.7 24.8.8 25.9.7 25.9.8 26.6.9 26.6.10 27.3.10 27.3.11 28.3.2 28.3.3 29.4.5 29.4.6 30.5.0 30.5.1 31.7.6 31.7.7 32.3.2 32.3.3 33.4.10 33.4.11 34.5.7 34.5.8 35.7.4 35.7.5 36.8.0 36.8.1 36.9.0 36.9.1 36.9.2 36.9.3 37.3.1 37.4.0 37.5.0 37.5.1 37.6.0 38.2.0: Cross platform application development framework based on web technologies
 net-im/element-desktop 1.11.96 1.11.97 1.11.98 1.11.99 1.11.100 1.11.101 1.11.102 1.11.103 1.11.104 1.11.105 1.11.106 1.11.107 1.11.108 1.11.109 1.11.110 1.11.111 1.11.112 1.12.0 9999: A glossy Matrix collaboration client for desktop
 net-im/element-web 1.11.112 1.12.0 9999: A glossy Matrix collaboration client for the web
 net-misc/sb-hosts 3.16.20 3.16.21 9999: A hosts file from several well-curated sources
