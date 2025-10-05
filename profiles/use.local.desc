@@ -6,25 +6,7 @@ app-admin/gb-chroot:host - Enable this on a chroot host
 app-editors/vscode:api-proposals - Enable API proposals !WARNING! Enabling them might be forbidden by Microsoft licensing terms!
 app-editors/vscode:badge-providers - Allow various badge providers
 app-editors/vscode:build-online - Disable network-sandbox and open Pandora's box!
-app-editors/vscode:electron-19 - Build against electron-19 instead of the default one. Use at your own risk!
-app-editors/vscode:electron-20 - Build against electron-20 instead of the default one. Use at your own risk!
-app-editors/vscode:electron-21 - Build against electron-21 instead of the default one. Use at your own risk!
-app-editors/vscode:electron-22 - Build against electron-22 instead of the default one. Use at your own risk!
-app-editors/vscode:electron-23 - Build against electron-23 instead of the default one. Use at your own risk!
-app-editors/vscode:electron-24 - Build against electron-24 instead of the default one. Use at your own risk!
-app-editors/vscode:electron-25 - Build against electron-25 instead of the default one. Use at your own risk!
-app-editors/vscode:electron-26 - Build against electron-26 instead of the default one. Use at your own risk!
-app-editors/vscode:electron-27 - Build against electron-27 instead of the default one. Use at your own risk!
-app-editors/vscode:electron-28 - Build against electron-28 instead of the default one. Use at your own risk!
-app-editors/vscode:electron-29 - Build against electron-29 instead of the default one. Use at your own risk!
-app-editors/vscode:electron-30 - Build against electron-30 instead of the default one. Use at your own risk!
-app-editors/vscode:electron-31 - Build against electron-31 instead of the default one. Use at your own risk!
-app-editors/vscode:electron-32 - Build against electron-32 instead of the default one. Use at your own risk!
-app-editors/vscode:electron-33 - Build against electron-33 instead of the default one. Use at your own risk!
-app-editors/vscode:electron-34 - Build against electron-34 instead of the default one. Use at your own risk!
-app-editors/vscode:electron-35 - Build against electron-35 instead of the default one. Use at your own risk!
 app-editors/vscode:electron-36 - Build against electron-36 instead of the default one. Use at your own risk!
-app-editors/vscode:electron-37 - Build against electron-37 instead of the default one. Use at your own risk!
 app-editors/vscode:electron-38 - Build against electron-38 instead of the default one. Use at your own risk!
 app-editors/vscode:openvsx - Use Eclipse Open VSX instead of Visual Studio Marketplace
 app-editors/vscode:reh - Build Remote Extension Host
