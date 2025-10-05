@@ -119,24 +119,7 @@ net-misc/sb-hosts:gambling - Add common online betting sites
 net-misc/sb-hosts:porn - Add porn sites
 net-misc/sb-hosts:social - Add social media sites
 sci-misc/jupyterlab-desktop:build-online - Disable network-sandbox and open Pandora's box!
-sci-misc/jupyterlab-desktop:electron-19 - Build against electron-19 instead of the default one. Use at your own risk!
-sci-misc/jupyterlab-desktop:electron-20 - Build against electron-20 instead of the default one. Use at your own risk!
-sci-misc/jupyterlab-desktop:electron-21 - Build against electron-21 instead of the default one. Use at your own risk!
-sci-misc/jupyterlab-desktop:electron-22 - Build against electron-22 instead of the default one. Use at your own risk!
-sci-misc/jupyterlab-desktop:electron-23 - Build against electron-23 instead of the default one. Use at your own risk!
-sci-misc/jupyterlab-desktop:electron-24 - Build against electron-24 instead of the default one. Use at your own risk!
-sci-misc/jupyterlab-desktop:electron-25 - Build against electron-25 instead of the default one. Use at your own risk!
-sci-misc/jupyterlab-desktop:electron-26 - Build against electron-26 instead of the default one. Use at your own risk!
-sci-misc/jupyterlab-desktop:electron-28 - Build against electron-28 instead of the default one. Use at your own risk!
-sci-misc/jupyterlab-desktop:electron-29 - Build against electron-29 instead of the default one. Use at your own risk!
-sci-misc/jupyterlab-desktop:electron-30 - Build against electron-30 instead of the default one. Use at your own risk!
-sci-misc/jupyterlab-desktop:electron-31 - Build against electron-31 instead of the default one. Use at your own risk!
-sci-misc/jupyterlab-desktop:electron-32 - Build against electron-32 instead of the default one. Use at your own risk!
-sci-misc/jupyterlab-desktop:electron-33 - Build against electron-33 instead of the default one. Use at your own risk!
-sci-misc/jupyterlab-desktop:electron-34 - Build against electron-34 instead of the default one. Use at your own risk!
-sci-misc/jupyterlab-desktop:electron-35 - Build against electron-35 instead of the default one. Use at your own risk!
 sci-misc/jupyterlab-desktop:electron-36 - Build against electron-36 instead of the default one. Use at your own risk!
-sci-misc/jupyterlab-desktop:electron-37 - Build against electron-37 instead of the default one. Use at your own risk!
 sci-misc/jupyterlab-desktop:electron-38 - Build against electron-38 instead of the default one. Use at your own risk!
 www-client/cromite:cfi - Build with CFI (Control Flow Integrity) enabled. It requires "-stdlib=libc++", see #40 for more details.
 www-client/cromite:clang - Use Clang compiler instead of GCC
