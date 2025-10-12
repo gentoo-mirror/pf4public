@@ -10,5 +10,5 @@ LICENSE=GPL-2
 REQUIRED_USE=savedconfig
 RESTRICT=strip
 SLOT=6.1.147
-_eclasses_=portability	a39e3d646f76cb45d06b44cc1144b8d4	savedconfig	b9131abe556ad2ea96c01b06d658d363	toolchain-funcs	a0b29008c671a362b505f96fa80ce9c0
+_eclasses_=portability	a39e3d646f76cb45d06b44cc1144b8d4	savedconfig	b9131abe556ad2ea96c01b06d658d363	toolchain-funcs	98d9f464d912ae6b7316fb8a3721f5db
 _md5_=def5a3eaf6c7e7f7e8313f0bbf3497bf
