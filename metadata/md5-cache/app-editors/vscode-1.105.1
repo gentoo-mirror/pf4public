@@ -1,0 +1,16 @@
+BDEPEND=|| ( dev-lang/python:3.13 dev-lang/python:3.12 dev-lang/python:3.11 ) || ( ( dev-lang/python:3.13 dev-python/setuptools[python_targets_python3_13(-)] ) ( dev-lang/python:3.12 dev-python/setuptools[python_targets_python3_12(-)] ) ( dev-lang/python:3.11 dev-python/setuptools[python_targets_python3_11(-)] ) ) !temp-fix? ( net-libs/nodejs )
+DEFINED_PHASES=compile configure install postinst postrm prepare pretend setup unpack
+DEPEND=>=app-crypt/libsecret-0.18.8:= >=x11-libs/libX11-1.6.9:= >=x11-libs/libxkbfile-1.1.0:= virtual/krb5 sys-apps/ripgrep electron-36? ( dev-util/electron:36 ) electron-38? ( dev-util/electron:38 ) !electron-36? ( !electron-38? ( dev-util/electron:37 ) )
+DESCRIPTION=Visual Studio Code - Open Source
+EAPI=8
+HOMEPAGE=https://github.com/microsoft/vscode
+INHERIT=desktop flag-o-matic multilib ninja-utils pax-utils portability python-any-r1 toolchain-funcs xdg-utils
+IUSE=api-proposals badge-providers electron-36 electron-38 openvsx reh reh-web substitute-urls temp-fix +build-online
+KEYWORDS=~amd64 ~arm64 ~ppc64 ~x86
+LICENSE=MIT
+RDEPEND=>=app-crypt/libsecret-0.18.8:= >=x11-libs/libX11-1.6.9:= >=x11-libs/libxkbfile-1.1.0:= virtual/krb5 sys-apps/ripgrep electron-36? ( dev-util/electron:36 ) electron-38? ( dev-util/electron:38 ) !electron-36? ( !electron-38? ( dev-util/electron:37 ) )
+RESTRICT=mirror build-online? ( network-sandbox )
+SLOT=0
+SRC_URI=https://registry.yarnpkg.com/@vscode/ripgrep/-/ripgrep-1.15.9.tgz -> @vscode-ripgrep-1.15.9.tgz https://github.com/microsoft/vscode/archive/1.105.1.tar.gz -> vscode-1.105.1.tar.gz
+_eclasses_=desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed	toolchain-funcs	98d9f464d912ae6b7316fb8a3721f5db	flag-o-matic	a7afe42e95fb46ce9691605acfb24672	multilib	a199af442898963433d6f038a88cce9c	multiprocessing	1e32df7deee68372153dca65f4a7c21f	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	pax-utils	5555f2e75744739fe100ee62c22d28fe	portability	a39e3d646f76cb45d06b44cc1144b8d4	python-utils-r1	0b620dd604ab8af0bc9cd1bcc66d4f7c	python-any-r1	891415dfe39ad9b41b461f2b86354af0	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
+_md5_=217e54807a17cef2dde2a2c909154dc2
