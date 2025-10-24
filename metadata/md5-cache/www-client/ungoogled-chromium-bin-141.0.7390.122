@@ -10,6 +10,6 @@ RDEPEND=x11-libs/libX11 x11-libs/libXcomposite x11-libs/libXcursor x11-libs/libX
 REQUIRED_USE=x86? ( !widevine )
 RESTRICT=mirror
 SLOT=0
-SRC_URI=amd64? ( https://github.com/PF4Public/ungoogled-chromium-bin/releases/download/141.0.7390.76/x86-64.tar.bz2 -> ungoogled-chromium-bin-141.0.7390.76-x86-64.tar.bz2 ) x86? ( https://github.com/PF4Public/ungoogled-chromium-bin/releases/download/141.0.7390.76/i686.tar.bz2 -> ungoogled-chromium-bin-141.0.7390.76-i686.tar.bz2 )
+SRC_URI=amd64? ( https://github.com/PF4Public/ungoogled-chromium-bin/releases/download/141.0.7390.122/x86-64.tar.bz2 -> ungoogled-chromium-bin-141.0.7390.122-x86-64.tar.bz2 ) x86? ( https://github.com/PF4Public/ungoogled-chromium-bin/releases/download/141.0.7390.122/i686.tar.bz2 -> ungoogled-chromium-bin-141.0.7390.122-i686.tar.bz2 )
 _eclasses_=toolchain-funcs	98d9f464d912ae6b7316fb8a3721f5db	linux-info	efd923656513c879204fec6638eadee5	chromium-2	6be3cf193def84c82ddae5c1f21ddbe5	desktop	3a72ffe0d8e1dd73af3a1c8c15a59fed	readme.gentoo-r1	b045f3acf546393ab6b3170781875358	xdg-utils	42869b3c8d86a70ef3cf75165a395e09
 _md5_=8e6720998b0fb04715c5e0f29f789438
