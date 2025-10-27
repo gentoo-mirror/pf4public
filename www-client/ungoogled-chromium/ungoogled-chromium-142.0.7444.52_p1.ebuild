@@ -63,13 +63,13 @@ UGC_COMMIT_ID="98f9cedd97e7cccb52315abc65803f72a0919b73"
 # 	5794e9d12bf82620d5f24505798fecb45ca5a22d
 # )
 
-CROMITE_COMMIT_ID="7f5b8c4989665ee2c18d537d679dad3cab65ccae"
+CROMITE_COMMIT_ID="409ac177ee6dd9051fb1f455622b7ab87f3262fa"
 
 declare -A CHROMIUM_COMMITS=(
 	["069d424e41f42c6f4a4551334eafc7cfaed6e880"]="." #143+
 	["bd9e1afdde061d4870cf69de39b04caac26960f2"]="." #143+
-	# ["e56b8ce0bafe9df578625be6973be95358b91785"]="third_party/perfetto"
 	# ["-da443d7bd3777a5dd0587ecff1fbad1722b106b5"]="."
+	# ["e56b8ce0bafe9df578625be6973be95358b91785"]="third_party/perfetto"
 )
 
 UGC_PV="${PV/_p/-}"
